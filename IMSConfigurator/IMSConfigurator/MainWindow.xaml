@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IMSConfigurator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="442" Width="525">
+        Title="IMSCofigurator" Height="442" Width="525">
     <Grid>
         <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="517">
             <MenuItem Header="Настройки">
@@ -20,9 +20,18 @@
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="17" Margin="0,9,-32,0" VerticalAlignment="Top" Width="517">
                 <RadioButton Content="M-1000" GroupName="modelGroup" VerticalAlignment="Top" Margin="20,0,0,0" Height="17" Width="116" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
                 <RadioButton Content="M-3000" GroupName="modelGroup" VerticalAlignment="Top" Margin="20,0,0,0" Height="17" Width="116" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
-
             </StackPanel>
         </GroupBox>
+        <GroupBox Header="Электропитание" HorizontalAlignment="Left" Height="100" Margin="10,93,0,0" VerticalAlignment="Top" Width="497">
+            <StackPanel Margin="0,0,0,40" Orientation="Horizontal">
+            <CheckBox Name="rps_chkbx" Content="Резервированное" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
+            </CheckBox>
+                <CheckBox Name="Double_rps_chkbx" Content="Двойной резерв" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
+                </CheckBox>
+            </StackPanel>
+
+        </GroupBox>
+
 
     </Grid>
 </Window>
