@@ -24,5 +24,37 @@ namespace IMSConfigurator
         {
             InitializeComponent();
         }
+
+        private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR3_sp.IsEnabled = true;
+            PWR4_sp.IsEnabled = true;
+            OUT7_sp.IsEnabled = true;
+            OUT8_sp.IsEnabled = true;
+            OUT9_sp.IsEnabled = true;
+            OUT10_sp.IsEnabled = true;
+        }
+
+        private void M1000_rbtn_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR3_sp.IsEnabled = false;
+            PWR4_sp.IsEnabled = false;
+            OUT7_sp.IsEnabled = false;
+            OUT8_sp.IsEnabled = false;
+            OUT9_sp.IsEnabled = false;
+            OUT10_sp.IsEnabled = false;
+        }
+
+        private void Double_CLK_chBx_Checked(object sender, RoutedEventArgs e)
+        {
+            CLK2_sp.IsEnabled = true;
+            RSC_sp.IsEnabled = true;
+        }
+
+        private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CLK2_sp.IsEnabled = false;
+            RSC_sp.IsEnabled = false;
+        }
     }
 }
