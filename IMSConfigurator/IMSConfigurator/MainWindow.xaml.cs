@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMSConfigurator.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,6 +56,16 @@ namespace IMSConfigurator
         {
             CLK2_sp.IsEnabled = false;
             RSC_sp.IsEnabled = false;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Moduls m_moduls = new Moduls();
+            Modul mod =  m_moduls.SearchModul("IMS - CPU", ModulType.Processor);
+            CPU_name.Text = mod.Name;
+            CPU_ID.Text = mod.ID;
+            CPU_discription.Text = mod.Discription;
+            CPU_price.Text = mod.Price.ToString();
         }
     }
 }

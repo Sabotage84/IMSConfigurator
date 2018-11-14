@@ -89,6 +89,7 @@
                         </StackPanel>
                     </Grid>
                 </GroupBox>
+                <Button Content="Button" Width="76" Height="12" Click="Button_Click"/>
                 <GroupBox Header="Процессор" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" Width="497">
                     <StackPanel x:Name="CPU_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32" VerticalAlignment="Top">
                         <CheckBox x:Name="CPU_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Width="16" Height="14"/>
@@ -100,7 +101,7 @@
                 </GroupBox>
             </StackPanel>
             <StackPanel Width="556">
-                <GroupBox Header="Выходы" HorizontalAlignment="Left" Height="443" Margin="10,10,0,0" VerticalAlignment="Top" Width="536">
+                <GroupBox Header="Выходы" HorizontalAlignment="Left" Height="436" Margin="10,10,0,0" VerticalAlignment="Top" Width="536">
 
                     <StackPanel Margin="0,0,0,1" Orientation="Vertical">
                         <StackPanel x:Name="OUT1_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
