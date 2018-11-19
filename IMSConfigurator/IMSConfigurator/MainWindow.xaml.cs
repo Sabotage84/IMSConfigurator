@@ -21,9 +21,21 @@ namespace IMSConfigurator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Moduls m_moduls;
+        List<Modul> powerModuls;
         public MainWindow()
         {
             InitializeComponent();
+            m_moduls = new Moduls();
+            powerModuls = m_moduls.SearchModulsByType(ModulType.Power);
+            string str="";
+            foreach (var item in powerModuls)
+            {
+                str =str+item.Name;
+                str += "\n";
+            }
+            MessageBox.Show(str);
         }
 
         private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
@@ -58,14 +70,63 @@ namespace IMSConfigurator
             RSC_sp.IsEnabled = false;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       
+
+        private void CPU_chkbx_Checked(object sender, RoutedEventArgs e)
         {
-            Moduls m_moduls = new Moduls();
-            Modul mod =  m_moduls.SearchModul("IMS - CPU", ModulType.Processor);
+            Modul mod = m_moduls.SearchModul("IMS - CPU", ModulType.Processor);
             CPU_name.Text = mod.Name;
             CPU_ID.Text = mod.ID;
             CPU_discription.Text = mod.Discription;
             CPU_price.Text = mod.Price.ToString();
+        }
+
+        private void CPU_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CPU_name.Text = "Модуль";
+            CPU_ID.Text = "ID";
+            CPU_discription.Text = "Описание";
+            CPU_price.Text = "Цена";
+        }
+
+        private void PWR1_chBx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            PWR1_name.IsEnabled = false;
+        }
+
+        private void PWR2_chBx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            PWR2_name.IsEnabled = false;
+        }
+
+        private void PWR3_chBx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            PWR3_name.IsEnabled = false;
+        }
+
+        private void PWR4_chBx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            PWR4_name.IsEnabled = false;
+        }
+
+        private void PWR1_chBx_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR1_name.IsEnabled = true;
+        }
+
+        private void PWR2_chBx_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR2_name.IsEnabled = true;
+        }
+
+        private void PWR3_chBx_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR3_name.IsEnabled = true;
+        }
+
+        private void PWR4_chBx_Checked(object sender, RoutedEventArgs e)
+        {
+            PWR4_name.IsEnabled = true;
         }
     }
 }

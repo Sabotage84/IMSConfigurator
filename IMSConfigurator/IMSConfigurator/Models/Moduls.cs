@@ -58,7 +58,7 @@ namespace IMSConfigurator.Models
             m_moduls.Add(new Modul ("IMS - CPE - 3040"              ,"27116",   "2x DSUB9 - Config.Serial Time Strings - RS485 + PPS       ",   858,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 3060"              ,"27558",   "2x DSUB9 - RS232 + PPS / RS422 + PPS                      ",   858,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 5000"              ,"27023",   "4 x progr.Pulses / FO connectors                          ",   1051,   ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS - CPU"                     ,"27018",   "LANTIME Processor Unit                                    ",   874,    ModulType.Processor  ));
+            m_moduls.Add(new Modul ("IMS - CPU"                     ,"27018",   "Процессор управления. Графический веб интерфейс, ПО: LTOSv6. HTTP, NTP, SSH, SNMP. 1 x LAN порт 10/100 Мбит/с.",   874,    ModulType.Processor  ));
             m_moduls.Add(new Modul ("IMS - ESI"                     ,"27007",   "Extended Reference Inputs                                 ",   902,    ModulType.Input      ));
             m_moduls.Add(new Modul ("IMS - FDM180"                  ,"27076",   "Mains frequency 70 - 270 V AC, 50Hz or 60Hz               ",   849,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-CLK GLN-DHQ"               ,"27044",   "incl.GNS - antenna and 20m cable Belden H155              ",   2334,   ModulType.Generator  ));
@@ -131,6 +131,15 @@ namespace IMSConfigurator.Models
             }
             return null;
             
+        }
+
+        public List<Modul> SearchModulsByType(ModulType type)
+        {
+            var query =
+                from item in m_moduls
+                where item.Type == type
+                select item;
+            return query.ToList();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
