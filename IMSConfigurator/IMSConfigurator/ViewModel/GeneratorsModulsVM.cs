@@ -4,19 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace IMSConfigurator.ViewModel
 {
-    public class PowerModulsVM
+    class GeneratorsModulsVM
     {
         public List<Modul> modListMV;
-        public PowerModulsVM()
+        public List<Modul> ModListMV { get => modListMV; set => modListMV = value; }
+        public GeneratorsModulsVM()
         {
             Moduls m = new Moduls();
-            ModListMV = m.SearchModulsByType(ModulType.Power);
+            ModListMV = m.SearchModulsByType(ModulType.Generator);
         }
-
-        public List<Modul> ModListMV { get => modListMV; set => modListMV = value; }
     }
 }

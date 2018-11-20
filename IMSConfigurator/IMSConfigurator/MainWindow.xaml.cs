@@ -28,16 +28,8 @@ namespace IMSConfigurator
         {
             InitializeComponent();
             m_moduls = new Moduls();
-           
-           
             powerModuls = m_moduls.SearchModulsByType(ModulType.Power);
-            //string str="";
-            //foreach (var item in powerModuls)
-            //{
-            //    str =str+item.Name;
-            //    str += "\n";
-            //}
-            //MessageBox.Show(str);
+            
         }
 
         private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
@@ -133,11 +125,31 @@ namespace IMSConfigurator
 
         private void PWR1_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            PWR1_name.IsEditable = false;
-            Modul m= (Modul) PWR1_name.SelectedValue;
-            PWR1_ID.Text = m.ID;
-            PWR1_discription.Text = m.Discription;
-            PWR1_price.Text = m.Price.ToString();
+            FeelPWR(PWR1_name, PWR1_ID, PWR1_discription, PWR1_price, (Modul)PWR1_name.SelectedValue);
+        }
+
+        private void FeelPWR(ComboBox combo, TextBlock id, TextBlock disc, TextBlock price, Modul m)
+        {
+            combo.IsEditable = false;
+             
+            id.Text = m.ID;
+            disc.Text = m.Discription;
+            price.Text = m.Price.ToString();
+        }
+
+        private void PWR2_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelPWR(PWR2_name, PWR2_ID, PWR2_discription, PWR2_price, (Modul)PWR2_name.SelectedValue);
+        }
+
+        private void PWR3_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelPWR(PWR3_name, PWR3_ID, PWR3_discription, PWR3_price, (Modul)PWR3_name.SelectedValue);
+        }
+
+        private void PWR4_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelPWR(PWR4_name, PWR4_ID, PWR4_discription, PWR4_price, (Modul)PWR4_name.SelectedValue);
         }
     }
 }

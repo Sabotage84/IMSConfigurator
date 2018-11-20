@@ -7,7 +7,7 @@
         xmlns:Local="clr-namespace:IMSConfigurator.Models"
         xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.MainWindow"
         mc:Ignorable="d"
-        Title="IMSCofigurator" Height="605.666" Width="1088.366">
+        Title="IMSCofigurator" Height="513.666" Width="1313.366">
     <Window.DataContext>
         <ViewModel:PowerModulsVM/>
     </Window.DataContext>
@@ -23,49 +23,52 @@
             </MenuItem>
         </Menu>
         <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Width="599" Height="451">
 
-                <GroupBox Header="Шасси" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="497">
+                <GroupBox Header="Шасси" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="589">
                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="20" Margin="0" VerticalAlignment="Top" Width="221">
                         <RadioButton x:Name="M1000_rbtn" Content="M-1000" GroupName="modelGroup" VerticalAlignment="Top" Margin="20,0,0,0" Height="17" Width="116" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Checked="M1000_rbtn_Checked" />
                         <RadioButton x:Name="M3000_rbtn" Content="M-3000" GroupName="modelGroup" VerticalAlignment="Top" Margin="20,0,0,0" Height="17" Width="62" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Checked="M3000_rbtn_Checked" />
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Header="Электропитание" HorizontalAlignment="Left" Height="155" Margin="10,5,0,0" VerticalAlignment="Top" Width="497">
+                <GroupBox Header="Электропитание" HorizontalAlignment="Left" Height="155" Margin="10,5,0,0" VerticalAlignment="Top" Width="589">
                     <Grid Height="158" VerticalAlignment="Top" Margin="0,0,0,-4">
 
                         <StackPanel x:Name="PWR1_sp"  Orientation="Horizontal" Margin="0,0,0,123" Height="35" VerticalAlignment="Bottom">
                             <CheckBox x:Name="PWR1_chBx" Content="" Margin="10" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR1_chBx_Unchecked" Checked="PWR1_chBx_Checked"/>
-                            <ComboBox x:Name="PWR1_name" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR1_name_SelectionChanged" IsEditable="True"/>
+                            <ComboBox x:Name="PWR1_name" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,8,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR1_name_SelectionChanged" IsEditable="True"/>
                             <TextBlock x:Name="PWR1_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="PWR1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,9" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR1_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="PWR2_sp"  Orientation="Horizontal" Margin="0,35,0,0" Height="32" VerticalAlignment="Top">
                             <CheckBox x:Name="PWR2_chBx" Content="" Margin="10,9" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR2_chBx_Unchecked" Checked="PWR2_chBx_Checked"/>
-                            <ComboBox x:Name="PWR2_name" IsEditable="True" IsReadOnly="True" Text="Модуль" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False"/>
+                            <ComboBox x:Name="PWR2_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" SelectionChanged="PWR2_name_SelectionChanged" FontSize="9"/>
                             <TextBlock x:Name="PWR2_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="PWR2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR2_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                         </StackPanel>
                         <StackPanel x:Name="PWR3_sp"  Orientation="Horizontal" Margin="0,0,0,55" Height="33" VerticalAlignment="Bottom">
                             <CheckBox x:Name="PWR3_chBx" Content="" Margin="10,10,10,9" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR3_chBx_Unchecked" Checked="PWR3_chBx_Checked"/>
-                            <ComboBox x:Name="PWR3_name" IsEditable="True" IsReadOnly="True" Text="Модуль" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False"/>
+                            <ComboBox x:Name="PWR3_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR3_name_SelectionChanged"/>
                             <TextBlock x:Name="PWR3_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="PWR3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR3_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="PWR4_sp"  Orientation="Horizontal" Margin="0,103,0,0" Height="34" VerticalAlignment="Top">
                             <CheckBox x:Name="PWR4_chBx" Content="" Margin="10" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR4_chBx_Unchecked" Checked="PWR4_chBx_Checked"/>
-                            <ComboBox x:Name="PWR4_name" IsEditable="True" IsReadOnly="True" Text="Модуль" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False"/>
+                            <ComboBox x:Name="PWR4_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,7,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR4_name_SelectionChanged"/>
                             <TextBlock x:Name="PWR4_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="PWR4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR4_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="Генераторы" Height="149" Margin="10,10,0,10" HorizontalAlignment="Left" Width="498">
+                <GroupBox Header="Генераторы" Height="149" Margin="10,10,0,10" HorizontalAlignment="Left" Width="589">
+                    <GroupBox.DataContext>
+                        <ViewModel:GeneratorsModulsVM/>
+                    </GroupBox.DataContext>
                     <Grid Height="126" VerticalAlignment="Top" Margin="0,0,0,-3">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="125*"/>
@@ -75,124 +78,113 @@
                             <CheckBox x:Name="Double_CLK_chBx" Content="Резерв генераторов" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Checked="Double_CLK_chBx_Checked" Unchecked="Double_CLK_chBx_Unchecked"/>
                         </StackPanel>
                         <StackPanel x:Name="CLK1_sp"  Orientation="Horizontal" Margin="0,26,0,0" Height="32" VerticalAlignment="Top">
-                            <TextBox x:Name="CLK1_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="5,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman"/>
+                            <TextBox x:Name="CLK1_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="CLK1_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="CLK1_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="CLK1_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="CLK1_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="CLK2_sp"  Orientation="Horizontal" Margin="0,0,0,33.333" Height="32" VerticalAlignment="Bottom" IsEnabled="False">
-                            <TextBox x:Name="CLK2_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="5,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic"/>
+                            <TextBox x:Name="CLK2_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic"/>
                             <TextBlock x:Name="CLK2_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="CLK2_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="CLK2_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="CLK2_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="RSC_sp"  Orientation="Horizontal" Height="32" VerticalAlignment="Top" Margin="0,95,0,-1" IsEnabled="False" Grid.RowSpan="2">
-                            <TextBlock x:Name="RSC_name" TextWrapping="Wrap" Text="Text" Width="100" Margin="5,5,0,7" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="RSC_name" TextWrapping="Wrap" Text="Text" Width="100" Margin="35,5,0,7" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="RSC_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="RSC_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="205" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="RSC_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,7" Width="275" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="RSC_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="Процессор" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" Width="497">
+                <GroupBox Header="Процессор" HorizontalAlignment="Left" Height="68" Margin="10,10,0,1" VerticalAlignment="Top" Width="589">
                     <StackPanel x:Name="CPU_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32" VerticalAlignment="Top">
                         <CheckBox x:Name="CPU_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Width="16" Height="14" Checked="CPU_chkbx_Checked" Unchecked="CPU_chkbx_Unchecked"/>
-                        <TextBox x:Name="CPU_name" TextWrapping="Wrap" Text="Модуль"  Margin="0,5,0,7" Width="75" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman"/>
+                        <TextBox x:Name="CPU_name" TextWrapping="Wrap" Text="Модуль"  Margin="0,5,0,7" Width="100" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman"/>
                         <TextBlock x:Name="CPU_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="CPU_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="CPU_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="275" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         <TextBlock x:Name="CPU_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
-            <StackPanel Width="556">
-                <GroupBox Header="Выходы" HorizontalAlignment="Left" Height="436" Margin="10,10,0,0" VerticalAlignment="Top" Width="536">
+            <StackPanel Width="700">
+                <GroupBox Header="Выходы" HorizontalAlignment="Left" Height="442" Margin="10,10,0,0" VerticalAlignment="Top" Width="690">
 
                     <StackPanel Margin="0,0,0,1" Orientation="Vertical">
                         <StackPanel x:Name="OUT1_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT1_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT1_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT1_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT1_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT1_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT2_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT2_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT2_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT2_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT2_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT2_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT3_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT3_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT3_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT3_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT3_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT3_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT4_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT4_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT4_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT4_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT4_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT4_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT5_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT5_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT5_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT5_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT5_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT5_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT5_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT5_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT6_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT6_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT6_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT6_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT6_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT6_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT6_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT6_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT7_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT7_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT7_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT7_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT7_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT7_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT7_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT7_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT8_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT8_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT8_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT8_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT8_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT8_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT8_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT8_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT9_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT9_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT9_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT9_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT9_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT9_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT9_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT9_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="OUT10_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32">
                             <CheckBox x:Name="OUT10_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Height="14" Width="16"/>
                             <TextBox x:Name="OUT10_name" TextWrapping="Wrap" Text="Модуль"  Margin="10,6,0,6" Width="75" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="OUT10_ID" TextWrapping="Wrap" Text="ID" Margin="10,6,0,6" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT10_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="230" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="OUT10_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,0,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT10_discription" TextWrapping="Wrap" Text="Описание" Margin="10,6,0,6" Width="370" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="OUT10_price" TextWrapping="Wrap" Text="Цена" Margin="10,6,5,6" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
 
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
         </StackPanel>
-        <ListView Height="100" ItemsSource="{Binding ModListMV}" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel x:Name="tryIt">
-                        <TextBlock Text="{Binding Name}"/>
-                        <TextBlock Text="{Binding Discription}"/>
-                    </StackPanel>
-                </DataTemplate>
-
-            </ListView.ItemTemplate>
-        </ListView>
     </StackPanel>
 </Window>
