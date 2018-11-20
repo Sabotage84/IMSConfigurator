@@ -1,21 +1,25 @@
-﻿<Window x:Class="IMSConfigurator.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IMSConfigurator"
         xmlns:Local="clr-namespace:IMSConfigurator.Models"
+        xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.MainWindow"
         mc:Ignorable="d"
-        Title="IMSCofigurator" Height="518.666" Width="1088.366">
+        Title="IMSCofigurator" Height="605.666" Width="1088.366">
+    <Window.DataContext>
+        <ViewModel:PowerModulsVM/>
+    </Window.DataContext>
 
     <StackPanel Orientation="Vertical">
         <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1070">
             <MenuItem Header="Настройки">
-                <MenuItem Header="Управление модулями"></MenuItem>
+                <MenuItem Header="Управление модулями"/>
             </MenuItem>
             <MenuItem Header="О программе">
-                <MenuItem Header="Инфо"></MenuItem>
-                <MenuItem Header="Выход"></MenuItem>
+                <MenuItem Header="Инфо"/>
+                <MenuItem Header="Выход"/>
             </MenuItem>
         </Menu>
         <StackPanel Orientation="Horizontal">
@@ -32,7 +36,7 @@
 
                         <StackPanel x:Name="PWR1_sp"  Orientation="Horizontal" Margin="0,0,0,123" Height="35" VerticalAlignment="Bottom">
                             <CheckBox x:Name="PWR1_chBx" Content="" Margin="10" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR1_chBx_Unchecked" Checked="PWR1_chBx_Checked"/>
-                            <ComboBox x:Name="PWR1_name" IsEditable="True" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding powerModuls}" DisplayMemberPath="powerModuls.Name" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False"/>
+                            <ComboBox x:Name="PWR1_name" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="75" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR1_name_SelectionChanged" IsEditable="True"/>
                             <TextBlock x:Name="PWR1_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="70" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,5,0,7" Width="205" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="PWR1_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -179,5 +183,16 @@
                 </GroupBox>
             </StackPanel>
         </StackPanel>
+        <ListView Height="100" ItemsSource="{Binding ModListMV}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel x:Name="tryIt">
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Discription}"/>
+                    </StackPanel>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
 </Window>

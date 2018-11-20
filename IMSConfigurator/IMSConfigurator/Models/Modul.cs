@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMSConfigurator.Models
 {
-    class Modul
+    public class Modul
     {
         string name;
         string iD;
@@ -30,7 +30,7 @@ namespace IMSConfigurator.Models
         }
     }
 
-    enum ModulType
+    public enum ModulType
     {
         Power, Generator, Processor, Output, Cooler, Input, Switcher
     }

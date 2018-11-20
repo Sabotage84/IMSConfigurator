@@ -28,14 +28,16 @@ namespace IMSConfigurator
         {
             InitializeComponent();
             m_moduls = new Moduls();
+           
+           
             powerModuls = m_moduls.SearchModulsByType(ModulType.Power);
-            string str="";
-            foreach (var item in powerModuls)
-            {
-                str =str+item.Name;
-                str += "\n";
-            }
-            MessageBox.Show(str);
+            //string str="";
+            //foreach (var item in powerModuls)
+            //{
+            //    str =str+item.Name;
+            //    str += "\n";
+            //}
+            //MessageBox.Show(str);
         }
 
         private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
@@ -127,6 +129,15 @@ namespace IMSConfigurator
         private void PWR4_chBx_Checked(object sender, RoutedEventArgs e)
         {
             PWR4_name.IsEnabled = true;
+        }
+
+        private void PWR1_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PWR1_name.IsEditable = false;
+            Modul m= (Modul) PWR1_name.SelectedValue;
+            PWR1_ID.Text = m.ID;
+            PWR1_discription.Text = m.Discription;
+            PWR1_price.Text = m.Price.ToString();
         }
     }
 }
