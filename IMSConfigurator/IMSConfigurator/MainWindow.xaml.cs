@@ -56,6 +56,19 @@ namespace IMSConfigurator
         {
             CLK2_sp.IsEnabled = true;
             RSC_sp.IsEnabled = true;
+            Modul m = (Modul)CLK1_name.SelectedValue;
+            CLK2_name.Text = m.Name;
+            CLK2_ID.Text = m.ID;
+            CLK2_discription.Text = m.Discription;
+            CLK2_price.Text = m.Price.ToString();
+            if (M3000_rbtn.IsChecked == true)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS - RSC M3000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+            }
         }
 
         private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
@@ -150,6 +163,124 @@ namespace IMSConfigurator
         private void PWR4_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelPWR(PWR4_name, PWR4_ID, PWR4_discription, PWR4_price, (Modul)PWR4_name.SelectedValue);
+        }
+
+        private void CLK1_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Double_CLK_chBx.IsEnabled = true;
+            Modul m= (Modul)CLK1_name.SelectedValue;        
+            CLK1_name.IsEditable = false;
+            CLK1_ID.Text = m.ID;
+            CLK1_discription.Text = m.Discription;
+            CLK1_price.Text = m.Price.ToString();
+            if (Double_CLK_chBx.IsEnabled==true && Double_CLK_chBx.IsChecked==true)
+            {
+                CLK2_name.Text = m.Name;
+                CLK2_ID.Text = m.ID;
+                CLK2_discription.Text = m.Discription;
+                CLK2_price.Text = m.Price.ToString();
+            }
+
+        }
+
+        private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT1_name.IsEnabled = true;
+        }
+
+        private void OUT2_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT2_name.IsEnabled = true;
+        }
+
+        private void OUT3_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT3_name.IsEnabled = true;
+        }
+
+        private void OUT4_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT4_name.IsEnabled = true;
+        }
+
+        private void OUT5_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT5_name.IsEnabled = true;
+        }
+
+        private void OUT6_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT6_name.IsEnabled = true;
+        }
+
+        private void OUT7_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT7_name.IsEnabled = true;
+        }
+
+        private void OUT8_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT8_name.IsEnabled = true;
+        }
+
+        private void OUT9_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT9_name.IsEnabled = true;
+        }
+
+        private void OUT10_chkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            OUT10_name.IsEnabled = true;
+        }
+
+        private void OUT1_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT1_name.IsEnabled = false;
+        }
+
+        private void OUT2_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT2_name.IsEnabled = false;
+        }
+
+        private void OUT3_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT3_name.IsEnabled = false;
+        }
+
+        private void OUT4_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT4_name.IsEnabled = false;
+        }
+
+        private void OUT5_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT5_name.IsEnabled = false;
+        }
+
+        private void OUT6_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT6_name.IsEnabled = false;
+        }
+
+        private void OUT7_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT7_name.IsEnabled = false;
+        }
+
+        private void OUT8_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT8_name.IsEnabled = false;
+        }
+
+        private void OUT9_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT9_name.IsEnabled = false;
+        }
+
+        private void OUT10_chkbx_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OUT10_name.IsEnabled = false;
         }
     }
 }
