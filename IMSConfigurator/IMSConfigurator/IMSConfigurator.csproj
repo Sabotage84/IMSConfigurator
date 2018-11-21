@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\GeneratorsModulsVM.cs" />
+    <Compile Include="ViewModel\OutputModulsVM.cs" />
     <Compile Include="ViewModel\PowerModulsVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
