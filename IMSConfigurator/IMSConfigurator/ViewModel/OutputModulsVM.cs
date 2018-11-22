@@ -17,7 +17,6 @@ namespace IMSConfigurator.ViewModel
             Moduls m = new Moduls();
             ModListMV = m.SearchModulsByType(ModulType.Output);
             modListMV.AddRange(m.SearchModulsByType(ModulType.Input));
-            MessageBox.Show(modListMV[0].Name);
         }
     }
 }

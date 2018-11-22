@@ -282,5 +282,20 @@ namespace IMSConfigurator
         {
             OUT10_name.IsEnabled = false;
         }
+
+        private void OUT1_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT1_tooltip.Visibility= Visibility.Visible;
+            
+            OUT2_name.Visibility = Visibility.Hidden;
+            OUT2_ID.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT1_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT1_tooltip.Visibility = Visibility.Hidden;
+            OUT2_name.Visibility = Visibility.Visible;
+            OUT2_ID.Visibility = Visibility.Visible;
+        }
     }
 }
