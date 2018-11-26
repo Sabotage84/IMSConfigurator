@@ -288,14 +288,134 @@ namespace IMSConfigurator
             OUT1_tooltip.Visibility= Visibility.Visible;
             
             OUT2_name.Visibility = Visibility.Hidden;
-            OUT2_ID.Visibility = Visibility.Hidden;
+            
         }
 
         private void OUT1_name_LostFocus(object sender, RoutedEventArgs e)
         {
             OUT1_tooltip.Visibility = Visibility.Hidden;
             OUT2_name.Visibility = Visibility.Visible;
-            OUT2_ID.Visibility = Visibility.Visible;
+           
+        }
+
+        private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT2_tooltip.Visibility = Visibility.Visible;
+            OUT3_name.Visibility = Visibility.Hidden;
+            
+        }
+
+        private void OUT2_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT2_tooltip.Visibility = Visibility.Hidden;
+            OUT3_name.Visibility = Visibility.Visible;
+            
+        }
+
+        private void OUT3_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT3_tooltip.Visibility = Visibility.Visible;
+            OUT4_name.Visibility = Visibility.Hidden;
+           
+        }
+
+        private void OUT3_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT3_tooltip.Visibility = Visibility.Hidden;
+            OUT4_name.Visibility = Visibility.Visible;
+            
+        }
+
+        private void OUT4_sp_GotFocus(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void OUT4_sp_LostFocus(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void OUT4_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT4_tooltip.Visibility = Visibility.Visible;
+            OUT5_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT4_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT4_tooltip.Visibility = Visibility.Hidden;
+            OUT5_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT5_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT5_tooltip.Visibility = Visibility.Visible;
+            OUT6_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT5_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT5_tooltip.Visibility = Visibility.Hidden;
+            OUT6_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT6_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT6_tooltip.Visibility = Visibility.Visible;
+            OUT7_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT6_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT6_tooltip.Visibility = Visibility.Hidden;
+            OUT7_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT7_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT7_tooltip.Visibility = Visibility.Visible;
+            OUT8_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT7_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT7_tooltip.Visibility = Visibility.Hidden;
+            OUT8_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT8_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT8_tooltip.Visibility = Visibility.Visible;
+            OUT9_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT8_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT8_tooltip.Visibility = Visibility.Hidden;
+            OUT9_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT9_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT9_tooltip.Visibility = Visibility.Visible;
+            OUT10_name.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT9_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT9_tooltip.Visibility = Visibility.Hidden;
+            OUT10_name.Visibility = Visibility.Visible;
+        }
+
+        private void OUT10_name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            OUT10_tooltip.Visibility = Visibility.Visible;
+        }
+
+        private void OUT10_name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            OUT10_tooltip.Visibility = Visibility.Hidden;
         }
     }
 }
