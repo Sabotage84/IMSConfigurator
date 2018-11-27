@@ -1,4 +1,5 @@
 ﻿using IMSConfigurator.Models;
+using IMSConfigurator.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -416,6 +417,12 @@ namespace IMSConfigurator
         private void OUT10_name_LostFocus(object sender, RoutedEventArgs e)
         {
             OUT10_tooltip.Visibility = Visibility.Hidden;
+        }
+
+        private void OUT4_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            OutputModulsVM temp=(OutputModulsVM)OUTs_grp_bx.DataContext;
+            temp.UdateList(OUT4_name.Text);
         }
     }
 }
