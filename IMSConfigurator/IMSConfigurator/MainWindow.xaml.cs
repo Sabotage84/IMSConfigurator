@@ -421,8 +421,58 @@ namespace IMSConfigurator
 
         private void OUT4_name_TextChanged(object sender, TextChangedEventArgs e)
         {
-            OutputModulsVM temp=(OutputModulsVM)OUTs_grp_bx.DataContext;
-            temp.UdateList(OUT4_name.Text);
+            SearchModuls(OUT4_name.Text);
+        }
+
+        private void SearchModuls(string searchText)
+        {
+            OutputModulsVM temp = (OutputModulsVM)OUTs_grp_bx.DataContext;
+            temp.UdateList(searchText);
+        }
+
+        private void OUT1_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT1_name.Text);
+        }
+
+        private void OUT2_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT2_name.Text);
+        }
+
+        private void OUT3_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT3_name.Text);
+        }
+
+        private void OUT5_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT5_name.Text);
+        }
+
+        private void OUT6_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT6_name.Text);
+        }
+
+        private void OUT7_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT7_name.Text);
+        }
+
+        private void OUT8_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT8_name.Text);
+        }
+
+        private void OUT9_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT9_name.Text);
+        }
+
+        private void OUT10_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SearchModuls(OUT10_name.Text);
         }
     }
 }

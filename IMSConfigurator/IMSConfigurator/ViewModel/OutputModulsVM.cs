@@ -13,10 +13,9 @@ namespace IMSConfigurator.ViewModel
 {
     class OutputModulsVM : INotifyPropertyChanged
     {
-        string searchOutsName;
+       
         public ObservableCollection<Modul> modListMV;
         public List<Modul> allModuls;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<Modul> ModListMV { get => modListMV;
@@ -26,14 +25,6 @@ namespace IMSConfigurator.ViewModel
                
             }
         }
-        public string SearchOutsName { get => searchOutsName;
-            set {
-                searchOutsName = value;
-                OnPropertyChanged(nameof(SearchOutsName));
-                UdateList(SearchOutsName);
-            }
-        }
-
         private void OnPropertyChanged([CallerMemberName]string prop="" )
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
@@ -41,7 +32,6 @@ namespace IMSConfigurator.ViewModel
 
         public void UdateList(string searchOutsName)
         {
-            //MessageBox.Show("Test");
             List<Modul> s_Moduls =new List<Modul>();
             foreach (var item in allModuls)
             {
@@ -58,12 +48,6 @@ namespace IMSConfigurator.ViewModel
             }
             else
             {
-                //ModListMV.Clear();
-                //foreach (var item in collection)
-                //{
-
-                //}
-                
                 ModListMV = new  ObservableCollection<Modul>(s_Moduls);
             }
         }
