@@ -474,5 +474,77 @@ namespace IMSConfigurator
         {
             SearchModuls(OUT10_name.Text);
         }
+
+        private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Modul mm = new Modul();
+            Modul mm2 = (Modul)OUT1_tooltip.SelectedItem;
+            mm.Name = mm2.Name;
+            mm.ID = mm2.ID;
+            mm.Discription = mm2.Discription;
+            mm.Price = mm2.Price;
+            FeelOutModul(mm, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+        }
+
+        private void FeelOutModul(Modul m, TextBox name, TextBlock ID, TextBlock dis, TextBlock price)
+        {
+            if (ID != null)
+            {
+                name.Text = m.Name;
+                ID.Text = m.ID;
+                dis.Text = m.Discription;
+                price.Text = m.Price.ToString();
+            }
+        }
+
+        private void OUT2_name_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void OUT2_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT2_tooltip.SelectedItem, OUT2_name, OUT2_ID, OUT2_discription, OUT2_price);
+        }
+
+        private void OUT3_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT3_tooltip.SelectedItem, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+        }
+
+        private void OUT4_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT4_tooltip.SelectedItem, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+        }
+
+        private void OUT5_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT5_tooltip.SelectedItem, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+        }
+
+        private void OUT6_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT6_tooltip.SelectedItem, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+        }
+
+        private void OUT7_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT7_tooltip.SelectedItem, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+        }
+
+        private void OUT8_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT8_tooltip.SelectedItem, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+        }
+
+        private void OUT9_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT9_tooltip.SelectedItem, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+        }
+
+        private void OUT10_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FeelOutModul((Modul)OUT10_tooltip.SelectedItem, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+        }
     }
 }

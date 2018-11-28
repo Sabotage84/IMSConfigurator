@@ -28,6 +28,10 @@ namespace IMSConfigurator.Models
             Price = price;
             Type = type;
         }
+        public Modul()
+        {
+
+        }
     }
 
     public enum ModulType
