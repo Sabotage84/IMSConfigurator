@@ -287,23 +287,22 @@ namespace IMSConfigurator
         private void OUT1_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT1_tooltip.Visibility= Visibility.Visible;
-            
             OUT2_name.Visibility = Visibility.Hidden;
-            
+            SearchModuls(OUT1_name.Text);
         }
 
         private void OUT1_name_LostFocus(object sender, RoutedEventArgs e)
         {
             OUT1_tooltip.Visibility = Visibility.Hidden;
             OUT2_name.Visibility = Visibility.Visible;
-           
+            
         }
 
         private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT2_tooltip.Visibility = Visibility.Visible;
             OUT3_name.Visibility = Visibility.Hidden;
-            
+            SearchModuls(OUT2_name.Text);
         }
 
         private void OUT2_name_LostFocus(object sender, RoutedEventArgs e)
@@ -317,7 +316,7 @@ namespace IMSConfigurator
         {
             OUT3_tooltip.Visibility = Visibility.Visible;
             OUT4_name.Visibility = Visibility.Hidden;
-           
+            SearchModuls(OUT3_name.Text);
         }
 
         private void OUT3_name_LostFocus(object sender, RoutedEventArgs e)
@@ -341,6 +340,7 @@ namespace IMSConfigurator
         {
             OUT4_tooltip.Visibility = Visibility.Visible;
             OUT5_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT4_name.Text);
         }
 
         private void OUT4_name_LostFocus(object sender, RoutedEventArgs e)
@@ -353,6 +353,7 @@ namespace IMSConfigurator
         {
             OUT5_tooltip.Visibility = Visibility.Visible;
             OUT6_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT5_name.Text);
         }
 
         private void OUT5_name_LostFocus(object sender, RoutedEventArgs e)
@@ -365,6 +366,7 @@ namespace IMSConfigurator
         {
             OUT6_tooltip.Visibility = Visibility.Visible;
             OUT7_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT6_name.Text);
         }
 
         private void OUT6_name_LostFocus(object sender, RoutedEventArgs e)
@@ -377,6 +379,7 @@ namespace IMSConfigurator
         {
             OUT7_tooltip.Visibility = Visibility.Visible;
             OUT8_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT7_name.Text);
         }
 
         private void OUT7_name_LostFocus(object sender, RoutedEventArgs e)
@@ -389,18 +392,21 @@ namespace IMSConfigurator
         {
             OUT8_tooltip.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT8_name.Text);
         }
 
         private void OUT8_name_LostFocus(object sender, RoutedEventArgs e)
         {
             OUT8_tooltip.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Visible;
+
         }
 
         private void OUT9_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT9_tooltip.Visibility = Visibility.Visible;
             OUT10_name.Visibility = Visibility.Hidden;
+            SearchModuls(OUT9_name.Text);
         }
 
         private void OUT9_name_LostFocus(object sender, RoutedEventArgs e)
@@ -412,6 +418,7 @@ namespace IMSConfigurator
         private void OUT10_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT10_tooltip.Visibility = Visibility.Visible;
+            SearchModuls(OUT10_name.Text);
         }
 
         private void OUT10_name_LostFocus(object sender, RoutedEventArgs e)
@@ -477,23 +484,18 @@ namespace IMSConfigurator
 
         private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Modul mm = new Modul();
-            Modul mm2 = (Modul)OUT1_tooltip.SelectedItem;
-            mm.Name = mm2.Name;
-            mm.ID = mm2.ID;
-            mm.Discription = mm2.Discription;
-            mm.Price = mm2.Price;
-            FeelOutModul(mm, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            FeelOutModul((Modul)OUT1_tooltip.SelectedItem, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
         }
 
         private void FeelOutModul(Modul m, TextBox name, TextBlock ID, TextBlock dis, TextBlock price)
         {
-            if (ID != null)
+            if (m != null)
             {
-                name.Text = m.Name;
                 ID.Text = m.ID;
                 dis.Text = m.Discription;
                 price.Text = m.Price.ToString();
+                string str = m.Name;
+                name.Text = str;
             }
         }
 

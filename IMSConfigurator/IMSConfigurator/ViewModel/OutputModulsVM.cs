@@ -33,6 +33,7 @@ namespace IMSConfigurator.ViewModel
         public void UdateList(string searchOutsName)
         {
             List<Modul> s_Moduls =new List<Modul>();
+            modListMV = new ObservableCollection<Modul>(allModuls);
             foreach (var item in allModuls)
             {
                 if (item.Name.Contains(searchOutsName))
