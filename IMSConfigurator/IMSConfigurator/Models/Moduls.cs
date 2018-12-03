@@ -13,6 +13,7 @@ namespace IMSConfigurator.Models
 
         public Moduls()
         {
+            m_moduls.Add(new Modul ("Метроном-3000"                 ,"?????",   "Шасси Метроном-3000", 371, ModulType.Chassis));
             m_moduls.Add(new Modul ("IMS - ACM M3000"               ,"27550",   "active cooling module for 3U IMS - chassis                ",   371,    ModulType.Cooler     ));
             m_moduls.Add(new Modul ("IMS - ACM M1000"               ,"27551",   "active cooling module for 1U IMS - chassis                ",   170,    ModulType.Cooler     ));
             m_moduls.Add(new Modul ("IMS - BPE - 1040"              ,"27033",   "4 x TC AM / BNC Connectors                                ",   513,    ModulType.Output     ));

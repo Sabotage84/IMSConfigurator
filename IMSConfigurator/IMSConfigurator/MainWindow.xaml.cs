@@ -548,5 +548,55 @@ namespace IMSConfigurator
         {
             FeelOutModul((Modul)OUT10_tooltip.SelectedItem, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (M1000_rbtn.IsChecked==true)
+            {
+                CreateM1000_Offer();
+            }
+            else if (M3000_rbtn.IsChecked==true)
+            {
+                CreateM3000_Offer();
+            }
+            else
+                MessageBox.Show("Выбирите шасси!");
+        }
+
+        private void CreateM3000_Offer()
+        {
+            List<Modul> m3000 = new List<Modul>();
+            string temp = "";
+            m3000.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
+            m3000.AddRange(GetCLKModuls());
+            foreach (var item in m3000)
+            {
+                temp += item.Name;
+                temp += "\\";
+            }
+            MessageBox.Show(temp);
+        }
+
+        private List<Modul> GetCLKModuls()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (!string.IsNullOrEmpty(CLK1_name.Text))
+                temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
+            else
+            {
+                MessageBox.Show("Необходимо выбрать генератор");
+            }
+            if (Double_CLK_chBx.IsChecked == true)
+            {
+                temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
+                temp.Add(m_moduls.SearchModul(RSC_name.Text, ModulType.Switcher));
+            }
+            return temp;
+        }
+
+        private void CreateM1000_Offer()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

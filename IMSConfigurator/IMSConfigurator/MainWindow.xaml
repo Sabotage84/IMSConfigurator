@@ -7,12 +7,12 @@
         xmlns:Local="clr-namespace:IMSConfigurator.Models"
         xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.MainWindow"
         mc:Ignorable="d"
-        Title="IMSCofigurator" Height="602.866" Width="1313.366">
+        Title="IMSCofigurator" Height="549.666" Width="1313.366">
     <Window.DataContext>
         <ViewModel:PowerModulsVM/>
     </Window.DataContext>
 
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical" Margin="0,0,0.2,0.2">
         <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1305">
             <MenuItem Header="Настройки">
                 <MenuItem Header="Управление модулями"/>
@@ -233,6 +233,7 @@
                 </GroupBox>
             </StackPanel>
         </StackPanel>
-        <ListBox Height="100"/>
+        <Button Content="Создать КП" Height="25" Margin="0,15,188.2,0" HorizontalAlignment="Right" Width="120" Click="Button_Click"/>
+
     </StackPanel>
 </Window>
