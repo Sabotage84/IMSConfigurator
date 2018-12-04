@@ -569,12 +569,38 @@ namespace IMSConfigurator
             string temp = "";
             m3000.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
             m3000.AddRange(GetCLKModuls());
+
+
+            m3000.AddRange(GetPWRModuls());
             foreach (var item in m3000)
             {
                 temp += item.Name;
                 temp += "\\";
             }
             MessageBox.Show(temp);
+        }
+
+        private List<Modul> GetPWRModuls()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (PWR1_chBx.IsChecked == true)
+                temp.Add( GetPwr(PWR1_name.Text));
+            if (PWR2_chBx.IsChecked == true)
+                temp.Add(GetPwr(PWR2_name.Text));
+            if (PWR3_chBx.IsChecked == true)
+                temp.Add(GetPwr(PWR3_name.Text));
+            if (PWR4_chBx.IsChecked == true)
+                temp.Add(GetPwr(PWR4_name.Text));
+
+            return temp;
+        }
+
+        private Modul GetPwr(string p_name)
+        {
+            if (!string.IsNullOrEmpty(p_name))
+                return m_moduls.SearchModul(p_name, ModulType.Power);
+            else
+                return null;
         }
 
         private List<Modul> GetCLKModuls()
