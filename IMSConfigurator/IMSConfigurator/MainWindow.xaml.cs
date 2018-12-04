@@ -569,7 +569,7 @@ namespace IMSConfigurator
             string temp = "";
             m3000.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
             m3000.AddRange(GetCLKModuls());
-
+            m3000.AddRange(GetCPUModul());
 
             m3000.AddRange(GetPWRModuls());
             foreach (var item in m3000)
@@ -578,6 +578,15 @@ namespace IMSConfigurator
                 temp += "\\";
             }
             MessageBox.Show(temp);
+        }
+
+        private List<Modul> GetCPUModul()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (CPU_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(CPU_name.Text))
+                 temp.Add(m_moduls.SearchModul(CPU_name.Text, ModulType.Processor));
+            return temp;
         }
 
         private List<Modul> GetPWRModuls()
