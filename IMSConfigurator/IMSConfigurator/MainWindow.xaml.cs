@@ -572,11 +572,15 @@ namespace IMSConfigurator
             m3000.AddRange(GetCPUModul());
             m3000.AddRange(GetOutModuls());
             m3000.AddRange(GetPWRModuls());
-            foreach (var item in m3000)
+            if (CheckM3000Model.Check(m3000))
             {
-                temp += item.Name;
-                temp += "\\";
+                foreach (var item in m3000)
+                {
+                    temp += item.Name;
+                    temp += "\\";
+                }
             }
+            
             MessageBox.Show(temp);
         }
 
