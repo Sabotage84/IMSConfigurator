@@ -570,7 +570,7 @@ namespace IMSConfigurator
             m3000.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
             m3000.AddRange(GetCLKModuls());
             m3000.AddRange(GetCPUModul());
-
+            m3000.AddRange(GetOutModuls());
             m3000.AddRange(GetPWRModuls());
             foreach (var item in m3000)
             {
@@ -578,6 +578,42 @@ namespace IMSConfigurator
                 temp += "\\";
             }
             MessageBox.Show(temp);
+        }
+
+        private List<Modul> GetOutModuls()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (OUT1_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT1_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT1_name.Text, ModulType.Output));
+            if (OUT2_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT2_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT2_name.Text, ModulType.Output));
+            if (OUT3_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT3_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT3_name.Text, ModulType.Output));
+            if (OUT4_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT4_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT4_name.Text, ModulType.Output));
+            if (OUT5_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT5_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT5_name.Text, ModulType.Output));
+            if (OUT6_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT6_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT6_name.Text, ModulType.Output));
+            if (OUT7_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT7_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT7_name.Text, ModulType.Output));
+            if (OUT8_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT8_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT8_name.Text, ModulType.Output));
+            if (OUT9_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT9_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT9_name.Text, ModulType.Output));
+            if (OUT10_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT10_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT10_name.Text, ModulType.Output));
+            return temp;
         }
 
         private List<Modul> GetCPUModul()
