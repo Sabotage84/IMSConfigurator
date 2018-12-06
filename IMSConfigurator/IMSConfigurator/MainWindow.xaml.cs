@@ -565,23 +565,37 @@ namespace IMSConfigurator
 
         private void CreateM3000_Offer()
         {
-            List<Modul> m3000 = new List<Modul>();
-            string temp = "";
-            m3000.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
-            m3000.AddRange(GetCLKModuls());
-            m3000.AddRange(GetCPUModul());
-            m3000.AddRange(GetOutModuls());
-            m3000.AddRange(GetPWRModuls());
-            if (CheckM3000Model.Check(m3000))
-            {
-                foreach (var item in m3000)
-                {
-                    temp += item.Name;
-                    temp += "\\";
-                }
-            }
             
+            List<Modul> m3000 = new List<Modul>();
+            m3000=CollectAllModuls();
+            Metronome3000 m3 = new Metronome3000(m3000);
+            if (m3.AllOK)
+                MessageBox.Show("all ok");
+            else
+                MessageBox.Show("all wrong");
+
+
+            //FOR TEST
+            string temp = "";
+            
+           foreach (var item in m3000)
+           {
+               temp += item.Name;
+               temp += "\\";
+           }
+           
             MessageBox.Show(temp);
+        }
+
+        private List<Modul> CollectAllModuls()
+        {
+            List<Modul> temp = new List<Modul>();
+            temp.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
+            temp.AddRange(GetCLKModuls());
+            temp.AddRange(GetCPUModul());
+            temp.AddRange(GetOutModuls());
+            temp.AddRange(GetPWRModuls());
+            return temp;
         }
 
         private List<Modul> GetOutModuls()
@@ -656,7 +670,11 @@ namespace IMSConfigurator
         {
             List<Modul> temp = new List<Modul>();
             if (!string.IsNullOrEmpty(CLK1_name.Text))
-                temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
+            {
+                Modul m = m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator);
+                if (m!=null)
+                    temp.Add(m);
+            }
             else
             {
                 MessageBox.Show("Необходимо выбрать генератор");
