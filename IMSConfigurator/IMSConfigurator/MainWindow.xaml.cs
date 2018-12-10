@@ -569,10 +569,10 @@ namespace IMSConfigurator
             List<Modul> m3000 = new List<Modul>();
             m3000=CollectAllModuls();
             Metronome3000 m3 = new Metronome3000(m3000);
-            if (m3.AllOK)
-                MessageBox.Show("all ok");
+            if (m3.Status.check)
+                MessageBox.Show(m3.Status.message);
             else
-                MessageBox.Show("all wrong");
+                MessageBox.Show(m3.Status.message);
 
 
             //FOR TEST

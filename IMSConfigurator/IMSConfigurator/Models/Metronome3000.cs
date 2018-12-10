@@ -9,7 +9,7 @@ namespace IMSConfigurator.Models
 {
     class Metronome3000
     {
-        bool allOK = false;
+        err status = new err { message = "OK", check = true };
         ModulForKP[] chs = new ModulForKP[1];
         ModulForKP[] clk = new ModulForKP[2];
         ModulForKP[] rsc = new ModulForKP[1];
@@ -19,27 +19,65 @@ namespace IMSConfigurator.Models
 
         public Metronome3000(List<Modul> m3000)
         {
-            if (!CheckAll(m3000).check)
+            if (CheckAll(m3000).check)
             {
-                MessageBox.Show(CheckForNull(m3000).message);
-                AllOK = false;
+                Status.check = true;
             }
             else
             {
-                AllOK = true;
+                Status.check = false;
+               
             }
 
         }
 
-        public bool AllOK { get => allOK; set => allOK = value; }
+        public err Status { get => status; set => status = value; }
 
         private err CheckAll(List<Modul> m3000)
         {
             if (!CheckForNull(m3000).check)
-                return CheckForNull(m3000);
+            {
+                Status = CheckForNull(m3000);
+                return Status;
+            }
             if (!CheckRightCount(m3000).check)
-                return CheckRightCount(m3000);
+            {
+                Status =CheckRightCount(m3000);
+                return Status;
+            }
+            if (!CheckNessesaryModuls(m3000).check)
+            {
+                Status =CheckNessesaryModuls(m3000);
+                return Status;
+            }
+            if (!CheckInputModuls(m3000).check)
+            {
+                Status = CheckInputModuls(m3000);
+                return Status;
+            }
 
+            return new err { message = "OK", check = true };
+        }
+
+        private err CheckInputModuls(List<Modul> m3000)
+        {
+            
+        }
+
+        private err CheckNessesaryModuls(List<Modul> m3000)
+        {
+            Modul pwr=null, cpu=null, clk=null;
+            foreach (var item in m3000)
+            {
+                if (item.Type == ModulType.Generator)
+                    clk = item;
+                if (item.Type == ModulType.Processor)
+                    cpu = item;
+                if (item.Type == ModulType.Power)
+                    pwr = item;
+            }
+            if (pwr==null || clk==null || cpu==null)
+                return new err { message = "Нет необходимых модулей!", check = false };
             return new err { message = "OK", check = true };
         }
 
