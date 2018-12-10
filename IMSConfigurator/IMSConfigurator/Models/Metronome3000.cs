@@ -10,12 +10,8 @@ namespace IMSConfigurator.Models
     class Metronome3000
     {
         err status = new err { message = "OK", check = true };
-        ModulForKP[] chs = new ModulForKP[1];
-        ModulForKP[] clk = new ModulForKP[2];
-        ModulForKP[] rsc = new ModulForKP[1];
-        ModulForKP[] cpu = new ModulForKP[1];
-        ModulForKP[] ots = new ModulForKP[10];
-        ModulForKP[] pwr = new ModulForKP[4];
+        List<KPPosition> kpLIST = new List<KPPosition>();
+        string fullName = "";
 
         public Metronome3000(List<Modul> m3000)
         {
@@ -32,6 +28,8 @@ namespace IMSConfigurator.Models
         }
 
         public err Status { get => status; set => status = value; }
+        internal List<KPPosition> KpLIST { get => kpLIST; set => kpLIST = value; }
+        public string FullName { get => fullName; set => fullName = value; }
 
         private err CheckAll(List<Modul> m3000)
         {
@@ -50,18 +48,32 @@ namespace IMSConfigurator.Models
                 Status =CheckNessesaryModuls(m3000);
                 return Status;
             }
-            if (!CheckInputModuls(m3000).check)
-            {
-                Status = CheckInputModuls(m3000);
-                return Status;
-            }
+
+            KpLIST = m3000.GroupBy(x => x).Select(g=>(new KPPosition(g.Key, g.Count()))).ToList();
+            FullName=GetFullName(KpLIST);
 
             return new err { message = "OK", check = true };
         }
 
-        private err CheckInputModuls(List<Modul> m3000)
+        private string GetFullName(List<KPPosition> kpLIST)
         {
-            
+            string FullName="";
+            foreach (var item in kpLIST)
+            {
+                if (item.count > 1)
+                {
+                    FullName = FullName + item.count+" x "+ item.mod.Name;
+                    FullName += "\\";
+                }
+                else
+                {
+                    FullName = FullName + item.mod.Name;
+                    FullName += "\\";
+                }
+            }
+            if (!string.IsNullOrEmpty(FullName))
+                FullName = FullName.Substring(0, FullName.Length - 1);
+            return FullName;
         }
 
         private err CheckNessesaryModuls(List<Modul> m3000)
@@ -143,9 +155,16 @@ namespace IMSConfigurator.Models
         public bool check;
     }
 
-    class ModulForKP:Modul
+    class KPPosition
     {
-        int count;
+        public Modul mod;
+        public int count;
+
+        public KPPosition(Modul m, int c)
+        {
+            this.mod = m;
+            this.count = c;
+        }
     }
 
 }

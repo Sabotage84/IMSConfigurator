@@ -576,15 +576,15 @@ namespace IMSConfigurator
 
 
             //FOR TEST
-            string temp = "";
+           // string temp = "";
             
-           foreach (var item in m3000)
-           {
-               temp += item.Name;
-               temp += "\\";
-           }
+           //foreach (var item in m3000)
+           //{
+           //    temp += item.Name;
+           //    temp += "\\";
+           //}
            
-            MessageBox.Show(temp);
+            MessageBox.Show(m3.FullName);
         }
 
         private List<Modul> CollectAllModuls()
