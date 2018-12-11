@@ -1,4 +1,5 @@
-﻿using IMSConfigurator.Models;
+﻿using IMSConfigurator.ExcelProv;
+using IMSConfigurator.Models;
 using IMSConfigurator.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -574,17 +575,14 @@ namespace IMSConfigurator
             else
                 MessageBox.Show(m3.Status.message);
 
-
-            //FOR TEST
-           // string temp = "";
-            
-           //foreach (var item in m3000)
-           //{
-           //    temp += item.Name;
-           //    temp += "\\";
-           //}
-           
             MessageBox.Show(m3.FullName);
+            CreateExcelOffer(m3);
+        }
+
+        private void CreateExcelOffer(Metronome3000 m3)
+        {
+             ExcelProvider e = new ExcelProvider();
+            
         }
 
         private List<Modul> CollectAllModuls()
