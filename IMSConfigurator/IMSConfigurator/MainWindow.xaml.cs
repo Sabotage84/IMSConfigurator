@@ -581,8 +581,8 @@ namespace IMSConfigurator
 
         private void CreateExcelOffer(Metronome3000 m3)
         {
-             ExcelProvider e = new ExcelProvider();
-            
+            ExcelProvider e = new ExcelProvider();
+            e.OpenExcelFile(@"../../KP1.xls", true);
         }
 
         private List<Modul> CollectAllModuls()
