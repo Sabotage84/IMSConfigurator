@@ -33,8 +33,9 @@ namespace IMSConfigurator.ExcelProv
         public void OpenExcelFile(string fileName, bool visible)
         {
 
-
-            if (File.Exists(fileName))
+            FileInfo f = new FileInfo(fileName);
+            
+            if (f.Exists)
             {
                 bool retry = true;      //своебразный костыль     
                 do                      //при открытии разных версий эксель
@@ -54,7 +55,7 @@ namespace IMSConfigurator.ExcelProv
                 //пробуем отрыть файл
                 try
                 {
-                    EXappworkbook = EXapp.Workbooks.Open(fileName,
+                    EXappworkbook = EXapp.Workbooks.Open(f.FullName,
                     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
                     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
                     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
@@ -63,9 +64,9 @@ namespace IMSConfigurator.ExcelProv
                     EXsheets = EXappworkbook.Worksheets;
                     EXworksheet = (Excel.Worksheet)EXsheets.get_Item(1);
                 }
-                catch
+                catch(Exception e)
                 {
-                    MessageBox.Show("Не удалось открыть файл: " + fileName);
+                    MessageBox.Show("Не удалось открыть файл: " + fileName+"\n" + e.Message + "\n" +e.Source + "\n" +e.InnerException);
                 }
             }
             else

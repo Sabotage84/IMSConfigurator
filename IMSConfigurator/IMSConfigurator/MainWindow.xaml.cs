@@ -552,16 +552,20 @@ namespace IMSConfigurator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (M1000_rbtn.IsChecked==true)
-            {
-                CreateM1000_Offer();
-            }
-            else if (M3000_rbtn.IsChecked==true)
-            {
-                CreateM3000_Offer();
-            }
-            else
-                MessageBox.Show("Выбирите шасси!");
+            List<Modul> m3000 = new List<Modul>();
+            
+            Metronome3000 m3 = new Metronome3000(m3000);
+            CreateExcelOffer(m3);
+            //if (M1000_rbtn.IsChecked==true)
+            //{
+            //    CreateM1000_Offer();
+            //}
+            //else if (M3000_rbtn.IsChecked==true)
+            //{
+            //    CreateM3000_Offer();
+            //}
+            //else
+            //    MessageBox.Show("Выбирите шасси!");
         }
 
         private void CreateM3000_Offer()
@@ -576,13 +580,14 @@ namespace IMSConfigurator
                 MessageBox.Show(m3.Status.message);
 
             MessageBox.Show(m3.FullName);
-            CreateExcelOffer(m3);
+           
         }
 
         private void CreateExcelOffer(Metronome3000 m3)
         {
             ExcelProvider e = new ExcelProvider();
-            e.OpenExcelFile(@"../../KP1.xls", true);
+            //e.OpenExcelFile(@"C:\qtprojects\IMSConfigurator\IMSConfigurator\IMSConfigurator\bin\Debug\1.xls", true);
+            e.OpenExcelFile(@"1.xls", true);
         }
 
         private List<Modul> CollectAllModuls()
