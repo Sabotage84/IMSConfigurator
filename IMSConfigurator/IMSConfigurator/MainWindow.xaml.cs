@@ -552,20 +552,16 @@ namespace IMSConfigurator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            List<Modul> m3000 = new List<Modul>();
-            
-            Metronome3000 m3 = new Metronome3000(m3000);
-            CreateExcelOffer(m3);
-            //if (M1000_rbtn.IsChecked==true)
-            //{
-            //    CreateM1000_Offer();
-            //}
-            //else if (M3000_rbtn.IsChecked==true)
-            //{
-            //    CreateM3000_Offer();
-            //}
-            //else
-            //    MessageBox.Show("Выбирите шасси!");
+            if (M1000_rbtn.IsChecked == true)
+            {
+                CreateM1000_Offer();
+            }
+            else if (M3000_rbtn.IsChecked == true)
+            {
+                CreateM3000_Offer();
+            }
+            else
+                MessageBox.Show("Выбирите шасси!");
         }
 
         private void CreateM3000_Offer()
@@ -574,20 +570,20 @@ namespace IMSConfigurator
             List<Modul> m3000 = new List<Modul>();
             m3000=CollectAllModuls();
             Metronome3000 m3 = new Metronome3000(m3000);
-            if (m3.Status.check)
+            if (!m3.Status.check)
                 MessageBox.Show(m3.Status.message);
             else
-                MessageBox.Show(m3.Status.message);
+                CreateExcelOffer(m3);
 
-            MessageBox.Show(m3.FullName);
+            //MessageBox.Show(m3.FullName);
            
         }
 
         private void CreateExcelOffer(Metronome3000 m3)
         {
-            ExcelProvider e = new ExcelProvider();
-            //e.OpenExcelFile(@"C:\qtprojects\IMSConfigurator\IMSConfigurator\IMSConfigurator\bin\Debug\1.xls", true);
-            e.OpenExcelFile(@"1.xls", true);
+            ExcelProvider ex = new ExcelProvider();
+            ex.OpenExcelFile(@"1.xls", true);
+            ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
         }
 
         private List<Modul> CollectAllModuls()
