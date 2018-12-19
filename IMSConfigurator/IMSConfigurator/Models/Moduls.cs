@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace IMSConfigurator.Models
         {
             m_moduls.Add(new Modul ("Устройство синхронизации частоты и времени Метроном - 3000", "27000", "Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19\" 3U.", 1070, ModulType.Chassis));
             m_moduls.Add(new Modul ("IMS - ACM M3000"               ,"27550",   "active cooling module for 3U IMS - chassis                ",   371,    ModulType.Cooler     ));
-            m_moduls.Add(new Modul ("IMS - ACM M1000"               ,"27551",   "active cooling module for 1U IMS - chassis                ",   170,    ModulType.Cooler     ));
+            m_moduls.Add(new Modul ("IMS - ACM M1000"               ,"27551",   "Модуль охлаждения",   170,    ModulType.Cooler     ));
             m_moduls.Add(new Modul ("IMS - BPE - 1040"              ,"27033",   "4 x TC AM / BNC Connectors                                ",   513,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - BPE - 1062"              ,"27045",   "4x DCF77 SIM / BNC Connectors - Hopf Level                ",   513,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - BPE - 2000"              ,"27565",   "4 BNC outputs: 4 x PPS                                    ",   463,    ModulType.Output     ));
@@ -45,14 +45,20 @@ namespace IMSConfigurator.Models
             m_moduls.Add(new Modul ("IMS - BPE - 5080"              ,"27031",   "Fixed Outputs - 4x 2048kHz / FO Connectors                ",   710,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - BPE - 5082"              ,"27529",   "Fixed Outputs - PPS, 10MHz, 2 x 2048kHz / FO              ",   710,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - BPE - 5080"              ,"27575",   "Fixed Outputs - Fiber Optical ST Connectors PP1 - PP4     ",   710,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS - CES - 1000"              ,"27521",   "Standard Error Relay Out                                  ",   24,     ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS-CES-1000", "27521", "Карта аварийной сигнализации (реле).", 25, ModulType.Output));
+            
             m_moduls.Add(new Modul ("IMS - CES - 1011"              ,"27071",   "PPS and 10MHz via BNC female and Error Relay Out.         ",   88,     ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS - CPE - 1000"              ,"27070",   "4 x configurable BNC pules outputs                        ",   854,    ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS-CPE-1000", "27070", "Управляемая карта выходных интерфейсов 1PPS, 10 МГц, синт частот синус, TTL, IRIG, AFNOR, IEEE1344, C37.118, NASA36, PPOs, DCF77 MARK, 4xBNC.",   855,    ModulType.Output     ));
+            
             m_moduls.Add(new Modul ("IMS - CPE - 1002"              ,"27112",   "2x Capture Input Signals / BNC Connector                  ",   854,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 1040"              ,"27570",   "4 x configurable BNC Outputs - TC AM                      ",   944,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 1050"              ,"27036",   "3x Programmable Outputs, 1x TC AM / BNC                   ",   854,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 2500"              ,"27037",   "4x Progr.Pulses / 2pin DFK PhotoMOS, 1x TC AM / BNC       ",   847,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS - CPE - 3000"              ,"27028",   "Config.Serial Time String(RS232 + PPS) / 2x DSUB9         ",   858,    ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS - CPE - 3000", "27028", "Карта выходных сигналов RS232+PPS. 2x DSUB9", 860, ModulType.Output));      
+            
             m_moduls.Add(new Modul ("IMS - CPE - 3010"              ,"27075",   "Configurable Serial Time String(RS422) / 2xDSUB9          ",   858,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 3020"              ,"27526",   "Config.serial Time String: RS4222 + PPS, 2x DSUB9         ",   858,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS - CPE - 3030"              ,"27114",   "Configurable Serial Time Strings(RS485) / 2x DSUB9        ",   858,    ModulType.Output     ));
@@ -61,8 +67,8 @@ namespace IMSConfigurator.Models
             m_moduls.Add(new Modul ("IMS - CPE - 5000"              ,"27023",   "4 x progr.Pulses / FO connectors                          ",   1051,   ModulType.Output     ));
 
             m_moduls.Add(new Modul ("IMS - CPU"                     ,"27018",   "Процессор управления. Графический веб интерфейс, ПО: LTOSv6. HTTP, NTP, SSH, SNMP. 1 x LAN порт 10/100 Мбит/с.",   874,    ModulType.Processor  ));
-
-            m_moduls.Add(new Modul ("IMS - ESI"                     ,"27007",   "Extended Reference Inputs                                 ",   902,    ModulType.Input      ));
+            m_moduls.Add(new Modul ("IMS - ESI", "27007", "Карта внешней синхронизации от сигналов E1 (2,048 МГц / 2,048 Мбит/с, SSM/BOC).",   900,    ModulType.Input      ));
+            
             m_moduls.Add(new Modul ("IMS - FDM180"                  ,"27076",   "Mains frequency 70 - 270 V AC, 50Hz or 60Hz               ",   849,    ModulType.Output     ));
 
             m_moduls.Add(new Modul ("IMS-CLK GLN-DHQ"               ,"27044", "Приемник ГЛОНАСС/GPS, опорный генератор OCXO-DHQ.",   2350,   ModulType.Generator  ));
@@ -86,11 +92,15 @@ namespace IMSConfigurator.Models
             m_moduls.Add(new Modul ("IMS-CLK GNS181 - UC - MQ"    ,"27604",   "incl.GPS antenna and 20m cable RG58                       ",   1631,   ModulType.Generator  ));
             m_moduls.Add(new Modul ("IMS-CLK GNS181 - UC - SQ"    ,"27605",   "incl.GPS antenna and 20m cable RG58                       ",   1502,   ModulType.Generator  ));
             m_moduls.Add(new Modul ("IMS-HPS100"                  ,"27063",   "PL - A: 8 Clients                                         ",   876,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-HPS100"                  ,"27074",   "PL - B: 256 Clients                                       ",   1185,   ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS-HPS100"                  ,"27074",   "PL-B. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP).",   1200,   ModulType.Output     ));
+            
             m_moduls.Add(new Modul ("IMS-HPS100"                  ,"27073",   "PL - C: 512 Clients                                       ",   1701,   ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-HPS100"                  ,"27061",   "PL - E: 2048 Clients                                      ",   2732,   ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LIU A0004"               ,"27091",   "Line Interface Unit, E1 / T1 generator, Clock(0 / 4)      ",   623,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-LIU A0040"               ,"27090",   "Line Interface Unit, E1 / T1 generator, 4 x RJ45          ",   623,    ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS-LIU A0040", "27090", "Карта интерфейсов  4 x 2,048 МГц. 120 Ом. Разъём RJ45.",   620,    ModulType.Output     ));
+            
             m_moduls.Add(new Modul ("IMS-LIU A0044"               ,"27571",   "Line Interface Unit, E1 / T1gen, Clock(4 / 4)             ",   788,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LIU A0400"               ,"27572",   "Line Interface Unit, E1 / T1 generator, BITS(0 / 4)       ",   623,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LIU A0404"               ,"27099",   "Line Interface Unit, E1 / T1gen, BITS(0 / 4) Clock(0 / 4) ",   788,    ModulType.Output     ));
@@ -98,17 +108,25 @@ namespace IMSConfigurator.Models
             m_moduls.Add(new Modul ("IMS-LIU A2002"               ,"27089",   "Line Interface Unit, E1 / T1gen, BITS(2 / 0) Clock(0 / 2) ",   623,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LIU A2020"               ,"27097",   "Line Interface Unit, E1 / T1gen, BITS(2 / 0) Clock(2 /    ",   623,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LIU A4000"               ,"27092",   "Line Interface Unit, E1 / T1 generator, BITS(4 / 0)       ",   623,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-LNE - GbE"               ,"27010",   "Expansion card with 4 Gigabit LAN ports                   ",   654,    ModulType.Output     ));
+            
+            m_moduls.Add(new Modul ("IMS-LNE-GbE"               ,"27010",   "Сетевая карта расширения. 4 x LAN порта 10/100/1000 Мбит/с.",   650,    ModulType.Output     ));
+            
             m_moduls.Add(new Modul ("IMS-LNE - GbE - SFP"         ,"27064",   "Expansion card, 4 x Gigabit SFP ports                     ",   961,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-LNO"                     ,"27011",   "4 x 10 MHz Sine - Low Phase Noise Option                  ",   849,    ModulType.Output     ));
+            m_moduls.Add(new Modul ("IMS-LNO", "27011", "4 x 10 МГц Синус - с низким фазовым шумом", 850, ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-LNO - 12dBm"             ,"27576",   "4 x 10 MHz Sine 12dBm                                     ",   885,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-MRI"                     ,"27008",   "Standard Reference Input - TC DCLS, TC AM, PPS, 10MHz     ",   379,    ModulType.Input      ));
+            
+            m_moduls.Add(new Modul ("IMS-MRI"                     ,"27008",   "Карта внешней синхронизации от сигналов IRIG (DCLS, AM) ,PPS,10 МГц.",   380,    ModulType.Input      ));
+            
             m_moduls.Add(new Modul ("IMS-MRI - FO - CLK 1"        ,"27098",   "Standard Reference Inputs - TC DCLS, TC AM, PPS, 10MHz    ",   689,    ModulType.Input      ));
             m_moduls.Add(new Modul ("IMS-MRI - FO - T - CLK 1"    ,"27082",   "TC AM / DCLS / FO - 10MHz and PPS - TTL / BNC             ",   544,    ModulType.Input      ));
             m_moduls.Add(new Modul ("IMS-N2X180 - SQ"             ,"27119",   "Converter from NTP or IEEE - 1588 ref.to IRIG, 10MHz      ",   950,    ModulType.Output     ));
-            m_moduls.Add(new Modul ("IMS-PWR - AD10"              ,"27005",   "Power Supply 100 - 240 V AC / DC                          ",   227,    ModulType.Power      ));
+            
+            m_moduls.Add(new Modul ("IMS-PWR-AD10", "27005", "Блок питания шасси. Входное напряжение переменное, постоянное 100…240 В.",   225,    ModulType.Power      ));
+            
             m_moduls.Add(new Modul ("IMS-PWR - DC10"              ,"27509",   "Power Supply 10 - 36 V DC                                 ",   279,    ModulType.Power      ));
-            m_moduls.Add(new Modul ("IMS-PWR - DC20"              ,"27015",   "Power Supply 20 - 72 VDC                                  ",   279,    ModulType.Power      ));
+            
+            m_moduls.Add(new Modul ("IMS-PWR - DC20"              ,"27015",   "Блок питания шасси. Входное напряжение постоянное 20…72 В.",   280,    ModulType.Power      ));
+            
             m_moduls.Add(new Modul ("IMS-REL - 1000"              ,"27026",   "3 x Relay Out: CLK 1, CLK 2, 10MHz                        ",   186,    ModulType.Output     ));
             m_moduls.Add(new Modul ("IMS-RSC M3000"               ,"27019",   "Switchover for redundant System                           ",   376,    ModulType.Switcher   ));
             m_moduls.Add(new Modul ("IMS-RSC - MDU"               ,"27502",   "                                                          ",   561,    ModulType.Switcher   ));
