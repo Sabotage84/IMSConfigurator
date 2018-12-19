@@ -584,6 +584,7 @@ namespace IMSConfigurator
             ExcelProvider ex = new ExcelProvider();
             ex.OpenExcelFile(@"1.xls", true);
             ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
+
         }
 
         private List<Modul> CollectAllModuls()
