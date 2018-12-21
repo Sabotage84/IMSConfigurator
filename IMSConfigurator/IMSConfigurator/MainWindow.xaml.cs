@@ -65,7 +65,7 @@ namespace IMSConfigurator
             CLK2_price.Text = m.Price.ToString();
             if (M3000_rbtn.IsChecked == true)
             {
-                Modul rsc = m_moduls.SearchModul("IMS - RSC M3000", ModulType.Switcher);
+                Modul rsc = m_moduls.SearchModul("IMS-RSC M3000", ModulType.Switcher);
                 RSC_name.Text = rsc.Name;
                 RSC_ID.Text = rsc.ID;
                 RSC_discription.Text = rsc.Discription;
@@ -575,7 +575,7 @@ namespace IMSConfigurator
             else
                 CreateExcelOffer(m3);
 
-            //MessageBox.Show(m3.FullName);
+            
            
         }
 
@@ -584,13 +584,44 @@ namespace IMSConfigurator
             ExcelProvider ex = new ExcelProvider();
             ex.OpenExcelFile(@"1.xls", true);
             ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
+            FillNamesAndDiscriptions(m3, ex);
+            FillPrice(m3, ex);
+        }
 
+        private static void FillPrice(Metronome3000 m3, ExcelProvider ex)
+        {
+            double sumPrice = 0;
+            double k = 2.25;
+            foreach (var item in m3.KpLIST)
+            {
+                sumPrice += item.count * item.mod.Price * k;
+            }
+            ex.WriteTOcell("E21", sumPrice.ToString());
+        }
+
+        private static void FillNamesAndDiscriptions(Metronome3000 m3, ExcelProvider ex)
+        {
+            int i = 21;
+            foreach (var item in m3.KpLIST)
+            {
+                if (item.count <= 1)
+                    ex.WriteTOcell("B" + i, item.mod.Name);
+                else
+                    ex.WriteTOcell("B" + i, item.count + "x" + item.mod.Name);
+                ex.WriteTOcell("C" + i, item.mod.ID + " " + item.mod.Discription);
+                i++;
+                if ((i - 21) < m3.KpLIST.Count)
+                    ex.InsertRow(i);
+                else
+                    ex.RemoveRow(i);
+
+            }
         }
 
         private List<Modul> CollectAllModuls()
         {
             List<Modul> temp = new List<Modul>();
-            temp.Add(m_moduls.SearchModul("Метроном-3000", ModulType.Chassis));
+            temp.Add(m_moduls.SearchModul("Устройство синхронизации частоты и времени Метроном - 3000", ModulType.Chassis));
             temp.AddRange(GetCLKModuls());
             temp.AddRange(GetCPUModul());
             temp.AddRange(GetOutModuls());

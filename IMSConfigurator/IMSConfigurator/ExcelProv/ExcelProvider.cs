@@ -225,6 +225,13 @@ namespace IMSConfigurator.ExcelProv
             rowRange.Insert(Excel.XlInsertShiftDirection.xlShiftDown, false);
         }
 
+        public void RemoveRow(int rowNum)
+        {
+            Excel.Range cellRange = (Excel.Range)EXworksheet.Rows[rowNum, Type.Missing];
+            
+            cellRange.Delete(Excel.XlDeleteShiftDirection.xlShiftUp);
+        }
+
         /// <ЕХ->DATE>
         /// Возвращает дату полученную из ячейки 
         /// Приенимает строку-номер ячейки
