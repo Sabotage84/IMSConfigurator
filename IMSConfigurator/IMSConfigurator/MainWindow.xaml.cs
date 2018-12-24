@@ -83,7 +83,7 @@ namespace IMSConfigurator
 
         private void CPU_chkbx_Checked(object sender, RoutedEventArgs e)
         {
-            Modul mod = m_moduls.SearchModul("IMS - CPU", ModulType.Processor);
+            Modul mod = m_moduls.SearchModul("IMS-CPU", ModulType.Processor);
             CPU_name.Text = mod.Name;
             CPU_ID.Text = mod.ID;
             CPU_discription.Text = mod.Discription;
