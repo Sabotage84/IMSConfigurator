@@ -76,7 +76,16 @@ namespace IMSConfigurator
         private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
         {
             CLK2_sp.IsEnabled = false;
-            RSC_sp.IsEnabled = false;
+            //RSC_sp.IsEnabled = false;
+            if (M3000_rbtn.IsChecked == true)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+            }
+
         }
 
        
@@ -181,6 +190,14 @@ namespace IMSConfigurator
                 CLK2_ID.Text = m.ID;
                 CLK2_discription.Text = m.Discription;
                 CLK2_price.Text = m.Price.ToString();
+            }
+            if (M3000_rbtn.IsChecked == true)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
             }
 
         }
@@ -715,12 +732,106 @@ namespace IMSConfigurator
                 temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
                 temp.Add(m_moduls.SearchModul(RSC_name.Text, ModulType.Switcher));
             }
+            else
+                temp.Add(m_moduls.SearchModul(RSC_name.Text, ModulType.Switcher));
             return temp;
         }
 
         private void CreateM1000_Offer()
         {
-            throw new NotImplementedException();
+            List<Modul> m1000 = new List<Modul>();
+            m1000 = CollectModulsForM1000();
+
+            string str = "";
+
+            foreach (var item in m1000)
+            {
+                str += item.Name + "\\";
+            }
+
+            MessageBox.Show(str);
+
+            //Metronome3000 m3 = new Metronome3000(m3000);
+            //if (!m3.Status.check)
+            //    MessageBox.Show(m3.Status.message);
+            //else
+            //    CreateExcelOffer(m3);
+        }
+
+        private List<Modul> CollectModulsForM1000()
+        {
+            List<Modul> temp = new List<Modul>();
+            temp.Add(m_moduls.SearchModul("Устройство синхронизации частоты и времени Метроном - 1000", ModulType.Chassis));
+            temp.Add(m_moduls.SearchModul("IMS-ACM M1000", ModulType.Cooler));
+            if (GetCLKModulsForM1000()!=null)
+                temp.AddRange(GetCLKModulsForM1000());
+            temp.AddRange(GetCPUModul());
+            temp.AddRange(GetOutModulsForM1000());
+            temp.AddRange(GetPWRModulsF0rM1000());
+            return temp;
+        }
+
+        private List<Modul> GetOutModulsForM1000()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (OUT1_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT1_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT1_name.Text, ModulType.Output));
+            if (OUT2_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT2_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT2_name.Text, ModulType.Output));
+            if (OUT3_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT3_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT3_name.Text, ModulType.Output));
+            if (OUT4_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT4_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT4_name.Text, ModulType.Output));
+            if (OUT5_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT5_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT5_name.Text, ModulType.Output));
+            if (OUT6_chkbx.IsChecked == true)
+                if (!string.IsNullOrEmpty(OUT6_name.Text))
+                    temp.Add(m_moduls.SearchModul(OUT6_name.Text, ModulType.Output));
+            
+            return temp;
+        }
+
+        private List<Modul> GetPWRModulsF0rM1000()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (PWR1_chBx.IsChecked == true)
+                temp.Add(GetPwr(PWR1_name.Text));
+            if (PWR2_chBx.IsChecked == true)
+                temp.Add(GetPwr(PWR2_name.Text));
+            return temp;
+        }
+
+        private List<Modul> GetCLKModulsForM1000()
+        {
+            List<Modul> temp = new List<Modul>();
+            if (!string.IsNullOrEmpty(CLK1_name.Text))
+            {
+                if (CLK1_name.Text.Contains("DHQ"))
+                {
+                    MessageBox.Show("В Метрономе-1000 нельзя установить генератор DHQ!");
+                    return null;
+                }
+                else
+                {
+                    Modul m = m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator);
+                    if (m != null)
+                        temp.Add(m);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Необходимо выбрать генератор");
+            }
+            if (Double_CLK_chBx.IsChecked == true)
+            {
+                temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
+            }
+            return temp;
         }
     }
 }
