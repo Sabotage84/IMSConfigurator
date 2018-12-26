@@ -81,7 +81,6 @@ namespace IMSConfigurator
         private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
         {
             CLK2_sp.IsEnabled = false;
-            //RSC_sp.IsEnabled = false;
             if (M3000_rbtn.IsChecked == true)
             {
                 Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
@@ -90,12 +89,31 @@ namespace IMSConfigurator
                 RSC_discription.Text = rsc.Discription;
                 RSC_price.Text = rsc.Price.ToString();
             }
+			if (M1000_rbtn.IsChecked == true)
+				OpenModuleM1000();
 
         }
 
-       
+		private void OpenModuleM1000()
+		{
+			if (!OUT4_sp.IsEnabled)
+			{
+				OUT4_sp.IsEnabled = true;
+				return;
+			}
+			if (!OUT5_sp.IsEnabled)
+			{
+				OUT5_sp.IsEnabled = true;
+				return;
+			}
+			if (!OUT6_sp.IsEnabled)
+			{
+				OUT6_sp.IsEnabled = true;
+				return;
+			}
+		}
 
-        private void CPU_chkbx_Checked(object sender, RoutedEventArgs e)
+		private void CPU_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             Modul mod = m_moduls.SearchModul("IMS-CPU", ModulType.Processor);
             CPU_name.Text = mod.Name;
@@ -112,7 +130,9 @@ namespace IMSConfigurator
             CPU_ID.Text = "ID";
             CPU_discription.Text = "Описание";
             CPU_price.Text = "Цена";
-        }
+			if (M1000_rbtn.IsChecked == true)
+				OpenModuleM1000();
+		}
 
         private void PWR1_chBx_Unchecked(object sender, RoutedEventArgs e)
         {
