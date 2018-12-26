@@ -26,6 +26,7 @@ namespace IMSConfigurator
 
         Moduls m_moduls;
         List<Modul> powerModuls;
+		bool firstChoseCLK = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -71,6 +72,10 @@ namespace IMSConfigurator
                 RSC_discription.Text = rsc.Discription;
                 RSC_price.Text = rsc.Price.ToString();
             }
+			if (M1000_rbtn.IsChecked == true)
+			{
+				CloseModuleM1000();
+			}
         }
 
         private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
@@ -97,6 +102,8 @@ namespace IMSConfigurator
             CPU_ID.Text = mod.ID;
             CPU_discription.Text = mod.Discription;
             CPU_price.Text = mod.Price.ToString();
+			if (M1000_rbtn.IsChecked == true)
+				CloseModuleM1000();
         }
 
         private void CPU_chkbx_Unchecked(object sender, RoutedEventArgs e)
@@ -199,10 +206,38 @@ namespace IMSConfigurator
                 RSC_discription.Text = rsc.Discription;
                 RSC_price.Text = rsc.Price.ToString();
             }
+			if (M1000_rbtn.IsChecked == true && firstChoseCLK)
+			{
+				firstChoseCLK = false;
+				CloseModuleM1000();
+			}
 
         }
 
-        private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
+		private void CloseModuleM1000()
+		{
+			if (OUT6_sp.IsEnabled)
+			{
+				OUT6_chkbx.IsChecked = false;
+				OUT6_sp.IsEnabled = false;
+				return;
+			}
+			if (OUT5_sp.IsEnabled)
+			{
+				OUT5_chkbx.IsChecked = false;
+				OUT5_sp.IsEnabled = false;
+				return;
+			}
+			if (OUT4_sp.IsEnabled)
+			{
+				OUT4_chkbx.IsChecked = false;
+				OUT4_sp.IsEnabled = false;
+				return;
+			}
+
+		}
+
+		private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT1_name.IsEnabled = true;
         }
