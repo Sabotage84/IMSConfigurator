@@ -144,9 +144,6 @@ namespace IMSConfigurator.Models
 
             return new err { message = "OK", check = true };
         }
-
-
-
     }
 
     class err
