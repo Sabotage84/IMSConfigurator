@@ -928,5 +928,66 @@ namespace IMSConfigurator
             }
             return temp;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OUT1_tooltip_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            
+        }
+
+        private void OUT1_tooltip_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void StackPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void OUT1_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            //var indexToMove = OUT1_tooltip.Items.
+            var b = (ListBox)sender;
+            var coordinatesAboutList = e.GetPosition(b);
+            var itemInsideContainer = b.InputHitTest(coordinatesAboutList);
+            var container = FindContainer(itemInsideContainer, b);
+            if (container == null)
+                return;
+            //var item = b.ItemContainerGenerator.ItemFromContainer(container.);
+            ListBoxItem item = (ListBoxItem)container;
+            var m = (Modul)item.Content;
+            //MessageBox.Show(m.Name);
+            OUT1_discription.Text = m.Discription;
+
+        }
+
+        private object FindContainer(IInputElement itemInsideContainer, ListBox b)
+        {
+            ListBoxItem candidate = null;
+            for (DependencyObject currentItem = (DependencyObject)itemInsideContainer;
+                 currentItem != null;
+                 currentItem = VisualTreeHelper.GetParent(currentItem))
+            {
+                candidate = currentItem as ListBoxItem;
+                if (candidate != null)
+                    break;
+            }
+            if (candidate != null)
+            {
+                for (DependencyObject parent = (DependencyObject)itemInsideContainer;
+                     parent != b;
+                     parent = VisualTreeHelper.GetParent(parent))
+                {
+                    if (parent == null)
+                        return null;
+                }
+            }
+            return candidate;
+        }
     }
 }
