@@ -11,7 +11,21 @@ namespace IMSConfigurator.Models
 		err status = new err { message = "OK", check = true };
 		List<KPPosition> kpLIST = new List<KPPosition>();
 		string fullName = "";
-		public err Status { get => status; set => status = value; }
+
+        public Metronome1000(List<Modul> m1000)
+        {
+            if (CheckAll(m1000).check)
+            {
+                Status.check = true;
+            }
+            else
+            {
+                Status.check = false;
+
+            }
+        }
+
+        public err Status { get => status; set => status = value; }
 		internal List<KPPosition> KpLIST { get => kpLIST; set => kpLIST = value; }
 		public string FullName { get => fullName; set => fullName = value; }
 

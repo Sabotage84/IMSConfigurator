@@ -796,21 +796,61 @@ namespace IMSConfigurator
         {
             List<Modul> m1000 = new List<Modul>();
             m1000 = CollectModulsForM1000();
+            Metronome1000 metr1000 = new Metronome1000(m1000);
+            if (!metr1000.Status.check)
+                MessageBox.Show(metr1000.Status.message);
+            else
+                CreateExcelOfferForM1000(metr1000);
 
-            string str = "";
+            //string str = "";
+            //foreach (var item in m1000)
+            //{
+            //    str += item.Name + "\\";
+            //}
 
-            foreach (var item in m1000)
+            //MessageBox.Show(str);
+
+            
+            
+        }
+
+        private void CreateExcelOfferForM1000(Metronome1000 metr1000)
+        {
+            ExcelProvider ex = new ExcelProvider();
+            ex.OpenExcelFile(@"1.xls", true);
+            ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
+            FillNamesAndDiscriptionsForM1000(metr1000, ex);
+            FillPriceForM1000(metr1000, ex);
+        }
+
+        private void FillPriceForM1000(Metronome1000 metr1000, ExcelProvider ex)
+        {
+            double sumPrice = 0;
+            double k = 2.25;
+            foreach (var item in metr1000.KpLIST)
             {
-                str += item.Name + "\\";
+                sumPrice += item.count * item.mod.Price * k;
             }
+            ex.WriteTOcell("E21", sumPrice.ToString());
+        }
 
-            MessageBox.Show(str);
+        private void FillNamesAndDiscriptionsForM1000(Metronome1000 metr1000, ExcelProvider ex)
+        {
+            int i = 21;
+            foreach (var item in metr1000.KpLIST)
+            {
+                if (item.count <= 1)
+                    ex.WriteTOcell("B" + i, item.mod.Name);
+                else
+                    ex.WriteTOcell("B" + i, item.count + "x" + item.mod.Name);
+                ex.WriteTOcell("C" + i, item.mod.ID + " " + item.mod.Discription);
+                i++;
+                if ((i - 21) < metr1000.KpLIST.Count)
+                    ex.InsertRow(i);
+                else
+                    ex.RemoveRow(i);
 
-            //Metronome3000 m3 = new Metronome3000(m3000);
-            //if (!m3.Status.check)
-            //    MessageBox.Show(m3.Status.message);
-            //else
-            //    CreateExcelOffer(m3);
+            }
         }
 
         private List<Modul> CollectModulsForM1000()
