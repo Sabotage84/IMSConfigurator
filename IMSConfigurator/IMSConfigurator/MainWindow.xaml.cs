@@ -951,19 +951,22 @@ namespace IMSConfigurator
 
         private void OUT1_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
-            //var indexToMove = OUT1_tooltip.Items.
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m!=null)
+                OUT1_discription.Text = m.Discription;
+        }
+
+        private Modul GetModulUnderMouse(object sender, MouseEventArgs e)
+        {
             var b = (ListBox)sender;
             var coordinatesAboutList = e.GetPosition(b);
             var itemInsideContainer = b.InputHitTest(coordinatesAboutList);
             var container = FindContainer(itemInsideContainer, b);
             if (container == null)
-                return;
-            //var item = b.ItemContainerGenerator.ItemFromContainer(container.);
-            ListBoxItem item = (ListBoxItem)container;
+                return null;
+                ListBoxItem item = (ListBoxItem)container;
             var m = (Modul)item.Content;
-            //MessageBox.Show(m.Name);
-            OUT1_discription.Text = m.Discription;
-
+            return m;
         }
 
         private object FindContainer(IInputElement itemInsideContainer, ListBox b)
@@ -988,6 +991,84 @@ namespace IMSConfigurator
                 }
             }
             return candidate;
+        }
+
+        private void OUT2_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT2_discription.Text = m.Discription;
+        }
+
+        private void OUT3_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT3_discription.Text = m.Discription;
+        }
+
+        private void OUT4_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT4_discription.Text = m.Discription;
+        }
+
+        private void StackPanel_MouseMove_1(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void OUT5_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT5_discription.Text = m.Discription;
+        }
+
+        private void StackPanel_MouseMove_2(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void OUT6_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT6_discription.Text = m.Discription;
+        }
+
+        private void StackPanel_MouseMove_3(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void OUT7_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT7_discription.Text = m.Discription;
+        }
+
+        private void OUT8_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT8_discription.Text = m.Discription;
+        }
+
+        private void OUT9_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT9_discription.Text = m.Discription;
+        }
+
+        private void OUT10_tooltip_MouseMove(object sender, MouseEventArgs e)
+        {
+            Modul m = GetModulUnderMouse(sender, e);
+            if (m != null)
+                OUT10_discription.Text = m.Discription;
         }
     }
 }
