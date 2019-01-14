@@ -37,23 +37,97 @@ namespace IMSConfigurator
 
         private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
         {
+            PWR1_sp.IsEnabled = true;
+            PWR2_sp.IsEnabled = true;
             PWR3_sp.IsEnabled = true;
             PWR4_sp.IsEnabled = true;
+            CLK1_sp.IsEnabled = true;
+            CPU_sp.IsEnabled = true;
+            OUT1_sp.IsEnabled = true;
+            OUT2_sp.IsEnabled = true;
+            OUT3_sp.IsEnabled = true;
+            OUT4_sp.IsEnabled = true;
+            OUT5_sp.IsEnabled = true;
+            OUT6_sp.IsEnabled = true;
             OUT7_sp.IsEnabled = true;
             OUT8_sp.IsEnabled = true;
             OUT9_sp.IsEnabled = true;
             OUT10_sp.IsEnabled = true;
+
+            LoadDefaultM3000Conf();
+        }
+
+        private void LoadDefaultM3000Conf()
+        {
+            LoadDefaultM1000Conf();
+            Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
+            RSC_name.Text = rsc.Name;
+            RSC_ID.Text = rsc.ID;
+            RSC_discription.Text = rsc.Discription;
+            RSC_price.Text = rsc.Price.ToString();
         }
 
         private void M1000_rbtn_Checked(object sender, RoutedEventArgs e)
         {
+            PWR1_sp.IsEnabled = true;
+            PWR2_sp.IsEnabled = true;
             PWR3_sp.IsEnabled = false;
             PWR4_sp.IsEnabled = false;
+            CLK1_sp.IsEnabled = true;
+            CPU_sp.IsEnabled = true;
+            OUT1_sp.IsEnabled = true;
+            OUT2_sp.IsEnabled = true;
+            OUT3_sp.IsEnabled = true;
+            OUT4_sp.IsEnabled = true;
+            OUT5_sp.IsEnabled = true;
+            OUT6_sp.IsEnabled = true;
             OUT7_sp.IsEnabled = false;
             OUT8_sp.IsEnabled = false;
             OUT9_sp.IsEnabled = false;
             OUT10_sp.IsEnabled = false;
+            if (CPU_chkbx.IsChecked == true)
+                CloseModuleM1000();
+            if (Double_CLK_chBx.IsChecked == true)
+                CloseModuleM1000();
+            if (CLK1_name.Text != "Модуль" || !string.IsNullOrEmpty(CLK1_name.Text))
+                CloseModuleM1000();
+            LoadDefaultM1000Conf();
+            
+            
         }
+
+        private void LoadDefaultM1000Conf()
+        {
+            Modul m = m_moduls.SearchModul("IMS-PWR-AD10", ModulType.Power);
+            PWR1_chBx.IsChecked = true;
+            PWR1_name.Text = m.Name;
+            PWR1_ID.Text = m.ID;
+            PWR1_discription.Text = m.Discription;
+            PWR1_price.Text = m.Price.ToString();
+
+            m = m_moduls.SearchModul("IMS-CLK GLN-HQ", ModulType.Generator);
+            
+            CLK1_name.Text = m.Name;
+            CLK1_name.IsEditable = false;
+            CLK1_ID.Text = m.ID;
+            CLK1_discription.Text = m.Discription;
+            CLK1_price.Text = m.Price.ToString();
+            
+            m = m_moduls.SearchModul("IMS-CPU", ModulType.Processor);
+            CPU_chkbx.IsChecked = true;
+            CPU_name.Text = m.Name;
+            CPU_ID.Text = m.ID;
+            CPU_discription.Text = m.Discription;
+            CPU_price.Text = m.Price.ToString();
+
+            Double_CLK_chBx.IsChecked = false;
+            RSC_name.Text = "";
+            RSC_ID.Text = "";
+            RSC_discription.Text = "";
+            RSC_price.Text = "";
+        }
+
+
 
         private void Double_CLK_chBx_Checked(object sender, RoutedEventArgs e)
         {
@@ -81,6 +155,10 @@ namespace IMSConfigurator
         private void Double_CLK_chBx_Unchecked(object sender, RoutedEventArgs e)
         {
             CLK2_sp.IsEnabled = false;
+            CLK2_name.Text = "Модуль";
+            CLK2_ID.Text = "ID";
+            CLK2_discription.Text = "Описание";
+            CLK2_price.Text = "Price";
             if (M3000_rbtn.IsChecked == true)
             {
                 Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
