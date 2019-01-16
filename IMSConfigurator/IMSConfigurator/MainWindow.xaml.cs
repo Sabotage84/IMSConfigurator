@@ -439,6 +439,9 @@ namespace IMSConfigurator
         {
             OUT1_tooltip.Visibility= Visibility.Visible;
             OUT2_name.Visibility = Visibility.Hidden;
+            OUT3_name.Visibility = Visibility.Hidden;
+            OUT4_name.Visibility = Visibility.Hidden;
+            OUT5_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT1_name.Text);
         }
 
@@ -446,13 +449,18 @@ namespace IMSConfigurator
         {
             OUT1_tooltip.Visibility = Visibility.Hidden;
             OUT2_name.Visibility = Visibility.Visible;
-            
+            OUT3_name.Visibility = Visibility.Visible;
+            OUT4_name.Visibility = Visibility.Visible;
+            OUT5_name.Visibility = Visibility.Visible;
         }
 
         private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT2_tooltip.Visibility = Visibility.Visible;
             OUT3_name.Visibility = Visibility.Hidden;
+            OUT4_name.Visibility = Visibility.Hidden;
+            OUT5_name.Visibility = Visibility.Hidden;
+            OUT6_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT2_name.Text);
         }
 
@@ -460,13 +468,19 @@ namespace IMSConfigurator
         {
             OUT2_tooltip.Visibility = Visibility.Hidden;
             OUT3_name.Visibility = Visibility.Visible;
-            
+            OUT4_name.Visibility = Visibility.Visible;
+            OUT5_name.Visibility = Visibility.Visible;
+            OUT6_name.Visibility = Visibility.Visible;
+
         }
 
         private void OUT3_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT3_tooltip.Visibility = Visibility.Visible;
             OUT4_name.Visibility = Visibility.Hidden;
+            OUT5_name.Visibility = Visibility.Hidden;
+            OUT6_name.Visibility = Visibility.Hidden;
+            OUT7_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT3_name.Text);
         }
 
@@ -474,7 +488,10 @@ namespace IMSConfigurator
         {
             OUT3_tooltip.Visibility = Visibility.Hidden;
             OUT4_name.Visibility = Visibility.Visible;
-            
+            OUT5_name.Visibility = Visibility.Visible;
+            OUT6_name.Visibility = Visibility.Visible;
+            OUT7_name.Visibility = Visibility.Visible;
+
         }
 
         private void OUT4_sp_GotFocus(object sender, RoutedEventArgs e)
@@ -491,6 +508,9 @@ namespace IMSConfigurator
         {
             OUT4_tooltip.Visibility = Visibility.Visible;
             OUT5_name.Visibility = Visibility.Hidden;
+            OUT6_name.Visibility = Visibility.Hidden;
+            OUT7_name.Visibility = Visibility.Hidden;
+            OUT8_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT4_name.Text);
         }
 
@@ -498,12 +518,18 @@ namespace IMSConfigurator
         {
             OUT4_tooltip.Visibility = Visibility.Hidden;
             OUT5_name.Visibility = Visibility.Visible;
+            OUT6_name.Visibility = Visibility.Visible;
+            OUT7_name.Visibility = Visibility.Visible;
+            OUT8_name.Visibility = Visibility.Visible;
         }
 
         private void OUT5_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT5_tooltip.Visibility = Visibility.Visible;
             OUT6_name.Visibility = Visibility.Hidden;
+            OUT7_name.Visibility = Visibility.Hidden;
+            OUT8_name.Visibility = Visibility.Hidden;
+            OUT9_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT5_name.Text);
         }
 
@@ -511,12 +537,19 @@ namespace IMSConfigurator
         {
             OUT5_tooltip.Visibility = Visibility.Hidden;
             OUT6_name.Visibility = Visibility.Visible;
+            OUT7_name.Visibility = Visibility.Visible;
+            OUT8_name.Visibility = Visibility.Visible;
+            OUT9_name.Visibility = Visibility.Visible;
+
         }
 
         private void OUT6_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT6_tooltip.Visibility = Visibility.Visible;
             OUT7_name.Visibility = Visibility.Hidden;
+            OUT8_name.Visibility = Visibility.Hidden;
+            OUT9_name.Visibility = Visibility.Hidden;
+            OUT10_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT6_name.Text);
         }
 
@@ -524,12 +557,17 @@ namespace IMSConfigurator
         {
             OUT6_tooltip.Visibility = Visibility.Hidden;
             OUT7_name.Visibility = Visibility.Visible;
+            OUT8_name.Visibility = Visibility.Visible;
+            OUT9_name.Visibility = Visibility.Visible;
+            OUT10_name.Visibility = Visibility.Visible;
         }
 
         private void OUT7_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT7_tooltip.Visibility = Visibility.Visible;
             OUT8_name.Visibility = Visibility.Hidden;
+            OUT9_name.Visibility = Visibility.Hidden;
+            OUT10_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT7_name.Text);
         }
 
@@ -537,12 +575,15 @@ namespace IMSConfigurator
         {
             OUT7_tooltip.Visibility = Visibility.Hidden;
             OUT8_name.Visibility = Visibility.Visible;
+            OUT9_name.Visibility = Visibility.Visible;
+            OUT10_name.Visibility = Visibility.Visible;
         }
 
         private void OUT8_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT8_tooltip.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Hidden;
+            OUT10_name.Visibility = Visibility.Hidden;
             SearchModuls(OUT8_name.Text);
         }
 
@@ -550,7 +591,7 @@ namespace IMSConfigurator
         {
             OUT8_tooltip.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Visible;
-
+            OUT10_name.Visibility = Visibility.Visible;
         }
 
         private void OUT9_name_GotFocus(object sender, RoutedEventArgs e)
