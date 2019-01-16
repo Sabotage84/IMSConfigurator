@@ -89,7 +89,7 @@ namespace IMSConfigurator
                 CloseModuleM1000();
             if (Double_CLK_chBx.IsChecked == true)
                 CloseModuleM1000();
-            if (CLK1_name.Text != "Модуль" || !string.IsNullOrEmpty(CLK1_name.Text))
+            if ( CLK1_name.Text != "Модуль" || string.IsNullOrEmpty(CLK1_name.Text))
                 CloseModuleM1000();
             LoadDefaultM1000Conf();
             
