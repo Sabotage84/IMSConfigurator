@@ -116,13 +116,14 @@
 
                     <StackPanel Margin="0,0,0,1" Orientation="Vertical">
                         <StackPanel x:Name="OUT1_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="200" IsEnabled="False">
+                            
 
                             <CheckBox x:Name="OUT1_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT1_chkbx_Checked" Unchecked="OUT1_chkbx_Unchecked"/>
-                            <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,-25" MouseMove="StackPanel_MouseMove" Height="200" VerticalAlignment="Top">
-                                <TextBox x:Name="OUT1_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT1_name_GotFocus" LostFocus="OUT1_name_LostFocus" TextChanged="OUT1_name_TextChanged">
-
-                                </TextBox>
-
+                            <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,-5" MouseMove="StackPanel_MouseMove" Height="200" VerticalAlignment="Top">
+                                <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="OUT1_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT1_name_GotFocus" LostFocus="OUT1_name_LostFocus" TextChanged="OUT1_name_TextChanged" BorderThickness="1,1,0,1" Width="115"/>
+                                <Button x:Name="OUT1_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5"/>
+                                </StackPanel>
                                 <ListBox x:Name="OUT1_tooltip" Margin="0" ItemsSource="{Binding ModListMV, Mode=OneWay}" DisplayMemberPath="Name" Visibility="Hidden" Background="White"  SelectionChanged="OUT1_tooltip_SelectionChanged" IsMouseDirectlyOverChanged="OUT1_tooltip_IsMouseDirectlyOverChanged" IsMouseCapturedChanged="OUT1_tooltip_IsMouseCapturedChanged" MouseMove="OUT1_tooltip_MouseMove" Height="200"/>
 
                             </StackPanel>
@@ -135,7 +136,7 @@
                         <StackPanel x:Name="OUT2_sp"  Orientation="Horizontal" Margin="0,-160,0,0" Height="220" IsEnabled="False">
                             <CheckBox x:Name="OUT2_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" Width="16" Checked="OUT2_chkbx_Checked" Unchecked="OUT2_chkbx_Unchecked" Height="14" VerticalAlignment="Top"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,8">
-                                <TextBox x:Name="OUT2_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT2_name_GotFocus" LostFocus="OUT2_name_LostFocus" TextChanged="OUT2_name_TextChanged" SelectionChanged="OUT2_name_SelectionChanged"/>
+                                <TextBox x:Name="OUT2_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT2_name_GotFocus" LostFocus="OUT2_name_LostFocus" TextChanged="OUT2_name_TextChanged" SelectionChanged="OUT2_name_SelectionChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT2_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT2_tooltip_SelectionChanged" MouseMove="OUT2_tooltip_MouseMove"/>
                             </StackPanel>
                             <TextBlock x:Name="OUT2_ID" TextWrapping="Wrap" Text="ID" Margin="5,5,0,0" Width="50" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -145,7 +146,7 @@
                         <StackPanel x:Name="OUT3_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="220" IsEnabled="False">
                             <CheckBox x:Name="OUT3_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT3_chkbx_Checked" Unchecked="OUT3_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,0,0,7" Height="200">
-                                <TextBox x:Name="OUT3_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT3_name_GotFocus" LostFocus="OUT3_name_LostFocus" TextChanged="OUT3_name_TextChanged"/>
+                                <TextBox x:Name="OUT3_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT3_name_GotFocus" LostFocus="OUT3_name_LostFocus" TextChanged="OUT3_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT3_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT3_tooltip_SelectionChanged" MouseMove="OUT3_tooltip_MouseMove"/>
 
                             </StackPanel>
@@ -157,7 +158,7 @@
                             <CheckBox x:Name="OUT4_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT4_chkbx_Checked" Unchecked="OUT4_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="200" VerticalAlignment="Top">
 
-                                <TextBox x:Name="OUT4_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT4_name_GotFocus" LostFocus="OUT4_name_LostFocus" TextChanged="OUT4_name_TextChanged"/>
+                                <TextBox x:Name="OUT4_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT4_name_GotFocus" LostFocus="OUT4_name_LostFocus" TextChanged="OUT4_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT4_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT4_tooltip_SelectionChanged" MouseMove="OUT4_tooltip_MouseMove"/>
 
                             </StackPanel>
@@ -168,7 +169,7 @@
                         <StackPanel x:Name="OUT5_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="220" IsEnabled="False">
                             <CheckBox x:Name="OUT5_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT5_chkbx_Checked" Unchecked="OUT5_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_1" Height="200" VerticalAlignment="Top">
-                                <TextBox x:Name="OUT5_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT5_name_GotFocus" LostFocus="OUT5_name_LostFocus" TextChanged="OUT5_name_TextChanged"/>
+                                <TextBox x:Name="OUT5_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT5_name_GotFocus" LostFocus="OUT5_name_LostFocus" TextChanged="OUT5_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT5_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT5_tooltip_SelectionChanged" MouseMove="OUT5_tooltip_MouseMove"/>
 
                             </StackPanel>
@@ -179,7 +180,7 @@
                         <StackPanel x:Name="OUT6_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="220" IsEnabled="False">
                             <CheckBox x:Name="OUT6_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT6_chkbx_Checked" Unchecked="OUT6_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_2">
-                                <TextBox x:Name="OUT6_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT6_name_GotFocus" LostFocus="OUT6_name_LostFocus" TextChanged="OUT6_name_TextChanged"/>
+                                <TextBox x:Name="OUT6_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT6_name_GotFocus" LostFocus="OUT6_name_LostFocus" TextChanged="OUT6_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT6_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT6_tooltip_SelectionChanged" MouseMove="OUT6_tooltip_MouseMove"/>
                             </StackPanel>
                             <TextBlock x:Name="OUT6_ID" TextWrapping="Wrap" Text="ID" Margin="5,5,0,0" Width="50" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -189,7 +190,7 @@
                         <StackPanel x:Name="OUT7_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="220" IsEnabled="False">
                             <CheckBox x:Name="OUT7_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT7_chkbx_Checked" Unchecked="OUT7_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_3">
-                                <TextBox x:Name="OUT7_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT7_name_GotFocus" LostFocus="OUT7_name_LostFocus" TextChanged="OUT7_name_TextChanged"/>
+                                <TextBox x:Name="OUT7_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT7_name_GotFocus" LostFocus="OUT7_name_LostFocus" TextChanged="OUT7_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT7_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT7_tooltip_SelectionChanged" MouseMove="OUT7_tooltip_MouseMove"/>
 
                             </StackPanel>
@@ -201,7 +202,7 @@
                             <CheckBox x:Name="OUT8_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT8_chkbx_Checked" Unchecked="OUT8_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="180" VerticalAlignment="Top">
 
-                                <TextBox x:Name="OUT8_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT8_name_GotFocus" LostFocus="OUT8_name_LostFocus" TextChanged="OUT8_name_TextChanged"/>
+                                <TextBox x:Name="OUT8_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT8_name_GotFocus" LostFocus="OUT8_name_LostFocus" TextChanged="OUT8_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT8_tooltip" Margin="0" Height="180" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT8_tooltip_SelectionChanged" MouseMove="OUT8_tooltip_MouseMove"/>
                             </StackPanel>
                             <TextBlock x:Name="OUT8_ID" TextWrapping="Wrap" Text="ID" Margin="5,5,0,0" Width="50" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -212,7 +213,7 @@
                             <CheckBox x:Name="OUT9_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT9_chkbx_Checked" Unchecked="OUT9_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="140" VerticalAlignment="Top">
 
-                                <TextBox x:Name="OUT9_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT9_name_GotFocus" LostFocus="OUT9_name_LostFocus" TextChanged="OUT9_name_TextChanged"/>
+                                <TextBox x:Name="OUT9_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT9_name_GotFocus" LostFocus="OUT9_name_LostFocus" TextChanged="OUT9_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT9_tooltip" Margin="0" Height="140" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT9_tooltip_SelectionChanged" MouseMove="OUT9_tooltip_MouseMove"/>
                             </StackPanel>
                             <TextBlock x:Name="OUT9_ID" TextWrapping="Wrap" Text="ID" Margin="5,5,0,0" Width="50" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -222,7 +223,7 @@
                         <StackPanel x:Name="OUT10_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="180" IsEnabled="False">
                             <CheckBox x:Name="OUT10_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="14" Width="16" Checked="OUT10_chkbx_Checked" Unchecked="OUT10_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="100" VerticalAlignment="Top">
-                                <TextBox x:Name="OUT10_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT10_name_GotFocus" LostFocus="OUT10_name_LostFocus" TextChanged="OUT10_name_TextChanged"/>
+                                <TextBox x:Name="OUT10_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT10_name_GotFocus" LostFocus="OUT10_name_LostFocus" TextChanged="OUT10_name_TextChanged" Width="115" BorderThickness="1,1,0,1"/>
                                 <ListBox x:Name="OUT10_tooltip" Margin="0" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT10_tooltip_SelectionChanged" MouseMove="OUT10_tooltip_MouseMove" Height="100"/>
                             </StackPanel>
                             <TextBlock x:Name="OUT10_ID" TextWrapping="Wrap" Text="ID" Margin="5,5,0,0" Width="50" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -234,8 +235,11 @@
                 </GroupBox>
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="38">
-            <Button Content="Создать КП" Height="25" Margin="1000,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="38" HorizontalAlignment="Right" Width="1305">
+
+            <TextBox TextWrapping="Wrap" Text="Модуль"  Margin="20,10,0,0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="True" Width="248" Background="{x:Null}" BorderThickness="1,1,0,1"  />
+            <Button x:Name="xxx" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,8" Width="19" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3"/>
+            <Button Content="Создать КП" Height="25" Margin="750,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
             <Button Content="Отмена" Height="25" Margin="0" HorizontalAlignment="Right" Width="103" VerticalAlignment="Center" Click="Button_Click_1"/>
         </StackPanel>
     </StackPanel>
