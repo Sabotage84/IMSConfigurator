@@ -146,6 +146,19 @@ namespace IMSConfigurator.Models
             }
         }
 
+
+        public Modul SearchModulByIDAndName(string id, string name)
+        {
+
+            foreach (var item in m_moduls)
+            {
+                if (item.ID == id && item.Name == name)
+                    return item;
+            }
+            return null;
+
+        }
+
         public Modul SearchModul(string name, ModulType type)
         {
             

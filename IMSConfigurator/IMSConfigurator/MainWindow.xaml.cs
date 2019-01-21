@@ -460,6 +460,14 @@ namespace IMSConfigurator
             OUT3_Clear.Visibility = Visibility.Visible;
             OUT4_Clear.Visibility = Visibility.Visible;
             OUT5_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
+        }
+
+        private void CheckOutModulNameAndId(TextBox name, TextBlock dis, TextBlock id, TextBlock price)
+        {
+            Modul t = m_moduls.SearchModulByIDAndName(id.Text, name.Text);
+            if (t == null)
+                ClearModulInfo(name, dis, id, price);
         }
 
         private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
@@ -487,7 +495,7 @@ namespace IMSConfigurator
             OUT4_Clear.Visibility = Visibility.Visible;
             OUT5_Clear.Visibility = Visibility.Visible;
             OUT6_Clear.Visibility = Visibility.Visible;
-
+            CheckOutModulNameAndId(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
         }
 
         private void OUT3_name_GotFocus(object sender, RoutedEventArgs e)
@@ -515,6 +523,7 @@ namespace IMSConfigurator
             OUT5_Clear.Visibility = Visibility.Visible;
             OUT6_Clear.Visibility = Visibility.Visible;
             OUT7_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
         }
 
         private void OUT4_sp_GotFocus(object sender, RoutedEventArgs e)
@@ -552,6 +561,7 @@ namespace IMSConfigurator
             OUT6_Clear.Visibility = Visibility.Visible;
             OUT7_Clear.Visibility = Visibility.Visible;
             OUT8_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
         }
 
         private void OUT5_name_GotFocus(object sender, RoutedEventArgs e)
@@ -579,6 +589,7 @@ namespace IMSConfigurator
             OUT7_Clear.Visibility = Visibility.Visible;
             OUT8_Clear.Visibility = Visibility.Visible;
             OUT9_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
         }
 
         private void OUT6_name_GotFocus(object sender, RoutedEventArgs e)
@@ -606,6 +617,7 @@ namespace IMSConfigurator
             OUT8_Clear.Visibility = Visibility.Visible;
             OUT9_Clear.Visibility = Visibility.Visible;
             OUT10_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
         }
 
         private void OUT7_name_GotFocus(object sender, RoutedEventArgs e)
@@ -630,7 +642,7 @@ namespace IMSConfigurator
             OUT8_Clear.Visibility = Visibility.Visible;
             OUT9_Clear.Visibility = Visibility.Visible;
             OUT10_Clear.Visibility = Visibility.Visible;
-           
+            CheckOutModulNameAndId(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
         }
 
         private void OUT8_name_GotFocus(object sender, RoutedEventArgs e)
@@ -651,7 +663,8 @@ namespace IMSConfigurator
             OUT10_name.Visibility = Visibility.Visible;
             OUT9_Clear.Visibility = Visibility.Visible;
             OUT10_Clear.Visibility = Visibility.Visible;
-           
+            CheckOutModulNameAndId(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
+
         }
 
         private void OUT9_name_GotFocus(object sender, RoutedEventArgs e)
@@ -667,6 +680,7 @@ namespace IMSConfigurator
             OUT9_tooltip.Visibility = Visibility.Hidden;
             OUT10_name.Visibility = Visibility.Visible;
             OUT10_Clear.Visibility = Visibility.Visible;
+            CheckOutModulNameAndId(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
         }
 
         private void OUT10_name_GotFocus(object sender, RoutedEventArgs e)
@@ -678,6 +692,7 @@ namespace IMSConfigurator
         private void OUT10_name_LostFocus(object sender, RoutedEventArgs e)
         {
             OUT10_tooltip.Visibility = Visibility.Hidden;
+            CheckOutModulNameAndId(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
         }
 
         private void OUT4_name_TextChanged(object sender, TextChangedEventArgs e)
