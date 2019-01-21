@@ -442,6 +442,10 @@ namespace IMSConfigurator
             OUT3_name.Visibility = Visibility.Hidden;
             OUT4_name.Visibility = Visibility.Hidden;
             OUT5_name.Visibility = Visibility.Hidden;
+            OUT2_Clear.Visibility = Visibility.Hidden;
+            OUT3_Clear.Visibility = Visibility.Hidden;
+            OUT4_Clear.Visibility = Visibility.Hidden;
+            OUT5_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT1_name.Text);
         }
 
@@ -452,6 +456,10 @@ namespace IMSConfigurator
             OUT3_name.Visibility = Visibility.Visible;
             OUT4_name.Visibility = Visibility.Visible;
             OUT5_name.Visibility = Visibility.Visible;
+            OUT2_Clear.Visibility = Visibility.Visible;
+            OUT3_Clear.Visibility = Visibility.Visible;
+            OUT4_Clear.Visibility = Visibility.Visible;
+            OUT5_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
@@ -461,6 +469,10 @@ namespace IMSConfigurator
             OUT4_name.Visibility = Visibility.Hidden;
             OUT5_name.Visibility = Visibility.Hidden;
             OUT6_name.Visibility = Visibility.Hidden;
+            OUT3_Clear.Visibility = Visibility.Hidden;
+            OUT4_Clear.Visibility = Visibility.Hidden;
+            OUT5_Clear.Visibility = Visibility.Hidden;
+            OUT6_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT2_name.Text);
         }
 
@@ -471,6 +483,10 @@ namespace IMSConfigurator
             OUT4_name.Visibility = Visibility.Visible;
             OUT5_name.Visibility = Visibility.Visible;
             OUT6_name.Visibility = Visibility.Visible;
+            OUT3_Clear.Visibility = Visibility.Visible;
+            OUT4_Clear.Visibility = Visibility.Visible;
+            OUT5_Clear.Visibility = Visibility.Visible;
+            OUT6_Clear.Visibility = Visibility.Visible;
 
         }
 
@@ -481,6 +497,10 @@ namespace IMSConfigurator
             OUT5_name.Visibility = Visibility.Hidden;
             OUT6_name.Visibility = Visibility.Hidden;
             OUT7_name.Visibility = Visibility.Hidden;
+            OUT4_Clear.Visibility = Visibility.Hidden;
+            OUT5_Clear.Visibility = Visibility.Hidden;
+            OUT6_Clear.Visibility = Visibility.Hidden;
+            OUT7_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT3_name.Text);
         }
 
@@ -491,7 +511,10 @@ namespace IMSConfigurator
             OUT5_name.Visibility = Visibility.Visible;
             OUT6_name.Visibility = Visibility.Visible;
             OUT7_name.Visibility = Visibility.Visible;
-
+            OUT4_Clear.Visibility = Visibility.Visible;
+            OUT5_Clear.Visibility = Visibility.Visible;
+            OUT6_Clear.Visibility = Visibility.Visible;
+            OUT7_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT4_sp_GotFocus(object sender, RoutedEventArgs e)
@@ -511,6 +534,10 @@ namespace IMSConfigurator
             OUT6_name.Visibility = Visibility.Hidden;
             OUT7_name.Visibility = Visibility.Hidden;
             OUT8_name.Visibility = Visibility.Hidden;
+            OUT5_Clear.Visibility = Visibility.Hidden;
+            OUT6_Clear.Visibility = Visibility.Hidden;
+            OUT7_Clear.Visibility = Visibility.Hidden;
+            OUT8_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT4_name.Text);
         }
 
@@ -521,6 +548,10 @@ namespace IMSConfigurator
             OUT6_name.Visibility = Visibility.Visible;
             OUT7_name.Visibility = Visibility.Visible;
             OUT8_name.Visibility = Visibility.Visible;
+            OUT5_Clear.Visibility = Visibility.Visible;
+            OUT6_Clear.Visibility = Visibility.Visible;
+            OUT7_Clear.Visibility = Visibility.Visible;
+            OUT8_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT5_name_GotFocus(object sender, RoutedEventArgs e)
@@ -530,6 +561,10 @@ namespace IMSConfigurator
             OUT7_name.Visibility = Visibility.Hidden;
             OUT8_name.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Hidden;
+            OUT6_Clear.Visibility = Visibility.Hidden;
+            OUT7_Clear.Visibility = Visibility.Hidden;
+            OUT8_Clear.Visibility = Visibility.Hidden;
+            OUT9_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT5_name.Text);
         }
 
@@ -540,7 +575,10 @@ namespace IMSConfigurator
             OUT7_name.Visibility = Visibility.Visible;
             OUT8_name.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Visible;
-
+            OUT6_Clear.Visibility = Visibility.Visible;
+            OUT7_Clear.Visibility = Visibility.Visible;
+            OUT8_Clear.Visibility = Visibility.Visible;
+            OUT9_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT6_name_GotFocus(object sender, RoutedEventArgs e)
@@ -550,6 +588,10 @@ namespace IMSConfigurator
             OUT8_name.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Hidden;
             OUT10_name.Visibility = Visibility.Hidden;
+            OUT7_Clear.Visibility = Visibility.Hidden;
+            OUT8_Clear.Visibility = Visibility.Hidden;
+            OUT9_Clear.Visibility = Visibility.Hidden;
+            OUT10_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT6_name.Text);
         }
 
@@ -560,6 +602,10 @@ namespace IMSConfigurator
             OUT8_name.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Visible;
             OUT10_name.Visibility = Visibility.Visible;
+            OUT7_Clear.Visibility = Visibility.Visible;
+            OUT8_Clear.Visibility = Visibility.Visible;
+            OUT9_Clear.Visibility = Visibility.Visible;
+            OUT10_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT7_name_GotFocus(object sender, RoutedEventArgs e)
@@ -568,6 +614,10 @@ namespace IMSConfigurator
             OUT8_name.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Hidden;
             OUT10_name.Visibility = Visibility.Hidden;
+            OUT8_Clear.Visibility = Visibility.Hidden;
+            OUT9_Clear.Visibility = Visibility.Hidden;
+            OUT10_Clear.Visibility = Visibility.Hidden;
+            
             SearchModuls(OUT7_name.Text);
         }
 
@@ -577,6 +627,10 @@ namespace IMSConfigurator
             OUT8_name.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Visible;
             OUT10_name.Visibility = Visibility.Visible;
+            OUT8_Clear.Visibility = Visibility.Visible;
+            OUT9_Clear.Visibility = Visibility.Visible;
+            OUT10_Clear.Visibility = Visibility.Visible;
+           
         }
 
         private void OUT8_name_GotFocus(object sender, RoutedEventArgs e)
@@ -584,6 +638,9 @@ namespace IMSConfigurator
             OUT8_tooltip.Visibility = Visibility.Visible;
             OUT9_name.Visibility = Visibility.Hidden;
             OUT10_name.Visibility = Visibility.Hidden;
+            OUT9_Clear.Visibility = Visibility.Hidden;
+            OUT10_Clear.Visibility = Visibility.Hidden;
+          
             SearchModuls(OUT8_name.Text);
         }
 
@@ -592,12 +649,16 @@ namespace IMSConfigurator
             OUT8_tooltip.Visibility = Visibility.Hidden;
             OUT9_name.Visibility = Visibility.Visible;
             OUT10_name.Visibility = Visibility.Visible;
+            OUT9_Clear.Visibility = Visibility.Visible;
+            OUT10_Clear.Visibility = Visibility.Visible;
+           
         }
 
         private void OUT9_name_GotFocus(object sender, RoutedEventArgs e)
         {
             OUT9_tooltip.Visibility = Visibility.Visible;
             OUT10_name.Visibility = Visibility.Hidden;
+            OUT10_Clear.Visibility = Visibility.Hidden;
             SearchModuls(OUT9_name.Text);
         }
 
@@ -605,6 +666,7 @@ namespace IMSConfigurator
         {
             OUT9_tooltip.Visibility = Visibility.Hidden;
             OUT10_name.Visibility = Visibility.Visible;
+            OUT10_Clear.Visibility = Visibility.Visible;
         }
 
         private void OUT10_name_GotFocus(object sender, RoutedEventArgs e)
@@ -1188,6 +1250,64 @@ namespace IMSConfigurator
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
                 OUT10_discription.Text = m.Discription;
+        }
+
+        private void OUT1_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
+        }
+
+        private void ClearModulInfo(TextBox name, TextBlock dis, TextBlock id, TextBlock price)
+        {
+            name.Text = "";
+            dis.Text = "Описание";
+            id.Text = "ID";
+            price.Text = "Цена";
+        }
+
+        private void OUT2_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
+        }
+
+        private void OUT3_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
+        }
+
+        private void OUT4_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
+        }
+
+        private void OUT5_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
+        }
+
+        private void OUT6_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
+        }
+
+        private void OUT7_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
+        }
+
+        private void OUT8_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
+        }
+
+        private void OUT9_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
+        }
+
+        private void OUT10_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearModulInfo(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
         }
     }
 }
