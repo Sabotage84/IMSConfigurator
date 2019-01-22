@@ -261,9 +261,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="38" HorizontalAlignment="Right" Width="1305">
 
-            <TextBox TextWrapping="Wrap" Text="Модуль"  Margin="20,10,0,0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="True" Width="248" Background="{x:Null}" BorderThickness="1,1,0,1"  />
-            <Button x:Name="xxx" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,8" Width="19" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3"/>
-            <Button Content="Создать КП" Height="25" Margin="750,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
+           <Button Content="Создать КП" Height="25" Margin="1000,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
             <Button Content="Отмена" Height="25" Margin="0" HorizontalAlignment="Right" Width="103" VerticalAlignment="Center" Click="Button_Click_1"/>
         </StackPanel>
     </StackPanel>
