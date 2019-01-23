@@ -119,11 +119,25 @@ namespace IMSConfigurator.Models
 				return new err { message = "Wrong outputs count!", check = false };
 			if (s > sMax)
 				return new err { message = "Wrong rsc count!", check = false };
-			if (i > iMax)
-				return new err { message = "Wrong input count!", check = false };
+            if (i > 0)
+                if (i <= iMax)
+                {
+                    int m = 0, e = 0;
+                    foreach (var item in m3000.Where(n => n.Type == ModulType.Input))
+                    {
+                        if (item.Name.ToLower().Contains("mri"))
+                            m++;
+                        if (item.Name.ToLower().Contains("esi"))
+                            e++;
+                    }
+                    if (e > 1 || m > 1)
+                        return new err { message = "Wrong input count!", check = false };
+                }
+                else
+                    return new err { message = "Wrong input count!", check = false };
 
 
-			return new err { message = "OK", check = true };
+            return new err { message = "OK", check = true };
 		}
 
 		private err CheckNessesaryModuls(List<Modul> m3000)

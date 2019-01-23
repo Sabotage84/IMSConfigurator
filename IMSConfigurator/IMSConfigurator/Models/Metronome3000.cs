@@ -126,7 +126,7 @@ namespace IMSConfigurator.Models
                 if (item.Type == ModulType.Switcher)
                    s++;
                 if (item.Type == ModulType.Input)
-                    s++;
+                    i++;
             }
             if (g>gMax)
                 return new err { message = "Wrong generator count!", check = false };
@@ -138,7 +138,21 @@ namespace IMSConfigurator.Models
                 return new err { message = "Wrong outputs count!", check = false };
             if (s>sMax)
                 return new err { message = "Wrong rsc count!", check = false };
-            if (i>iMax)
+            if (i>0)
+                if(i<=iMax)
+                {
+                    int m = 0, e = 0;
+                    foreach (var item in m3000.Where(n=>n.Type==ModulType.Input))
+                    {
+                        if (item.Name.ToLower().Contains("mri"))
+                            m++;
+                        if (item.Name.ToLower().Contains("esi"))
+                            e++;
+                    }
+                    if (e>1 || m>1)
+                        return new err { message = "Wrong input count!", check = false };
+                }
+            else
                 return new err { message = "Wrong input count!", check = false };
 
 

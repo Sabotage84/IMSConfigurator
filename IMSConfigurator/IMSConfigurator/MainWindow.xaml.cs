@@ -338,70 +338,70 @@ namespace IMSConfigurator
 		private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT1_name.IsEnabled = true;
-            ClearModulInfo(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
+            ClearModulInfoWithOUTName(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
             OUT1_name.Focus();
         }
 
         private void OUT2_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT2_name.IsEnabled = true;
-            ClearModulInfo(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
+            ClearModulInfoWithOUTName(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
             OUT2_name.Focus();
         }
 
         private void OUT3_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT3_name.IsEnabled = true;
-            ClearModulInfo(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
+            ClearModulInfoWithOUTName(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
             OUT3_name.Focus();
         }
 
         private void OUT4_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT4_name.IsEnabled = true;
-            ClearModulInfo(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
+            ClearModulInfoWithOUTName(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
             OUT4_name.Focus();
         }
 
         private void OUT5_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT5_name.IsEnabled = true;
-            ClearModulInfo(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
+            ClearModulInfoWithOUTName(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
             OUT5_name.Focus();
         }
 
         private void OUT6_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT6_name.IsEnabled = true;
-            ClearModulInfo(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
+            ClearModulInfoWithOUTName(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
             OUT6_name.Focus();
         }
 
         private void OUT7_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT7_name.IsEnabled = true;
-            ClearModulInfo(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
+            ClearModulInfoWithOUTName(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
             OUT7_name.Focus();
         }
 
         private void OUT8_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT8_name.IsEnabled = true;
-            ClearModulInfo(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
+            ClearModulInfoWithOUTName(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
             OUT8_name.Focus();
         }
 
         private void OUT9_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT9_name.IsEnabled = true;
-            ClearModulInfo(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
+            ClearModulInfoWithOUTName(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
             OUT9_name.Focus();
         }
 
         private void OUT10_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT10_name.IsEnabled = true;
-            ClearModulInfo(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
+            ClearModulInfoWithOUTName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
             OUT10_name.Focus();
         }
 
@@ -487,7 +487,7 @@ namespace IMSConfigurator
         {
             Modul t = m_moduls.SearchModulByIDAndName(id.Text, name.Text);
             if (t == null)
-                ClearModulInfo(name, dis, id, price);
+                ClearModulInfoWithOUTName(name, dis, id, price);
         }
 
         private void OUT2_name_GotFocus(object sender, RoutedEventArgs e)
@@ -774,6 +774,7 @@ namespace IMSConfigurator
         private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT1_tooltip.SelectedItem, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            OUT1_tooltip.SelectedItem = null;
         }
 
         private void FeelOutModul(Modul m, TextBox name, TextBlock ID, TextBlock dis, TextBlock price)
@@ -796,46 +797,55 @@ namespace IMSConfigurator
         private void OUT2_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT2_tooltip.SelectedItem, OUT2_name, OUT2_ID, OUT2_discription, OUT2_price);
+            OUT2_tooltip.SelectedItem = null;
         }
 
         private void OUT3_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT3_tooltip.SelectedItem, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+            OUT3_tooltip.SelectedItem = null;
         }
 
         private void OUT4_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT4_tooltip.SelectedItem, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+            OUT4_tooltip.SelectedItem = null;
         }
 
         private void OUT5_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT5_tooltip.SelectedItem, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+            OUT5_tooltip.SelectedItem = null;
         }
 
         private void OUT6_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT6_tooltip.SelectedItem, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+            OUT6_tooltip.SelectedItem = null;
         }
 
         private void OUT7_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT7_tooltip.SelectedItem, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+            OUT7_tooltip.SelectedItem = null;
         }
 
         private void OUT8_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT8_tooltip.SelectedItem, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+            OUT8_tooltip.SelectedItem = null;
         }
 
         private void OUT9_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT9_tooltip.SelectedItem, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+            OUT9_tooltip.SelectedItem = null;
         }
 
         private void OUT10_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FeelOutModul((Modul)OUT10_tooltip.SelectedItem, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+            OUT10_tooltip.SelectedItem = null;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -922,34 +932,34 @@ namespace IMSConfigurator
             List<Modul> temp = new List<Modul>();
             if (OUT1_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT1_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT1_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT1_ID.Text, OUT1_name.Text));
             if (OUT2_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT2_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT2_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT2_ID.Text, OUT2_name.Text));
             if (OUT3_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT3_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT3_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT3_ID.Text, OUT3_name.Text));
             if (OUT4_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT4_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT4_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT4_ID.Text, OUT4_name.Text));
             if (OUT5_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT5_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT5_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT5_ID.Text, OUT5_name.Text));
             if (OUT6_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT6_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT6_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT6_ID.Text, OUT6_name.Text));
             if (OUT7_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT7_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT7_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT7_ID.Text, OUT7_name.Text));
             if (OUT8_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT8_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT8_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT8_ID.Text, OUT8_name.Text));
             if (OUT9_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT9_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT9_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT9_ID.Text, OUT9_name.Text));
             if (OUT10_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT10_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT10_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT10_ID.Text, OUT10_name.Text));
             return temp;
         }
 
@@ -1017,17 +1027,6 @@ namespace IMSConfigurator
                 MessageBox.Show(metr1000.Status.message);
             else
                 CreateExcelOfferForM1000(metr1000);
-
-            //string str = "";
-            //foreach (var item in m1000)
-            //{
-            //    str += item.Name + "\\";
-            //}
-
-            //MessageBox.Show(str);
-
-            
-            
         }
 
         private void CreateExcelOfferForM1000(Metronome1000 metr1000)
@@ -1087,22 +1086,22 @@ namespace IMSConfigurator
             List<Modul> temp = new List<Modul>();
             if (OUT1_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT1_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT1_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT1_ID.Text, OUT1_name.Text));
             if (OUT2_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT2_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT2_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT2_ID.Text, OUT2_name.Text));
             if (OUT3_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT3_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT3_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT3_ID.Text, OUT3_name.Text));
             if (OUT4_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT4_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT4_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT4_ID.Text, OUT4_name.Text));
             if (OUT5_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT5_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT5_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT5_ID.Text, OUT5_name.Text));
             if (OUT6_chkbx.IsChecked == true)
                 if (!string.IsNullOrEmpty(OUT6_name.Text))
-                    temp.Add(m_moduls.SearchModul(OUT6_name.Text, ModulType.Output));
+                    temp.Add(m_moduls.SearchModulByIDAndName(OUT6_ID.Text, OUT6_name.Text));
             
             return temp;
         }
@@ -1289,10 +1288,18 @@ namespace IMSConfigurator
 
         private void OUT1_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
+            ClearModulInfoWithName(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
         }
 
-        private void ClearModulInfo(TextBox name, TextBlock dis, TextBlock id, TextBlock price)
+        private void ClearModulInfoWithOUTName(TextBox name, TextBlock dis, TextBlock id, TextBlock price)
+        {
+            //name.Text = "";
+            dis.Text = "Описание";
+            id.Text = "ID";
+            price.Text = "Цена";
+        }
+
+        private void ClearModulInfoWithName(TextBox name, TextBlock dis, TextBlock id, TextBlock price)
         {
             name.Text = "";
             dis.Text = "Описание";
@@ -1302,47 +1309,47 @@ namespace IMSConfigurator
 
         private void OUT2_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
+            ClearModulInfoWithName(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
         }
 
         private void OUT3_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
+            ClearModulInfoWithName(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
         }
 
         private void OUT4_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
+            ClearModulInfoWithName(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
         }
 
         private void OUT5_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
+            ClearModulInfoWithName(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
         }
 
         private void OUT6_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
+            ClearModulInfoWithName(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
         }
 
         private void OUT7_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
+            ClearModulInfoWithName(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
         }
 
         private void OUT8_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
+            ClearModulInfoWithName(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
         }
 
         private void OUT9_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
+            ClearModulInfoWithName(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
         }
 
         private void OUT10_Clear_Click(object sender, RoutedEventArgs e)
         {
-            ClearModulInfo(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
+            ClearModulInfoWithName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
         }
     }
 }
