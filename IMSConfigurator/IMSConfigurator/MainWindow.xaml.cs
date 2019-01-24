@@ -338,6 +338,7 @@ namespace IMSConfigurator
 		private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT1_name.IsEnabled = true;
+            OUT1_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
             OUT1_name.Focus();
         }
@@ -345,6 +346,7 @@ namespace IMSConfigurator
         private void OUT2_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT2_name.IsEnabled = true;
+            OUT2_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
             OUT2_name.Focus();
         }
@@ -352,6 +354,7 @@ namespace IMSConfigurator
         private void OUT3_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT3_name.IsEnabled = true;
+            OUT3_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
             OUT3_name.Focus();
         }
@@ -359,6 +362,7 @@ namespace IMSConfigurator
         private void OUT4_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT4_name.IsEnabled = true;
+            OUT4_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
             OUT4_name.Focus();
         }
@@ -366,6 +370,7 @@ namespace IMSConfigurator
         private void OUT5_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT5_name.IsEnabled = true;
+            OUT5_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
             OUT5_name.Focus();
         }
@@ -373,6 +378,7 @@ namespace IMSConfigurator
         private void OUT6_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT6_name.IsEnabled = true;
+            OUT6_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
             OUT6_name.Focus();
         }
@@ -380,6 +386,7 @@ namespace IMSConfigurator
         private void OUT7_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT7_name.IsEnabled = true;
+            OUT7_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
             OUT7_name.Focus();
         }
@@ -387,6 +394,7 @@ namespace IMSConfigurator
         private void OUT8_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT8_name.IsEnabled = true;
+            OUT8_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
             OUT8_name.Focus();
         }
@@ -394,6 +402,7 @@ namespace IMSConfigurator
         private void OUT9_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT9_name.IsEnabled = true;
+            OUT9_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
             OUT9_name.Focus();
         }
@@ -401,6 +410,7 @@ namespace IMSConfigurator
         private void OUT10_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT10_name.IsEnabled = true;
+            OUT10_Clear.IsEnabled = true;
             ClearModulInfoWithOUTName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
             OUT10_name.Focus();
         }

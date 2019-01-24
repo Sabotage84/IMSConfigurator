@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
         <StackPanel Orientation="Horizontal" Height="509">
-            <StackPanel Orientation="Vertical" Width="599" Margin="0,4,0,29">
+            <StackPanel Orientation="Vertical" Width="601" Margin="0,4,0,29">
 
                 <GroupBox Header="Шасси" HorizontalAlignment="Left" Height="41" Margin="10,5,0,0" VerticalAlignment="Top" Width="589">
                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="20" Margin="0" VerticalAlignment="Top" Width="221">
@@ -36,31 +36,31 @@
 
                         <StackPanel x:Name="PWR1_sp"  Orientation="Horizontal" Margin="0,0,0,123" Height="35" VerticalAlignment="Bottom" IsEnabled="False">
                             <CheckBox x:Name="PWR1_chBx" Content="" Margin="10" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR1_chBx_Unchecked" Checked="PWR1_chBx_Checked"/>
-                            <ComboBox x:Name="PWR1_name" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,8,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR1_name_SelectionChanged" IsEditable="True"/>
+                            <ComboBox x:Name="PWR1_name" IsReadOnly="True" Text="Модуль"  ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="105" Margin="0,8,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" IsEnabled="False" FontSize="10" SelectionChanged="PWR1_name_SelectionChanged" IsEditable="True"/>
                             <TextBlock x:Name="PWR1_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="275" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="PWR1_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="290" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="PWR1_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="PWR2_sp"  Orientation="Horizontal" Margin="0,35,0,0" Height="32" VerticalAlignment="Top" IsEnabled="False">
                             <CheckBox x:Name="PWR2_chBx" Content="" Margin="10,9" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR2_chBx_Unchecked" Checked="PWR2_chBx_Checked"/>
-                            <ComboBox x:Name="PWR2_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" SelectionChanged="PWR2_name_SelectionChanged" FontSize="9"/>
+                            <ComboBox x:Name="PWR2_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="105" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" IsEnabled="False" SelectionChanged="PWR2_name_SelectionChanged" FontSize="10"/>
                             <TextBlock x:Name="PWR2_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="275" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="PWR2_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="290" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="PWR2_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                         </StackPanel>
                         <StackPanel x:Name="PWR3_sp"  Orientation="Horizontal" Margin="0,0,0,55" Height="33" VerticalAlignment="Bottom" IsEnabled="False">
                             <CheckBox x:Name="PWR3_chBx" Content="" Margin="10,10,10,9" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR3_chBx_Unchecked" Checked="PWR3_chBx_Checked"/>
-                            <ComboBox x:Name="PWR3_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR3_name_SelectionChanged"/>
+                            <ComboBox x:Name="PWR3_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="105" Margin="0,6" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" IsEnabled="False" FontSize="10" SelectionChanged="PWR3_name_SelectionChanged"/>
                             <TextBlock x:Name="PWR3_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="275" Height="33" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="PWR3_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="290" Height="33" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="PWR3_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="PWR4_sp"  Orientation="Horizontal" Margin="0,103,0,0" Height="34" VerticalAlignment="Top" IsEnabled="False">
                             <CheckBox x:Name="PWR4_chBx" Content="" Margin="10" Width="16" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Unchecked="PWR4_chBx_Unchecked" Checked="PWR4_chBx_Checked"/>
-                            <ComboBox x:Name="PWR4_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="100" Margin="0,7,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" FontSize="9" SelectionChanged="PWR4_name_SelectionChanged"/>
+                            <ComboBox x:Name="PWR4_name" IsEditable="True" IsReadOnly="True" Text="Модуль" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" SelectedValue="Name" Width="105" Margin="0,7,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Times New Roman" IsEnabled="False" FontSize="10" SelectionChanged="PWR4_name_SelectionChanged"/>
                             <TextBlock x:Name="PWR4_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="PWR4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="275" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="PWR4_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="290" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="PWR4_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,10,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Grid>
@@ -76,35 +76,35 @@
                         </Grid.RowDefinitions>
 
                         <StackPanel x:Name="CLK1_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="26" VerticalAlignment="Top" IsEnabled="False">
-                            <ComboBox x:Name="CLK1_name" Text="Модуль" DisplayMemberPath="Name" Width="105" Margin="30,0,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman" IsEditable="True" ItemsSource="{Binding ModListMV}" FontSize="9" SelectionChanged="CLK1_name_SelectionChanged" VerticalContentAlignment="Center"/>
+                            <ComboBox x:Name="CLK1_name" Text="Модуль" DisplayMemberPath="Name" Width="120" Margin="15,2,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Times New Roman" IsEditable="True" ItemsSource="{Binding ModListMV}" FontSize="10" SelectionChanged="CLK1_name_SelectionChanged" VerticalContentAlignment="Center"/>
                             <TextBlock x:Name="CLK1_ID" TextWrapping="Wrap" Text="ID" Margin="10,4,0,0" Width="50" Height="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
                             <TextBlock x:Name="CLK1_discription" TextWrapping="Wrap" Text="Описание" Margin="15,4,0,0" Width="290" Height="22" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10" LineHeight="10"/>
-                            <TextBlock x:Name="CLK1_price" TextWrapping="Wrap" Text="Цена" Margin="10,0,0,-1" Width="65" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="CLK1_price" TextWrapping="Wrap" Text="Цена" Margin="10,4,0,4" Width="65" Height="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Margin="0,41,0,75" Orientation="Horizontal">
-                            <CheckBox x:Name="Double_CLK_chBx" Content="Резерв генераторов" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Checked="Double_CLK_chBx_Checked" Unchecked="Double_CLK_chBx_Unchecked" IsEnabled="False"/>
+                            <CheckBox x:Name="Double_CLK_chBx" Content="Резерв генераторов" HorizontalAlignment="Left" Margin="10,5,0,10" Checked="Double_CLK_chBx_Checked" Unchecked="Double_CLK_chBx_Unchecked" IsEnabled="False"/>
                         </StackPanel>
                         <StackPanel x:Name="CLK2_sp"  Orientation="Horizontal" Margin="0,0,0,38" Height="32" VerticalAlignment="Bottom" IsEnabled="False">
-                            <TextBlock x:Name="CLK2_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic" FontSize="9"/>
+                            <TextBlock x:Name="CLK2_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="11"/>
                             <TextBlock x:Name="CLK2_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock x:Name="CLK2_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,0" Width="275" Height="27" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="CLK2_discription" TextWrapping="Wrap" Text="Описание" Margin="15,5,0,0" Width="290" Height="27" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="CLK2_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel x:Name="RSC_sp"  Orientation="Horizontal" Margin="0,111,0,9" IsEnabled="False">
-                            <TextBlock x:Name="RSC_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontSize="9" FontFamily="Times New Roman"/>
+                            <TextBlock x:Name="RSC_name" TextWrapping="Wrap" Text="Модуль" Width="100" Margin="35,5,0,7" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" FontFamily="Times New Roman"/>
                             <TextBlock x:Name="RSC_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="RSC_discription" TextWrapping="Wrap" Text="Описание" Margin="15,4,0,-1" Width="275" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10"/>
+                            <TextBlock x:Name="RSC_discription" TextWrapping="Wrap" Text="Описание" Margin="15,4,0,-1" Width="290" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="RSC_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Grid>
                 </GroupBox>
                 <GroupBox Header="Процессор" HorizontalAlignment="Left" Height="68" Margin="10,10,0,0" VerticalAlignment="Top" Width="589">
                     <StackPanel x:Name="CPU_sp"  Orientation="Horizontal" Margin="0,10,0,0" Height="32" VerticalAlignment="Top" IsEnabled="False">
-                        <CheckBox x:Name="CPU_chkbx"  HorizontalAlignment="Center" Margin="10,9" VerticalAlignment="Center" Width="16" Height="14" Checked="CPU_chkbx_Checked" Unchecked="CPU_chkbx_Unchecked"/>
-                        <TextBlock x:Name="CPU_name" TextWrapping="Wrap" Text="Модуль"  Margin="0,5,0,7" Width="100" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" FontFamily="Times New Roman"/>
-                        <TextBlock x:Name="CPU_ID" TextWrapping="Wrap" Text="ID" Margin="10,5,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="CPU_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="275" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
-                        <TextBlock x:Name="CPU_price" TextWrapping="Wrap" Text="Цена" Margin="10,5,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox x:Name="CPU_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,10" VerticalAlignment="Center" Width="16" Height="14" Checked="CPU_chkbx_Checked" Unchecked="CPU_chkbx_Unchecked"/>
+                        <TextBlock x:Name="CPU_name" TextWrapping="Wrap" Text="Модуль"  Margin="0,8,0,7" Width="105" Height="17" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="11"/>
+                        <TextBlock x:Name="CPU_ID" TextWrapping="Wrap" Text="ID" Margin="10,8,0,7" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="CPU_discription" TextWrapping="Wrap" Text="Описание" Margin="10,0,0,0" Width="290" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" TextAlignment="Center" Padding="0,8,0,0"/>
+                        <TextBlock x:Name="CPU_price" TextWrapping="Wrap" Text="Цена" Margin="10,8,0,7" Width="65" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
@@ -122,7 +122,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,-5" MouseMove="StackPanel_MouseMove" Height="200" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT1_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT1_name_GotFocus" LostFocus="OUT1_name_LostFocus" TextChanged="OUT1_name_TextChanged" BorderThickness="1,1,0,1" Width="115"/>
-                                    <Button x:Name="OUT1_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT1_Clear_Click"/>
+                                    <Button x:Name="OUT1_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT1_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT1_tooltip" Margin="0" ItemsSource="{Binding ModListMV, Mode=OneWay}" DisplayMemberPath="Name" Visibility="Hidden" Background="White"  SelectionChanged="OUT1_tooltip_SelectionChanged" IsMouseDirectlyOverChanged="OUT1_tooltip_IsMouseDirectlyOverChanged" IsMouseCapturedChanged="OUT1_tooltip_IsMouseCapturedChanged" MouseMove="OUT1_tooltip_MouseMove" Height="200"/>
 
@@ -138,7 +138,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,8">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT2_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT2_name_GotFocus" LostFocus="OUT2_name_LostFocus" TextChanged="OUT2_name_TextChanged" SelectionChanged="OUT2_name_SelectionChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT2_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT2_Clear_Click"/>
+                                    <Button x:Name="OUT2_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT2_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT2_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT2_tooltip_SelectionChanged" MouseMove="OUT2_tooltip_MouseMove"/>
                             </StackPanel>
@@ -151,7 +151,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,0,0,7" Height="200">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT3_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT3_name_GotFocus" LostFocus="OUT3_name_LostFocus" TextChanged="OUT3_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT3_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT3_Clear_Click"/>
+                                    <Button x:Name="OUT3_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT3_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT3_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT3_tooltip_SelectionChanged" MouseMove="OUT3_tooltip_MouseMove"/>
 
@@ -165,7 +165,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="200" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT4_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT4_name_GotFocus" LostFocus="OUT4_name_LostFocus" TextChanged="OUT4_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT4_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT4_Clear_Click"/>
+                                    <Button x:Name="OUT4_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT4_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT4_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT4_tooltip_SelectionChanged" MouseMove="OUT4_tooltip_MouseMove"/>
 
@@ -179,7 +179,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_1" Height="200" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT5_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT5_name_GotFocus" LostFocus="OUT5_name_LostFocus" TextChanged="OUT5_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT5_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT5_Clear_Click"/>
+                                    <Button x:Name="OUT5_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT5_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT5_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT5_tooltip_SelectionChanged" MouseMove="OUT5_tooltip_MouseMove"/>
 
@@ -193,7 +193,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_2">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT6_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT6_name_GotFocus" LostFocus="OUT6_name_LostFocus" TextChanged="OUT6_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT6_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT6_Clear_Click"/>
+                                    <Button x:Name="OUT6_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT6_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT6_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT6_tooltip_SelectionChanged" MouseMove="OUT6_tooltip_MouseMove"/>
                             </StackPanel>
@@ -206,7 +206,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" MouseMove="StackPanel_MouseMove_3">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT7_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT7_name_GotFocus" LostFocus="OUT7_name_LostFocus" TextChanged="OUT7_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT7_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT7_Clear_Click"/>
+                                    <Button x:Name="OUT7_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT7_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT7_tooltip" Margin="0" Height="200" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT7_tooltip_SelectionChanged" MouseMove="OUT7_tooltip_MouseMove"/>
 
@@ -220,7 +220,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="180" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT8_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT8_name_GotFocus" LostFocus="OUT8_name_LostFocus" TextChanged="OUT8_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT8_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT8_Clear_Click"/>
+                                    <Button x:Name="OUT8_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT8_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT8_tooltip" Margin="0" Height="180" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT8_tooltip_SelectionChanged" MouseMove="OUT8_tooltip_MouseMove"/>
                             </StackPanel>
@@ -233,7 +233,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="140" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT9_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT9_name_GotFocus" LostFocus="OUT9_name_LostFocus" TextChanged="OUT9_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT9_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT9_Clear_Click"/>
+                                    <Button x:Name="OUT9_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT9_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT9_tooltip" Margin="0" Height="140" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT9_tooltip_SelectionChanged" MouseMove="OUT9_tooltip_MouseMove"/>
                             </StackPanel>
@@ -246,7 +246,7 @@
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="100" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox x:Name="OUT10_name" TextWrapping="Wrap" Text="Модуль"  Margin="0" Height="20" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" IsEnabled="False" GotFocus="OUT10_name_GotFocus" LostFocus="OUT10_name_LostFocus" TextChanged="OUT10_name_TextChanged" Width="115" BorderThickness="1,1,0,1" HorizontalAlignment="Right"/>
-                                    <Button x:Name="OUT10_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT10_Clear_Click"/>
+                                    <Button x:Name="OUT10_Clear" Content="X" Height="20" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="20" Padding="1" BorderThickness="0,1,1,1" Background="#FFFFFFFF" BorderBrush="#FFABADB3" Foreground="#FFABADB3" Opacity="0.5" Focusable="False" Click="OUT10_Clear_Click" IsEnabled="False"/>
                                 </StackPanel>
                                 <ListBox x:Name="OUT10_tooltip" Margin="0" ItemsSource="{Binding ModListMV}" DisplayMemberPath="Name" Background="White" Visibility="Hidden" SelectionChanged="OUT10_tooltip_SelectionChanged" MouseMove="OUT10_tooltip_MouseMove" Height="100"/>
                             </StackPanel>
@@ -261,7 +261,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="38" HorizontalAlignment="Right" Width="1305">
 
-           <Button Content="Создать КП" Height="25" Margin="1000,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
+            <Button Content="Создать КП" Height="25" Margin="1000,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
             <Button Content="Отмена" Height="25" Margin="0" HorizontalAlignment="Right" Width="103" VerticalAlignment="Center" Click="Button_Click_1"/>
         </StackPanel>
     </StackPanel>
