@@ -56,6 +56,7 @@
     </ApplicationDefinition>
     <Compile Include="CheckM3000Model.cs" />
     <Compile Include="ExcelProv\ExcelProvider.cs" />
+    <Compile Include="Models\IMSMetronome.cs" />
     <Compile Include="Models\Metronome1000.cs" />
     <Compile Include="Models\Metronome3000.cs" />
     <Compile Include="ViewModel\BaseVM.cs" />

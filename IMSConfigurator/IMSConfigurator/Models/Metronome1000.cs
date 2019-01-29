@@ -6,11 +6,8 @@ using System.Text;
 
 namespace IMSConfigurator.Models
 {
-	class Metronome1000
+	class Metronome1000: IMSMetronome
 	{
-		err status = new err { message = "OK", check = true };
-		List<KPPosition> kpLIST = new List<KPPosition>();
-		string fullName = "";
 
         public Metronome1000(List<Modul> m1000)
         {
@@ -25,66 +22,7 @@ namespace IMSConfigurator.Models
             }
         }
 
-        public err Status { get => status; set => status = value; }
-		internal List<KPPosition> KpLIST { get => kpLIST; set => kpLIST = value; }
-		public string FullName { get => fullName; set => fullName = value; }
-
-		private err CheckAll(List<Modul> m1000)
-		{
-			if (!CheckForNull(m1000).check)
-			{
-				Status = CheckForNull(m1000);
-				return Status;
-			}
-			if (!CheckRightCount(m1000).check)
-			{
-				Status = CheckRightCount(m1000);
-				return Status;
-			}
-			if (!CheckNessesaryModuls(m1000).check)
-			{
-				Status = CheckNessesaryModuls(m1000);
-				return Status;
-			}
-
-			KpLIST = m1000.GroupBy(x => x).Select(g => (new KPPosition(g.Key, g.Count()))).ToList();
-			FullName = GetFullName(KpLIST);
-
-			return new err { message = "OK", check = true };
-		}
-
-		private string GetFullName(List<KPPosition> kpLIST)
-		{
-			string FullName = "";
-			foreach (var item in kpLIST)
-			{
-				if (item.count > 1)
-				{
-					FullName = FullName + item.count + " x " + item.mod.Name;
-					FullName += "\\";
-				}
-				else
-				{
-					FullName = FullName + item.mod.Name;
-					FullName += "\\";
-				}
-			}
-			if (!string.IsNullOrEmpty(FullName))
-				FullName = FullName.Substring(0, FullName.Length - 1);
-			return FullName;
-		}
-
-		private err CheckForNull(List<Modul> m3000)
-		{
-			foreach (var item in m3000)
-			{
-				if (item == null)
-					return new err { message = m3000.IndexOf(item).ToString(), check = false };
-			}
-			return new err { message = "OK", check = true };
-		}
-
-		private err CheckRightCount(List<Modul> m3000)
+		internal override err CheckRightCount(List<Modul> m3000)
 		{
 
 			int g = 0, gMax = 2;
@@ -140,22 +78,7 @@ namespace IMSConfigurator.Models
             return new err { message = "OK", check = true };
 		}
 
-		private err CheckNessesaryModuls(List<Modul> m3000)
-		{
-			Modul pwr = null, cpu = null, clk = null;
-			foreach (var item in m3000)
-			{
-				if (item.Type == ModulType.Generator)
-					clk = item;
-				if (item.Type == ModulType.Processor)
-					cpu = item;
-				if (item.Type == ModulType.Power)
-					pwr = item;
-			}
-			if (pwr == null || clk == null || cpu == null)
-				return new err { message = "Нет необходимых модулей!", check = false };
-			return new err { message = "OK", check = true };
-		}
+		
 
 	}
 

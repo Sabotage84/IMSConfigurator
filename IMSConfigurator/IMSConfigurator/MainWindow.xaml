@@ -7,12 +7,12 @@
         xmlns:Local="clr-namespace:IMSConfigurator.Models"
         xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.MainWindow"
         mc:Ignorable="d"
-        Title="IMSCofigurator" Height="618.666" Width="1313.366">
+        Title="IMSCofigurator" Height="620" Width="1315" MinWidth="1315" MaxWidth="1315" MinHeight="620" MaxHeight="620">
     <Window.DataContext>
         <ViewModel:PowerModulsVM/>
     </Window.DataContext>
 
-    <StackPanel Orientation="Vertical" Height="589" VerticalAlignment="Top" Margin="0">
+    <StackPanel Orientation="Vertical" Height="589" VerticalAlignment="Top" Margin="0" MinHeight="589" MaxHeight="589" MinWidth="1305" MaxWidth="1305">
         <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1305">
             <MenuItem Header="Настройки">
                 <MenuItem Header="Управление модулями"/>
