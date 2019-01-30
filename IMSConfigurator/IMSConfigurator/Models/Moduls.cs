@@ -152,7 +152,7 @@ namespace IMSConfigurator.Models
 
             foreach (var item in m_moduls)
             {
-                if (item.ID == id && item.Name == name)
+                if (item.ID.ToLower() == id.ToLower() && item.Name.ToLower() == name.ToLower())
                     return item;
             }
             return null;
@@ -164,7 +164,7 @@ namespace IMSConfigurator.Models
             
             foreach (var item in m_moduls)
             {
-                if (item.Type == type && item.Name == name)
+                if (item.Type == type && item.Name.ToLower() == name.ToLower())
                     return item;
             }
             return null;

@@ -54,7 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CheckM3000Model.cs" />
     <Compile Include="ExcelProv\ExcelProvider.cs" />
     <Compile Include="Models\IMSMetronome.cs" />
     <Compile Include="Models\Metronome1000.cs" />

@@ -49,15 +49,15 @@ namespace IMSConfigurator.Models
                     i++;
             }
             if (g>gMax)
-                return new err { message = "Wrong generator count!", check = false };
+                return new err { message = "Неверное количество генераторов!", check = false };
             if (p>pMax)
-                return new err { message = "Wrong power count!", check = false };
+                return new err { message = "Неверное количество модулей электропитания!", check = false };
             if (c>cMax)
-                return new err { message = "Wrong cpu count!", check = false };
+                return new err { message = "Неверное количество модулей центрального процессора!", check = false };
             if (o >oMax)
-                return new err { message = "Wrong outputs count!", check = false };
+                return new err { message = "Неверное количество выходных модулей!", check = false };
             if (s>sMax)
-                return new err { message = "Wrong rsc count!", check = false };
+                return new err { message = "Неверное количество модулей переключения!", check = false };
             if (i>0)
                 if(i<=iMax)
                 {
@@ -70,10 +70,10 @@ namespace IMSConfigurator.Models
                             e++;
                     }
                     if (e>1 || m>1)
-                        return new err { message = "Wrong input count!", check = false };
+                        return new err { message = "Неверное количество входных модулей!", check = false };
                 }
             else
-                return new err { message = "Wrong input count!", check = false };
+                return new err { message = "Неверное количество входных модулей!", check = false };
 
 
             return new err { message = "OK", check = true };

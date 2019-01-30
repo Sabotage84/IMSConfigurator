@@ -36,7 +36,7 @@ namespace IMSConfigurator.ViewModel
             modListMV = new ObservableCollection<Modul>(allModuls);
             foreach (var item in allModuls)
             {
-                if (item.Name.Contains(searchOutsName))
+                if (item.Name.ToLower().Contains(searchOutsName.ToLower()))
                 {
                     s_Moduls.Add(item);
                 }
