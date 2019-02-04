@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMSConfigurator.Models
 {
+    [Serializable]
     public class Modul
     {
         string name;
@@ -18,7 +19,7 @@ namespace IMSConfigurator.Models
         public string ID { get => iD; set => iD = value; }
         public string Discription { get => discription; set => discription = value; }
         public double Price { get => price; set => price = value; }
-        internal ModulType Type { get => type; set => type = value; }
+        public ModulType Type { get => type; set => type = value; }
 
         public Modul(string name, string iD, string discription, double price, ModulType type)
         {
@@ -34,6 +35,7 @@ namespace IMSConfigurator.Models
         }
     }
 
+    [Serializable]
     public enum ModulType
     {
         Power, Generator, Processor, Output, Cooler, Input, Switcher, Chassis

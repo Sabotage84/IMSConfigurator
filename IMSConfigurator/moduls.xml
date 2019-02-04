@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<ArrayOfModul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modul>
+    <Name>Устройство синхронизации частоты и времени Метроном - 3000</Name>
+    <ID>27000</ID>
+    <Discription>Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19" 3U.</Discription>
+    <Price>593</Price>
+    <Type>Chassis</Type>
+  </Modul>
+  <Modul>
+    <Name>Устройство синхронизации частоты и времени Метроном - 1000</Name>
+    <ID>27543</ID>
+    <Discription>Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19" 1U.</Discription>
+    <Price>1070</Price>
+    <Type>Chassis</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-ACM M3000</Name>
+    <ID>27550</ID>
+    <Discription>Модуль охлаждения</Discription>
+    <Price>371</Price>
+    <Type>Cooler</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-ACM M1000</Name>
+    <ID>27551</ID>
+    <Discription>Модуль охлаждения</Discription>
+    <Price>170</Price>
+    <Type>Cooler</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-1040</Name>
+    <ID>27033</ID>
+    <Discription>Карта выходных сигналов 4 x TC AM/BNC</Discription>
+    <Price>513</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-1062</Name>
+    <ID>27045</ID>
+    <Discription>Карта выходных сигналов 4x DCF77 SIM/BNC</Discription>
+    <Price>513</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2000</Name>
+    <ID>27066</ID>
+    <Discription>Карта выходных сигналов 1x PPS, 10MГц, TC DCLS, TC AM / BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2002</Name>
+    <ID>27541</ID>
+    <Discription>Карта выходных сигналов - PPS, 10MHz, TC DCLS, 2.048МГц</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2010</Name>
+    <ID>27068</ID>
+    <Discription>Карта выходных сигналов 4x PPS / BNC </Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2012</Name>
+    <ID>27532</ID>
+    <Discription>4 x PPS - 20µs BNC                                        </Discription>
+    <Price>523</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2014</Name>
+    <ID>27527</ID>
+    <Discription>Карта выходных сигналов - 2 x PPS, 2 x 10МГц/BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2020</Name>
+    <ID>27069</ID>
+    <Discription>Карта выходных сигналов 4x 10МГц/BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2030</Name>
+    <ID>27077</ID>
+    <Discription>Карта выходных сигналов - 4x TC DCLS/BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2050</Name>
+    <ID>27078</ID>
+    <Discription>Карта выходных сигналов - 3x TC DCLS, 1x TC AM/BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2080</Name>
+    <ID>27085</ID>
+    <Discription>Карта выходных сигналов 4x 2.048МГц TTL/BNC</Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2090</Name>
+    <ID>27086</ID>
+    <Discription>PP1 - PP4 - progr Pulses from pre-connected Clock         </Discription>
+    <Price>463</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2110</Name>
+    <ID>27531</ID>
+    <Discription>Карта выходных сигналов 8х PPS/BNC</Discription>
+    <Price>597</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2120</Name>
+    <ID>27530</ID>
+    <Discription>Карта выходных сигналов 8х 10МГц/BNC</Discription>
+    <Price>597</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2180</Name>
+    <ID>27537</ID>
+    <Discription>Карта выходных сигналов 8х 2.048МГц/BNC                  </Discription>
+    <Price>597</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2500</Name>
+    <ID>27524</ID>
+    <Discription>4 x prog.pulses 2pin DFK PhotoMOS + 1 x TC AM BNC         </Discription>
+    <Price>528</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-2640</Name>
+    <ID>27535</ID>
+    <Discription>Outputs - 4x PPO TTL / 2pin DFK                           </Discription>
+    <Price>528</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-4043</Name>
+    <ID>27522</ID>
+    <Discription>4x programmable pulses RJ45, RS422 Level                  </Discription>
+    <Price>304</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5000</Name>
+    <ID>27084</ID>
+    <Discription>Карта выходных сигналов PPS, 10MHz, TC - DCLS, 2.048МГц/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5010</Name>
+    <ID>27035</ID>
+    <Discription>Карта выходных сигналов - 4x PPS/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5020</Name>
+    <ID>27030</ID>
+    <Discription>Карта выходных сигналов - 4 x 10МГц/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5030</Name>
+    <ID>27038</ID>
+    <Discription>Карта выходных сигналов - 4x TC DCLS/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5080</Name>
+    <ID>27031</ID>
+    <Discription>Карта выходных сигналов - 4x 2.048МГц/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5082</Name>
+    <ID>27529</ID>
+    <Discription>Карта выходных сигналов - PPS, 10МГц, 2 x 2.048МГц/оптическкий выход</Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-BPE-5080</Name>
+    <ID>27575</ID>
+    <Discription>Fixed Outputs - Fiber Optical ST Connectors PP1 - PP4     </Discription>
+    <Price>710</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CES-1000</Name>
+    <ID>27521</ID>
+    <Discription>Карта аварийной сигнализации (реле).</Discription>
+    <Price>25</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CES-1011</Name>
+    <ID>27071</ID>
+    <Discription>PPS and 10MHz via BNC female and Error Relay Out.         </Discription>
+    <Price>88</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-1000</Name>
+    <ID>27070</ID>
+    <Discription>Управляемая карта выходных интерфейсов 1PPS, 10 МГц, синт частот синус, TTL, IRIG, AFNOR, IEEE1344, C37.118, NASA36, PPOs, DCF77 MARK, 4xBNC.</Discription>
+    <Price>855</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-1002</Name>
+    <ID>27112</ID>
+    <Discription>2x Capture Input Signals / BNC Connector                  </Discription>
+    <Price>854</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-1040</Name>
+    <ID>27570</ID>
+    <Discription>4 x configurable BNC Outputs - TC AM                      </Discription>
+    <Price>944</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-1050</Name>
+    <ID>27036</ID>
+    <Discription>3x Programmable Outputs, 1x TC AM / BNC                   </Discription>
+    <Price>854</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-2500</Name>
+    <ID>27037</ID>
+    <Discription>4x Progr.Pulses / 2pin DFK PhotoMOS, 1x TC AM / BNC       </Discription>
+    <Price>847</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3000</Name>
+    <ID>27028</ID>
+    <Discription>Карта выходных сигналов RS232+PPS. 2x DSUB9</Discription>
+    <Price>860</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3010</Name>
+    <ID>27075</ID>
+    <Discription>Configurable Serial Time String(RS422) / 2xDSUB9          </Discription>
+    <Price>858</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3020</Name>
+    <ID>27526</ID>
+    <Discription>Config.serial Time String: RS4222 + PPS, 2x DSUB9         </Discription>
+    <Price>858</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3030</Name>
+    <ID>27114</ID>
+    <Discription>Configurable Serial Time Strings(RS485) / 2x DSUB9        </Discription>
+    <Price>858</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3040</Name>
+    <ID>27116</ID>
+    <Discription>2x DSUB9 - Config.Serial Time Strings - RS485 + PPS       </Discription>
+    <Price>858</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-3060</Name>
+    <ID>27558</ID>
+    <Discription>2x DSUB9 - RS232 + PPS / RS422 + PPS                      </Discription>
+    <Price>858</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPE-5000</Name>
+    <ID>27023</ID>
+    <Discription>4 x progr.Pulses / FO connectors                          </Discription>
+    <Price>1051</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CPU</Name>
+    <ID>27018</ID>
+    <Discription>Процессор управления. Графический веб интерфейс, ПО: LTOSv6. HTTP, NTP, SSH, SNMP. 1 x LAN порт 10/100 Мбит/с.</Discription>
+    <Price>874</Price>
+    <Type>Processor</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-ESI</Name>
+    <ID>27007</ID>
+    <Discription>Карта внешней синхронизации от сигналов E1 (2,048 МГц / 2,048 Мбит/с, SSM/BOC).</Discription>
+    <Price>900</Price>
+    <Type>Input</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-FDM180</Name>
+    <ID>27076</ID>
+    <Discription>Mains frequency 70 - 270 V AC, 50Hz or 60Hz               </Discription>
+    <Price>849</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GLN-DHQ</Name>
+    <ID>27044</ID>
+    <Discription>Приемник ГЛОНАСС/GPS, опорный генератор OCXO-DHQ.</Discription>
+    <Price>2350</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GLN-HQ</Name>
+    <ID>27043</ID>
+    <Discription>Приемник ГЛОНАСС/GPS, опорный генератор OCXO-HQ.</Discription>
+    <Price>1950</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GPS-DHQ</Name>
+    <ID>27041</ID>
+    <Discription>Приемник GPS, опорный генератор OCXO-DHQ.</Discription>
+    <Price>1860</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GPS-HQ</Name>
+    <ID>27040</ID>
+    <Discription>Приемник GPS, опорный генератор OCXO-HQ.</Discription>
+    <Price>1480</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GPS-MQ</Name>
+    <ID>27002</ID>
+    <Discription>Приемник GPS, опорный генератор OCXO-MQ.</Discription>
+    <Price>1280</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-CLK GPS-SQ</Name>
+    <ID>27039</ID>
+    <Discription>Приемник GPS, опорный генератор OCXO-SQ.</Discription>
+    <Price>1150</Price>
+    <Type>Generator</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-HPS100</Name>
+    <ID>27063</ID>
+    <Discription>PL - A. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 8 клиентов PTP.</Discription>
+    <Price>876</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-HPS100</Name>
+    <ID>27074</ID>
+    <Discription>PL-B. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 256 клиентов PTP.</Discription>
+    <Price>1200</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-HPS100</Name>
+    <ID>27073</ID>
+    <Discription>PL - C. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 512 клиентов PTP.</Discription>
+    <Price>1701</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-HPS100</Name>
+    <ID>27061</ID>
+    <Discription>PL - E. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 2048 клиентов PTP.</Discription>
+    <Price>2732</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A0004</Name>
+    <ID>27091</ID>
+    <Discription>Line Interface Unit, E1 / T1 generator, Clock(0 / 4)      </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A0040</Name>
+    <ID>27090</ID>
+    <Discription>Карта интерфейсов  4 x 2,048 МГц. 120 Ом. Разъём RJ45.</Discription>
+    <Price>620</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A0044</Name>
+    <ID>27571</ID>
+    <Discription>Line Interface Unit, E1 / T1gen, Clock(4 / 4)             </Discription>
+    <Price>788</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A0400</Name>
+    <ID>27572</ID>
+    <Discription>Line Interface Unit, E1 / T1 generator, BITS(0 / 4)       </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A0404</Name>
+    <ID>27099</ID>
+    <Discription> Карта интерфейсов E1.  4x 2 048 Мбит/с, 4 x 2 048 МГц. 75 Ом, несимметричный интерфейс. Разъём BNC.</Discription>
+    <Price>788</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A1111</Name>
+    <ID>27093</ID>
+    <Discription>Line Interface Unit, E1 / T1gen, BITS(1 / 1) Clock(1 / 1) </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A2002</Name>
+    <ID>27089</ID>
+    <Discription>Line Interface Unit, E1 / T1gen, BITS(2 / 0) Clock(0 / 2) </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A2020</Name>
+    <ID>27097</ID>
+    <Discription>Line Interface Unit, E1 / T1gen, BITS(2 / 0) Clock(2 /    </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LIU A4000</Name>
+    <ID>27092</ID>
+    <Discription>Line Interface Unit, E1 / T1 generator, BITS(4 / 0)       </Discription>
+    <Price>623</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LNE-GbE</Name>
+    <ID>27010</ID>
+    <Discription>Сетевая карта расширения. 4 x LAN порта 10/100/1000 Мбит/с.</Discription>
+    <Price>650</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LNE-GbE-SFP</Name>
+    <ID>27064</ID>
+    <Discription>Сетевая карта расширения. 4 x LAN порта 1000 Мбит/с SFP. SFP модули не входят в комплект.</Discription>
+    <Price>961</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LNO</Name>
+    <ID>27011</ID>
+    <Discription>4 x 10 МГц Синус - с низким фазовым шумом</Discription>
+    <Price>850</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-LNO-12dBm</Name>
+    <ID>27576</ID>
+    <Discription>Модуль выходных сигналов 10 МГц синус с низким уровнем фазовых шумов 12dBm. 4 выхода, BNC</Discription>
+    <Price>885</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-MRI</Name>
+    <ID>27008</ID>
+    <Discription>Карта внешней синхронизации от сигналов IRIG (DCLS, AM) ,PPS,10 МГц.</Discription>
+    <Price>380</Price>
+    <Type>Input</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-MRI-FO-CLK 1</Name>
+    <ID>27098</ID>
+    <Discription>Standard Reference Inputs - TC DCLS, TC AM, PPS, 10MHz    </Discription>
+    <Price>689</Price>
+    <Type>Input</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-MRI-FO-T-CLK 1</Name>
+    <ID>27082</ID>
+    <Discription>TC AM / DCLS / FO - 10MHz and PPS - TTL / BNC             </Discription>
+    <Price>544</Price>
+    <Type>Input</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-N2X180 - SQ</Name>
+    <ID>27119</ID>
+    <Discription>Converter from NTP or IEEE - 1588 ref.to IRIG, 10MHz      </Discription>
+    <Price>950</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-PWR-AD10</Name>
+    <ID>27005</ID>
+    <Discription>Блок питания шасси. Входное напряжение переменное, постоянное 100…240 В.</Discription>
+    <Price>225</Price>
+    <Type>Power</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-PWR-DC10</Name>
+    <ID>27509</ID>
+    <Discription>Блок питания шасси. Входное напряжение постоянное 10-36 В.</Discription>
+    <Price>279</Price>
+    <Type>Power</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-PWR-DC20</Name>
+    <ID>27015</ID>
+    <Discription>Блок питания шасси. Входное напряжение постоянное 20…72 В.</Discription>
+    <Price>280</Price>
+    <Type>Power</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-REL-1000</Name>
+    <ID>27026</ID>
+    <Discription>Карта вывода сигналов неисправности. 3xDFK</Discription>
+    <Price>186</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-RSC M3000</Name>
+    <ID>27019</ID>
+    <Discription>Модуль резервного переключения</Discription>
+    <Price>376</Price>
+    <Type>Switcher</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-RSC-MDU</Name>
+    <ID>27502</ID>
+    <Discription>Описание!!!</Discription>
+    <Price>561</Price>
+    <Type>Switcher</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-SCG-B</Name>
+    <ID>27534</ID>
+    <Discription>Модуль-генератор цифрового сигнала синхронизации звука DARS (симм) 1x 25pin, 4 x DARS.</Discription>
+    <Price>774</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-SCG-U</Name>
+    <ID>27503</ID>
+    <Discription>Модуль-генератор сигналов Word Clock и AES11 (несимм, 2,5 В TL на 75 Ом), 4x BNC</Discription>
+    <Price>678</Price>
+    <Type>Output</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-SPT M3000</Name>
+    <ID>27022</ID>
+    <Discription>Проходной модуль</Discription>
+    <Price>60</Price>
+    <Type>Switcher</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-VSG</Name>
+    <ID>27507</ID>
+    <Discription>Модуль-генератор видеосинхронизации. 1 x bi-level sync ,1x Tri-Level Sync, 1x Sync Signals (H-Sync, V-Sync, .. .), 1x DARS. 4 x BNC.</Discription>
+    <Price>781</Price>
+    <Type>Output</Type>
+  </Modul>
+</ArrayOfModul>
