@@ -892,6 +892,9 @@ namespace IMSConfigurator
             ExcelProvider ex = new ExcelProvider();
             ex.OpenExcelFile(@"1.xls", true);
             ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
+            string text = ex.ReadCell("C6");
+            text += DateTime.Now.Year;
+            ex.WriteTOcell("C6", text, 14,"Arial", true);
             FillNamesAndDiscriptions(m3, ex);
             FillPrice(m3, ex);
         }
@@ -1044,6 +1047,9 @@ namespace IMSConfigurator
             ExcelProvider ex = new ExcelProvider();
             ex.OpenExcelFile(@"1.xls", true);
             ex.WriteTOcell("F11", DateTime.Now.Date.ToString("dd/MM/yyyy"));
+            string text = ex.ReadCell("C6");
+            text += DateTime.Now.Year;
+            ex.WriteTOcell("C6", text, 14, "Arial", true);
             FillNamesAndDiscriptionsForM1000(metr1000, ex);
             FillPriceForM1000(metr1000, ex);
         }
