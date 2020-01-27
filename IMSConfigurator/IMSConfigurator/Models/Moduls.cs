@@ -25,7 +25,7 @@ namespace IMSConfigurator.Models
                 m_moduls = (List<Modul>)formatter.Deserialize(fs);
             }
 
-
+            #region
             //m_moduls.Add(new Modul("Устройство синхронизации частоты и времени Метроном - 3000", "27000", "Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19\" 3U.", 593, ModulType.Chassis));
             //m_moduls.Add(new Modul("Устройство синхронизации частоты и времени Метроном - 1000", "27543", "Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19\" 1U.", 1070, ModulType.Chassis));
             //m_moduls.Add(new Modul("IMS-ACM M3000", "27550", "Модуль охлаждения", 371, ModulType.Cooler));
@@ -157,7 +157,7 @@ namespace IMSConfigurator.Models
             //{
             //    xml_serializer.Serialize(fs, m_moduls);
             //}
-
+            #endregion
         }
 
         public IEnumerator<Modul> GetEnumerator()

@@ -862,7 +862,7 @@ namespace IMSConfigurator
         {
             if (M1000_rbtn.IsChecked == true)
             {
-                CreateM1000_Offer();
+                 CreateM1000_Offer();
             }
             else if (M3000_rbtn.IsChecked == true)
             {
@@ -872,7 +872,7 @@ namespace IMSConfigurator
                 MessageBox.Show("Выбирите шасси!");
         }
 
-        private void CreateM3000_Offer()
+        private async void CreateM3000_Offer()
         {
             
             List<Modul> m3000 = new List<Modul>();
@@ -881,7 +881,7 @@ namespace IMSConfigurator
             if (!m3.Status.check)
                 MessageBox.Show(m3.Status.message);
             else
-                CreateExcelOffer(m3);
+               await Task.Run(()=>CreateExcelOffer(m3));
 
             
            
@@ -1031,7 +1031,7 @@ namespace IMSConfigurator
             return temp;
         }
 
-        private void CreateM1000_Offer()
+        private async void CreateM1000_Offer()
         {
             List<Modul> m1000 = new List<Modul>();
             m1000 = CollectModulsForM1000();
@@ -1039,7 +1039,7 @@ namespace IMSConfigurator
             if (!metr1000.Status.check)
                 MessageBox.Show(metr1000.Status.message);
             else
-                CreateExcelOfferForM1000(metr1000);
+                await Task.Run(()=>CreateExcelOfferForM1000(metr1000));
         }
 
         private void CreateExcelOfferForM1000(Metronome1000 metr1000)
