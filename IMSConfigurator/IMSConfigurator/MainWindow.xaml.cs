@@ -105,7 +105,7 @@ namespace IMSConfigurator
             PWR1_discription.Text = m.Discription;
             PWR1_price.Text = m.Price.ToString();
 
-            m = m_moduls.SearchModul("IMS-CLK GLN-HQ", ModulType.Generator);
+            m = m_moduls.SearchModul("IMS-CLK GNS-HQ", ModulType.Generator);
             
             CLK1_name.Text = m.Name;
             CLK1_name.IsEditable = false;
