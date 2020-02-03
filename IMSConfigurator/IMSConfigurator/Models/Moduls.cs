@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml.Serialization;
 
 namespace IMSConfigurator.Models
@@ -14,7 +15,7 @@ namespace IMSConfigurator.Models
     {
         List<Modul> m_moduls = new List<Modul>();
 
-        public Moduls()
+        public Moduls(Application ap)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<Modul>));
 
@@ -22,7 +23,16 @@ namespace IMSConfigurator.Models
 
             using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
             {
-                m_moduls = (List<Modul>)formatter.Deserialize(fs);
+                try
+                {
+                    m_moduls = (List<Modul>)formatter.Deserialize(fs);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("ex1");
+                    ap.Shutdown();
+                }
+                        
             }
 
             #region
@@ -159,6 +169,30 @@ namespace IMSConfigurator.Models
             //}
             #endregion
         }
+
+        public Moduls()
+        {
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Modul>));
+
+
+
+            using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
+            {
+                try
+                {
+                    m_moduls = (List<Modul>)formatter.Deserialize(fs);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ex2");
+                   
+                }
+
+            }
+
+           
+        }
+
 
         public IEnumerator<Modul> GetEnumerator()
         {

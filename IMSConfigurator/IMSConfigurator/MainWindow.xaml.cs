@@ -29,8 +29,17 @@ namespace IMSConfigurator
 		bool firstChoseCLK = true;
         public MainWindow()
         {
-            InitializeComponent();
-            m_moduls = new Moduls();
+            
+            try
+            {   
+                InitializeComponent();
+                m_moduls = new Moduls(Application.Current);
+            }
+            catch (Exception)
+            {
+                Application.Current.Shutdown();
+            } 
+            
             powerModuls = m_moduls.SearchModulsByType(ModulType.Power);
             
         }
