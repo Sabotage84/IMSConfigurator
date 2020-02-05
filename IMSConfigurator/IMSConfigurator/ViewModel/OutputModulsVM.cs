@@ -55,7 +55,7 @@ namespace IMSConfigurator.ViewModel
 
         public OutputModulsVM()
         {
-            Moduls m = new Moduls();
+            Moduls m = Moduls.modulInstance;
             allModuls = m.SearchModulsByType(ModulType.Output);
             allModuls.AddRange(m.SearchModulsByType(ModulType.Input));
             modListMV = new ObservableCollection<Modul>(allModuls);

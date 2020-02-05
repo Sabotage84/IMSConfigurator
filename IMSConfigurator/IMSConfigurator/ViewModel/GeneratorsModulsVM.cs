@@ -13,7 +13,7 @@ namespace IMSConfigurator.ViewModel
         public List<Modul> ModListMV { get => modListMV; set => modListMV = value; }
         public GeneratorsModulsVM()
         {
-            Moduls m = new Moduls();
+            Moduls m = Moduls.modulInstance;
             ModListMV = m.SearchModulsByType(ModulType.Generator);
         }
     }

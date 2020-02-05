@@ -323,14 +323,14 @@
     <Type>Output</Type>
   </Modul>
   <Modul>
-    <Name>IMS-CLK GLN-DHQ</Name>
+    <Name>IMS-CLK GNS-DHQ</Name>
     <ID>27044</ID>
     <Discription>Приемник ГЛОНАСС/GPS, опорный генератор OCXO-DHQ.</Discription>
     <Price>2350</Price>
     <Type>Generator</Type>
   </Modul>
   <Modul>
-    <Name>IMS-CLK GLN-HQ</Name>
+    <Name>IMS-CLK GNS-HQ</Name>
     <ID>27043</ID>
     <Discription>Приемник ГЛОНАСС/GPS, опорный генератор OCXO-HQ.</Discription>
     <Price>1950</Price>
@@ -365,30 +365,30 @@
     <Type>Generator</Type>
   </Modul>
   <Modul>
-    <Name>IMS-HPS100</Name>
+    <Name>IMS-HPS100 PL-A</Name>
     <ID>27063</ID>
-    <Discription>PL - A. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 8 клиентов PTP.</Discription>
+    <Discription>PL-A. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 8 клиентов PTP.</Discription>
     <Price>876</Price>
     <Type>Output</Type>
   </Modul>
   <Modul>
-    <Name>IMS-HPS100</Name>
+    <Name>IMS-HPS100 PL-B</Name>
     <ID>27074</ID>
     <Discription>PL-B. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 256 клиентов PTP.</Discription>
     <Price>1200</Price>
     <Type>Output</Type>
   </Modul>
   <Modul>
-    <Name>IMS-HPS100</Name>
+    <Name>IMS-HPS100 PL-C</Name>
     <ID>27073</ID>
-    <Discription>PL - C. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 512 клиентов PTP.</Discription>
+    <Discription>PL-C. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 512 клиентов PTP.</Discription>
     <Price>1701</Price>
     <Type>Output</Type>
   </Modul>
   <Modul>
-    <Name>IMS-HPS100</Name>
+    <Name>IMS-HPS100 PL-E</Name>
     <ID>27061</ID>
-    <Discription>PL - E. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 2048 клиентов PTP.</Discription>
+    <Discription>PL-E. Карта PTP (IEEE 1588-2008)/NTP Gigabit (Комбинированный порт RJ45 / SFP). Режим One Step mode, Layer 2 / Layer 3 / IPv4 / IPv6, SyncE. 2048 клиентов PTP.</Discription>
     <Price>2732</Price>
     <Type>Output</Type>
   </Modul>

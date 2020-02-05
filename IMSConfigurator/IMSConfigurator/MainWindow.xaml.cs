@@ -33,7 +33,7 @@ namespace IMSConfigurator
             try
             {   
                 InitializeComponent();
-                m_moduls = new Moduls(Application.Current);
+                m_moduls = Moduls.modulInstance;
             }
             catch (Exception)
             {

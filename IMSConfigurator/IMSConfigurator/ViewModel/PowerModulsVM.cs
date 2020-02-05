@@ -13,7 +13,7 @@ namespace IMSConfigurator.ViewModel
         public List<Modul> modListMV;
         public PowerModulsVM()
         {
-            Moduls m = new Moduls();
+            Moduls m = Moduls.modulInstance;
             ModListMV = m.SearchModulsByType(ModulType.Power);
         }
 
