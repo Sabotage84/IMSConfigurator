@@ -35,6 +35,7 @@ namespace IMSConfigurator.Models
                 }
                 catch 
                 {
+                    
                     MessageBox.Show("Moduls file not foud!\n Load default moduls.", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
                     #region
                     m_moduls.Add(new Modul("Устройство синхронизации частоты и времени Метроном - 3000", "27000", "Шасси системы синхронизации. Система IMS с автоматическим распознаванием модулей. Горячая замена, резервирование модулей. Стоечный металлический корпус 19\" 3U.", 1106, ModulType.Chassis));
@@ -161,12 +162,10 @@ namespace IMSConfigurator.Models
 
 
 
-                    //XmlSerializer xml_serializer =
-                    //new XmlSerializer(typeof(List<Modul>));
-                    //using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
-                    //{
-                    //    xml_serializer.Serialize(fs, m_moduls);
-                    //}
+                    
+                    
+                     formatter.Serialize(fs, m_moduls);
+                   
                     #endregion
 
 
