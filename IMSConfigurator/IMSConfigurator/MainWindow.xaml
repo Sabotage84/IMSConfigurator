@@ -7,7 +7,7 @@
         xmlns:Local="clr-namespace:IMSConfigurator.Models"
         xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.MainWindow"
         mc:Ignorable="d"
-        Title="IMSCofigurator" Height="620" Width="1315" MinWidth="1315" MaxWidth="1315" MinHeight="620" MaxHeight="620">
+        Title="IMSCofigurator" Height="670" Width="1315" MinWidth="1315" MaxWidth="1350" MinHeight="670" MaxHeight="620">
     <Window.DataContext>
         <ViewModel:PowerModulsVM/>
     </Window.DataContext>
@@ -22,7 +22,9 @@
                 <MenuItem Header="Выход"/>
             </MenuItem>
         </Menu>
+        <ComboBox x:Name="history_cmbx" Margin="0,0,5,0" MaxDropDownHeight="400" Width="1295" HorizontalAlignment="Center" />
         <StackPanel Orientation="Horizontal" Height="509">
+
             <StackPanel Orientation="Vertical" Width="601" Margin="0,4,0,29">
 
                 <GroupBox Header="Шасси" HorizontalAlignment="Left" Height="41" Margin="10,5,0,0" VerticalAlignment="Top" Width="589">
@@ -241,7 +243,7 @@
                             <TextBlock x:Name="OUT9_discription" TextWrapping="Wrap" Text="Описание" Margin="5,5,0,0" Width="390" Height="36" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10"/>
                             <TextBlock x:Name="OUT9_price" TextWrapping="Wrap" Text="Цена" Margin="5,5,5,0" Width="65" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel x:Name="OUT10_sp"  Orientation="Horizontal" Margin="0,-180,0,0" Height="180" IsEnabled="False">
+                        <StackPanel x:Name="OUT10_sp"  Orientation="Horizontal" Margin="0,-180,-0.4,0" Height="182" IsEnabled="False">
                             <CheckBox x:Name="OUT10_chkbx"  HorizontalAlignment="Center" Margin="10,8,10,0" VerticalAlignment="Top" Height="13" Width="16" Checked="OUT10_chkbx_Checked" Unchecked="OUT10_chkbx_Unchecked"/>
                             <StackPanel Orientation="Vertical" Width="135" Margin="0,5,0,0" Height="100" VerticalAlignment="Top">
                                 <StackPanel Orientation="Horizontal">
@@ -259,7 +261,7 @@
                 </GroupBox>
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="38" HorizontalAlignment="Right" Width="1305">
+        <StackPanel Orientation="Horizontal" Margin="0" Height="38" HorizontalAlignment="Right" Width="1305">
 
             <Button Content="Создать КП" Height="25" Margin="1000,0,25,0" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
             <Button Content="Отмена" Height="25" Margin="0" HorizontalAlignment="Right" Width="103" VerticalAlignment="Center" Click="Button_Click_1"/>
