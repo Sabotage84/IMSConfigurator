@@ -40,12 +40,10 @@ namespace IMSConfigurator.ViewModel
                 {
                     s_Moduls.Add(item);
                 }
-
             }
             if (s_Moduls.Count==0)
             {
                 ModListMV = new ObservableCollection<Modul> (allModuls);
-                
             }
             else
             {

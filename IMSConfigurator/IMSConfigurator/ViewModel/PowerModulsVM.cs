@@ -16,7 +16,6 @@ namespace IMSConfigurator.ViewModel
             Moduls m = Moduls.modulInstance;
             ModListMV = m.SearchModulsByType(ModulType.Power);
         }
-
         public List<Modul> ModListMV { get => modListMV; set => modListMV = value; }
     }
 }
