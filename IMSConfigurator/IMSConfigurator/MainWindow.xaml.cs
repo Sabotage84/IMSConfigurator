@@ -353,7 +353,7 @@ namespace IMSConfigurator
             }
            
             OUT1_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
+            //ClearModulInfoWithOUTName(OUT1_name, OUT1_discription, OUT1_ID, OUT1_price);
             OUT1_name.Focus();
         }
 
@@ -365,7 +365,7 @@ namespace IMSConfigurator
                 OUT2_name.Text = string.Empty;
             }
             OUT2_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
+            //ClearModulInfoWithOUTName(OUT2_name, OUT2_discription, OUT2_ID, OUT2_price);
             OUT2_name.Focus();
         }
 
@@ -377,7 +377,7 @@ namespace IMSConfigurator
                 OUT3_name.Text = string.Empty;
             }
             OUT3_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
+            //ClearModulInfoWithOUTName(OUT3_name, OUT3_discription, OUT3_ID, OUT3_price);
             OUT3_name.Focus();
         }
 
@@ -389,7 +389,7 @@ namespace IMSConfigurator
                 OUT4_name.Text = string.Empty;
             }
             OUT4_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
+            //ClearModulInfoWithOUTName(OUT4_name, OUT4_discription, OUT4_ID, OUT4_price);
             OUT4_name.Focus();
         }
 
@@ -401,7 +401,7 @@ namespace IMSConfigurator
                 OUT5_name.Text = string.Empty;
             }
             OUT5_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
+            //ClearModulInfoWithOUTName(OUT5_name, OUT5_discription, OUT5_ID, OUT5_price);
             OUT5_name.Focus();
         }
 
@@ -413,7 +413,7 @@ namespace IMSConfigurator
                 OUT6_name.Text = string.Empty;
             }
             OUT6_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
+            //ClearModulInfoWithOUTName(OUT6_name, OUT6_discription, OUT6_ID, OUT6_price);
             OUT6_name.Focus();
         }
 
@@ -425,7 +425,7 @@ namespace IMSConfigurator
                 OUT7_name.Text = string.Empty;
             }
             OUT7_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
+            //ClearModulInfoWithOUTName(OUT7_name, OUT7_discription, OUT7_ID, OUT7_price);
             OUT7_name.Focus();
         }
 
@@ -437,7 +437,7 @@ namespace IMSConfigurator
                 OUT8_name.Text = string.Empty;
             }
             OUT8_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
+            //ClearModulInfoWithOUTName(OUT8_name, OUT8_discription, OUT8_ID, OUT8_price);
             OUT8_name.Focus();
         }
 
@@ -449,7 +449,7 @@ namespace IMSConfigurator
                 OUT9_name.Text = string.Empty;
             }
             OUT9_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
+            //ClearModulInfoWithOUTName(OUT9_name, OUT9_discription, OUT9_ID, OUT9_price);
             OUT9_name.Focus();
         }
 
@@ -461,7 +461,7 @@ namespace IMSConfigurator
                 OUT10_name.Text = string.Empty;
             }
             OUT10_Clear.IsEnabled = true;
-            ClearModulInfoWithOUTName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
+            //ClearModulInfoWithOUTName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
             OUT10_name.Focus();
         }
 
@@ -1243,8 +1243,13 @@ namespace IMSConfigurator
         private void OUT1_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
-            if (m!=null)
+            if (m != null)
+            {
                 OUT1_discription.Text = m.Discription;
+                OUT1_ID.Text = m.ID;
+                OUT1_price.Text = m.Price.ToString();
+            }
+
         }
 
         private Modul GetModulUnderMouse(object sender, MouseEventArgs e)
@@ -1288,21 +1293,36 @@ namespace IMSConfigurator
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT2_discription.Text = m.Discription;
+                OUT2_ID.Text = m.ID;
+                OUT2_price.Text = m.Price.ToString();
+            }
+                
         }
 
         private void OUT3_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT3_discription.Text = m.Discription;
+                OUT3_ID.Text = m.ID;
+                OUT3_price.Text = m.Price.ToString();
+            }
+               
         }
 
         private void OUT4_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT4_discription.Text = m.Discription;
+                OUT4_ID.Text = m.ID;
+                OUT4_price.Text = m.Price.ToString();
+            }
+                
         }
 
         private void StackPanel_MouseMove_1(object sender, MouseEventArgs e)
@@ -1314,7 +1334,12 @@ namespace IMSConfigurator
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT5_discription.Text = m.Discription;
+                OUT5_ID.Text = m.ID;
+                OUT5_price.Text = m.Price.ToString();
+            }
+               
         }
 
         private void StackPanel_MouseMove_2(object sender, MouseEventArgs e)
@@ -1326,7 +1351,12 @@ namespace IMSConfigurator
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT6_discription.Text = m.Discription;
+                OUT6_ID.Text = m.ID;
+                OUT6_price.Text = m.Price.ToString();
+            }
+                
         }
 
         private void StackPanel_MouseMove_3(object sender, MouseEventArgs e)
@@ -1338,28 +1368,48 @@ namespace IMSConfigurator
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT7_discription.Text = m.Discription;
+                OUT7_ID.Text = m.ID;
+                OUT7_price.Text = m.Price.ToString();
+            }
+               
         }
 
         private void OUT8_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT8_discription.Text = m.Discription;
+                OUT8_ID.Text = m.ID;
+                OUT8_price.Text = m.Price.ToString();
+            }
+               
         }
 
         private void OUT9_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT9_discription.Text = m.Discription;
+                OUT9_ID.Text = m.ID;
+                OUT9_price.Text = m.Price.ToString();
+            }
+              
         }
 
         private void OUT10_tooltip_MouseMove(object sender, MouseEventArgs e)
         {
             Modul m = GetModulUnderMouse(sender, e);
             if (m != null)
+            {
                 OUT10_discription.Text = m.Discription;
+                OUT10_ID.Text = m.ID;
+                OUT10_price.Text = m.Price.ToString();
+            }
+                
         }
 
         private void OUT1_Clear_Click(object sender, RoutedEventArgs e)
