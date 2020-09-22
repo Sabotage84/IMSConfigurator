@@ -1233,16 +1233,10 @@ namespace IMSConfigurator
             List<Modul> temp = new List<Modul>();
             if (!string.IsNullOrEmpty(CLK1_name.Text))
             {
-                if (CLK1_name.Text.Contains("DHQ"))
+                Modul m = m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator);
+                if (m != null)
                 {
-                    MessageBox.Show("В Метрономе-1000 нельзя установить генератор DHQ!");
-                    return null;
-                }
-                else
-                {
-                    Modul m = m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator);
-                    if (m != null)
-                        temp.Add(m);
+                    temp.Add(m);
                 }
             }
             else
