@@ -95,11 +95,11 @@ namespace IMSConfigurator
             OUT9_sp.IsEnabled = false;
             OUT10_sp.IsEnabled = false;
             if (CPU_chkbx.IsChecked == true)
-                CloseModuleM1000();
+                Close4to6ModuleM1000();
             if (Double_CLK_chBx.IsChecked == true)
-                CloseModuleM1000();
+                Close4to6ModuleM1000();
             if ( CLK1_name.Text != "Модуль" || string.IsNullOrEmpty(CLK1_name.Text))
-                CloseModuleM1000();
+                Close4to6ModuleM1000();
             LoadDefaultM1000Conf();
             
             
@@ -157,7 +157,7 @@ namespace IMSConfigurator
             }
 			if (M1000_rbtn.IsChecked == true)
 			{
-				CloseModuleM1000();
+				Close4to6ModuleM1000();
 			}
         }
 
@@ -208,7 +208,7 @@ namespace IMSConfigurator
             CPU_discription.Text = mod.Discription;
             CPU_price.Text = mod.Price.ToString();
 			if (M1000_rbtn.IsChecked == true)
-				CloseModuleM1000();
+				Close4to6ModuleM1000();
         }
 
         private void CPU_chkbx_Unchecked(object sender, RoutedEventArgs e)
@@ -298,6 +298,21 @@ namespace IMSConfigurator
             CLK1_ID.Text = m.ID;
             CLK1_discription.Text = m.Discription;
             CLK1_price.Text = m.Price.ToString();
+            if(M1000_rbtn.IsChecked == true && CLK1_discription.Text.Contains("DHQ"))
+            {
+                CLK2_name.Text = "";
+                CLK2_ID.Text = "";
+                CLK2_discription.Text = "";
+                CLK2_price.Text = "";
+                Double_CLK_chBx.IsEnabled = false;
+                Close4dModuleM1000();
+            }
+            else
+            {
+                Open4dModuleM1000();
+            }
+
+
             if (Double_CLK_chBx.IsEnabled==true && Double_CLK_chBx.IsChecked==true)
             {
                 CLK2_name.Text = m.Name;
@@ -305,6 +320,7 @@ namespace IMSConfigurator
                 CLK2_discription.Text = m.Discription;
                 CLK2_price.Text = m.Price.ToString();
             }
+
             if (M3000_rbtn.IsChecked == true)
             {
                 Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
@@ -313,15 +329,16 @@ namespace IMSConfigurator
                 RSC_discription.Text = rsc.Discription;
                 RSC_price.Text = rsc.Price.ToString();
             }
+
 			if (M1000_rbtn.IsChecked == true && firstChoseCLK)
 			{
 				firstChoseCLK = false;
-				CloseModuleM1000();
+				Close4to6ModuleM1000();
 			}
 
         }
 
-		private void CloseModuleM1000()
+		private void Close4to6ModuleM1000()
 		{
 			if (OUT6_sp.IsEnabled)
 			{
@@ -344,7 +361,26 @@ namespace IMSConfigurator
 
 		}
 
-		private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
+        private void Close4dModuleM1000()
+        {
+            if (OUT4_sp.IsEnabled)
+            {
+                OUT4_chkbx.IsChecked = false;
+                OUT4_sp.IsEnabled = false;
+                return;
+            }
+        }
+
+        private void Open4dModuleM1000()
+        {
+            if (!OUT4_sp.IsEnabled)
+            {
+                OUT4_sp.IsEnabled = true;
+                return;
+            }
+        }
+
+        private void OUT1_chkbx_Checked(object sender, RoutedEventArgs e)
         {
             OUT1_name.IsEnabled = true;
             if (OUT1_name.Text=="Модуль")
