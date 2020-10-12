@@ -19,7 +19,8 @@ namespace IMSConfigurator.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<Modul> ModListMV { get => modListMV;
-            set {
+            set 
+            {
                 modListMV = value;
                 OnPropertyChanged(nameof(ModListMV));
                
