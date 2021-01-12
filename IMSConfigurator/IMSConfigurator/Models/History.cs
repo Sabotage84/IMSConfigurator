@@ -37,7 +37,7 @@ namespace IMSConfigurator.Models
         public void SaveHistory()
         {
             XmlSerializer ser = new XmlSerializer(typeof(List<IMSMetronome>));
-            using (FileStream fs = new FileStream("histiry.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("history.xml", FileMode.OpenOrCreate))
             {
                 ser.Serialize(fs, imsList);
             }

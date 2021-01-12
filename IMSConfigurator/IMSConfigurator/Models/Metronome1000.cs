@@ -6,9 +6,11 @@ using System.Text;
 
 namespace IMSConfigurator.Models
 {
-	class Metronome1000: IMSMetronome
+	[Serializable]
+	public class Metronome1000: IMSMetronome
 	{
-
+		public Metronome1000()
+		{ }
         public Metronome1000(List<Modul> m1000)
         {
             if (CheckAll(m1000).check)

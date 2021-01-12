@@ -7,8 +7,13 @@ using System.Windows;
 
 namespace IMSConfigurator.Models
 {
-    class Metronome3000:IMSMetronome
+    [Serializable]
+    public class Metronome3000:IMSMetronome
     {
+        public Metronome3000()
+        {
+
+        }
         public Metronome3000(List<Modul> m3000)
         {
             if (CheckAll(m3000).check)

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace IMSConfigurator.Models
 {
-    class IMSMetronome
+    [XmlInclude(typeof(Metronome1000))]
+    [XmlInclude(typeof(Metronome3000))]
+    [Serializable]
+    public class IMSMetronome
     {
         err status = new err { message = "OK", check = true };
         List<KPPosition> kpLIST = new List<KPPosition>();
@@ -95,7 +99,7 @@ namespace IMSConfigurator.Models
 
     }
 
-    class err
+    public class err
     {
         public string message;
         public bool check;
