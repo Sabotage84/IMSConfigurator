@@ -11,17 +11,17 @@ using System.Xml.Serialization;
 namespace IMSConfigurator.Models
 {
     [Serializable]
-     class History : IEnumerable<IMSMetronome>
+     class History 
     {
         public History()
         {
-            XmlSerializer formatter = new XmlSerializer(typeof(List<IMSMetronome>));
+            XmlSerializer formatter = new XmlSerializer(typeof(List<List<Modul>>));
             using (FileStream fs = new FileStream("history.xml", FileMode.OpenOrCreate))
             {
 
                 try
                 {
-                    imsList = (List<IMSMetronome>)formatter.Deserialize(fs);
+                    imsList = (List<List<Modul>>)formatter.Deserialize(fs);
                 }
                 catch
                 {
@@ -36,7 +36,7 @@ namespace IMSConfigurator.Models
         
         public void SaveHistory()
         {
-            XmlSerializer ser = new XmlSerializer(typeof(List<IMSMetronome>));
+            XmlSerializer ser = new XmlSerializer(typeof(List<List<Modul>>));
             using (FileStream fs = new FileStream("history.xml", FileMode.OpenOrCreate))
             {
                 ser.Serialize(fs, imsList);
@@ -45,24 +45,13 @@ namespace IMSConfigurator.Models
         }
 
 
-        List<IMSMetronome> imsList = new List<IMSMetronome>();
+        List<List<Modul>> imsList = new List<List<Modul>>();
         
-        public void AddElement(IMSMetronome item)
+        public void AddElement(List<Modul> item)
         {
             imsList.Add(item);
         }
         
-        public IEnumerator<IMSMetronome> GetEnumerator()
-        {
-            foreach (var item in imsList)
-            {
-                yield return item;
-            }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        
     }
 }

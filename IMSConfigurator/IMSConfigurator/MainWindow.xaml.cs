@@ -979,7 +979,7 @@ namespace IMSConfigurator
             else
             {
                 History log = new History();
-                log.AddElement(m3);
+                log.AddElement(m3000);
                 log.SaveHistory();
                 await Task.Run(() => CreateExcelOffer(m3));
             }
@@ -1142,7 +1142,7 @@ namespace IMSConfigurator
             else
             {
                 History log = new History();
-                log.AddElement(metr1000);
+                log.AddElement(m1000);
                 log.SaveHistory();
                 await Task.Run(() => CreateExcelOfferForM1000(metr1000));
             }
