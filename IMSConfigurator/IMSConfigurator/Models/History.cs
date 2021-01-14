@@ -32,6 +32,10 @@ namespace IMSConfigurator.Models
                 }
 
             }
+            foreach (var item in imsList)
+            {
+                AddToHistoryLog(item);
+            }
         }
         
         public void SaveHistory()
@@ -44,7 +48,21 @@ namespace IMSConfigurator.Models
             
         }
 
+        public void AddToHistoryLog(List<Modul> moduls)
+        {
+            IMSMetronome item;
+            if (moduls[0].Name.Contains("1000"))
+            {
+                item = new Metronome1000(moduls);
+            }
+            else
+            {
+                item = new Metronome3000(moduls);
+            }
+            historyLog.Add(item.FullName, moduls);
+        }
 
+        Dictionary<string, List<Modul>> historyLog = new Dictionary<string, List<Modul>>();
         List<List<Modul>> imsList = new List<List<Modul>>();
         
         public void AddElement(List<Modul> item)
