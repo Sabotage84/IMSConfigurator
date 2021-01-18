@@ -157,7 +157,12 @@ namespace IMSConfigurator
             }
 			if (M1000_rbtn.IsChecked == true)
 			{
-				Close4to6ModuleM1000();
+                Modul rsc = m_moduls.SearchModul("IMS-RSC M1000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+                Close4to6ModuleM1000();
 			}
         }
 
@@ -1256,6 +1261,7 @@ namespace IMSConfigurator
             if (Double_CLK_chBx.IsChecked == true)
             {
                 temp.Add(m_moduls.SearchModul(CLK1_name.Text, ModulType.Generator));
+                temp.Add(m_moduls.SearchModul(RSC_name.Text, ModulType.Switcher));
             }
             return temp;
         }

@@ -24,16 +24,16 @@ namespace IMSConfigurator.Models
             }
         }
 
-		internal override err CheckRightCount(List<Modul> m3000)
+		internal override err CheckRightCount(List<Modul> m1000)
 		{
 
 			int g = 0, gMax = 2;
-			int p = 0, pMax = 4;
+			int p = 0, pMax = 2;
 			int c = 0, cMax = 1;
-			int o = 0, oMax = 10;
+			int o = 0, oMax = 5;
 			int s = 0, sMax = 1;
 			int i = 0, iMax = 2;
-			foreach (var item in m3000)
+			foreach (var item in m1000)
 			{
 
 				if (item.Type == ModulType.Generator)
@@ -63,7 +63,7 @@ namespace IMSConfigurator.Models
                 if (i <= iMax)
                 {
                     int m = 0, e = 0;
-                    foreach (var item in m3000.Where(n => n.Type == ModulType.Input))
+                    foreach (var item in m1000.Where(n => n.Type == ModulType.Input))
                     {
                         if (item.Name.ToLower().Contains("mri"))
                             m++;
