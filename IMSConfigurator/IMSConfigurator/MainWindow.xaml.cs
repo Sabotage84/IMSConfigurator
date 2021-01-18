@@ -34,6 +34,7 @@ namespace IMSConfigurator
             {   
                 InitializeComponent();
                 m_moduls = Moduls.modulInstance;
+                
             }
             catch (Exception)
             {

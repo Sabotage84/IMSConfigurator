@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 namespace IMSConfigurator.Models
 {
     [Serializable]
-     class History 
+     public class History 
     {
         public History()
         {
@@ -59,12 +59,14 @@ namespace IMSConfigurator.Models
             {
                 item = new Metronome3000(moduls);
             }
-            historyLog.Add(item.FullName, moduls);
+            HistoryLog.Add(item.FullName, moduls);
         }
 
         Dictionary<string, List<Modul>> historyLog = new Dictionary<string, List<Modul>>();
         List<List<Modul>> imsList = new List<List<Modul>>();
-        
+
+        public Dictionary<string, List<Modul>> HistoryLog { get => historyLog; set => historyLog = value; }
+
         public void AddElement(List<Modul> item)
         {
             imsList.Add(item);

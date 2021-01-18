@@ -22,7 +22,11 @@
                 <MenuItem Header="Выход"/>
             </MenuItem>
         </Menu>
-        <ComboBox x:Name="history_cmbx" Margin="0,0,5,0" MaxDropDownHeight="400" Width="1295" HorizontalAlignment="Center" />
+        <ComboBox x:Name="history_cmbx" Margin="0,0,5,0" MaxDropDownHeight="400" Width="1295" HorizontalAlignment="Center" ItemsSource="{Binding HistoryLogVM.Keys}">
+            <ComboBox.DataContext>
+                <ViewModel:HistoryVM/>
+            </ComboBox.DataContext>
+        </ComboBox>
         <StackPanel Orientation="Horizontal" Height="509">
 
             <StackPanel Orientation="Vertical" Width="601" Margin="0,4,0,29">
