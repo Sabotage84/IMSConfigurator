@@ -34,7 +34,7 @@ namespace IMSConfigurator
             {   
                 InitializeComponent();
                 m_moduls = Moduls.modulInstance;
-                
+                history_cmbx.DataContext = (HistoryVM)(new HistoryVM(new History()));
             }
             catch (Exception)
             {
