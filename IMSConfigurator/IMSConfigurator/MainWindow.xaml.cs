@@ -1524,5 +1524,16 @@ namespace IMSConfigurator
         {
             ClearModulInfoWithName(OUT10_name, OUT10_discription, OUT10_ID, OUT10_price);
         }
+
+        private void history_cmbx_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
+        private void history_cmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //TODO logic
+            MessageBox.Show("Test");
+        }
     }
 }
