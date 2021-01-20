@@ -35,6 +35,7 @@ namespace IMSConfigurator
                 InitializeComponent();
                 m_moduls = Moduls.modulInstance;
                 history_cmbx.DataContext = (HistoryVM)(new HistoryVM(new History()));
+                
             }
             catch (Exception)
             {
@@ -1533,7 +1534,17 @@ namespace IMSConfigurator
         private void history_cmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //TODO logic
-            MessageBox.Show("Test");
+            string nameServer = history_cmbx.SelectedItem.ToString();
+            MessageBox.Show(nameServer);
+            if(nameServer.Contains("Метроном - 1000"))
+            {
+
+                MessageBox.Show("M1000");
+            }
+            else
+            {
+                MessageBox.Show("M3000");
+            }
         }
     }
 }
