@@ -1540,11 +1540,31 @@ namespace IMSConfigurator
             {
 
                 MessageBox.Show("M1000");
+                History h = new History();
+                if (h.HistoryLog.ContainsKey(nameServer))
+                {
+                    FeelOfferM1000(h.HistoryLog[nameServer]);
+                }
             }
             else
             {
                 MessageBox.Show("M3000");
+                History h = new History();
+                if (h.HistoryLog.ContainsKey(nameServer))
+                {
+                    FeelOfferM3000(h.HistoryLog[nameServer]);
+                }
             }
+        }
+
+        private void FeelOfferM3000(List<Modul> list)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void FeelOfferM1000(List<Modul> list)
+        {
+            throw new NotImplementedException();
         }
     }
 }
