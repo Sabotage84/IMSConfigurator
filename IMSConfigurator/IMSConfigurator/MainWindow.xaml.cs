@@ -1565,17 +1565,17 @@ namespace IMSConfigurator
 
         private void ChoseM3000Basic()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void FeelModuls(List<Modul> list)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void ChoseM1000Basic()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void FeelOfferM1000(List<Modul> list)
