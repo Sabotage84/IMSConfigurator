@@ -48,24 +48,7 @@ namespace IMSConfigurator
 
         private void M3000_rbtn_Checked(object sender, RoutedEventArgs e)
         {
-            PWR1_sp.IsEnabled = true;
-            PWR2_sp.IsEnabled = true;
-            PWR3_sp.IsEnabled = true;
-            PWR4_sp.IsEnabled = true;
-            CLK1_sp.IsEnabled = true;
-            CPU_sp.IsEnabled = true;
-            OUT1_sp.IsEnabled = true;
-            OUT2_sp.IsEnabled = true;
-            OUT3_sp.IsEnabled = true;
-            OUT4_sp.IsEnabled = true;
-            OUT5_sp.IsEnabled = true;
-            OUT6_sp.IsEnabled = true;
-            OUT7_sp.IsEnabled = true;
-            OUT8_sp.IsEnabled = true;
-            OUT9_sp.IsEnabled = true;
-            OUT10_sp.IsEnabled = true;
-
-            LoadDefaultM3000Conf();
+            ChoseM3000Basic();
         }
 
         private void LoadDefaultM3000Conf()
@@ -80,31 +63,7 @@ namespace IMSConfigurator
 
         private void M1000_rbtn_Checked(object sender, RoutedEventArgs e)
         {
-            PWR1_sp.IsEnabled = true;
-            PWR2_sp.IsEnabled = true;
-            PWR3_sp.IsEnabled = false;
-            PWR4_sp.IsEnabled = false;
-            CLK1_sp.IsEnabled = true;
-            CPU_sp.IsEnabled = true;
-            OUT1_sp.IsEnabled = true;
-            OUT2_sp.IsEnabled = true;
-            OUT3_sp.IsEnabled = true;
-            OUT4_sp.IsEnabled = true;
-            OUT5_sp.IsEnabled = true;
-            OUT6_sp.IsEnabled = true;
-            OUT7_sp.IsEnabled = false;
-            OUT8_sp.IsEnabled = false;
-            OUT9_sp.IsEnabled = false;
-            OUT10_sp.IsEnabled = false;
-            if (CPU_chkbx.IsChecked == true)
-                Close4to6ModuleM1000();
-            if (Double_CLK_chBx.IsChecked == true)
-                Close4to6ModuleM1000();
-            if ( CLK1_name.Text != "Модуль" || string.IsNullOrEmpty(CLK1_name.Text))
-                Close4to6ModuleM1000();
-            LoadDefaultM1000Conf();
-            
-            
+            ChoseM1000Basic();
         }
 
         private void LoadDefaultM1000Conf()
@@ -1533,7 +1492,6 @@ namespace IMSConfigurator
 
         private void history_cmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //TODO logic
             string nameServer = history_cmbx.SelectedItem.ToString();
             MessageBox.Show(nameServer);
             if(nameServer.Contains("Метроном - 1000"))
@@ -1559,13 +1517,30 @@ namespace IMSConfigurator
 
         private void FeelOfferM3000(List<Modul> list)
         {
-            ChoseM3000Basic();
+            M3000_rbtn.IsChecked = true;
             FeelModuls(list);
         }
 
         private void ChoseM3000Basic()
         {
-            
+            PWR1_sp.IsEnabled = true;
+            PWR2_sp.IsEnabled = true;
+            PWR3_sp.IsEnabled = true;
+            PWR4_sp.IsEnabled = true;
+            CLK1_sp.IsEnabled = true;
+            CPU_sp.IsEnabled = true;
+            OUT1_sp.IsEnabled = true;
+            OUT2_sp.IsEnabled = true;
+            OUT3_sp.IsEnabled = true;
+            OUT4_sp.IsEnabled = true;
+            OUT5_sp.IsEnabled = true;
+            OUT6_sp.IsEnabled = true;
+            OUT7_sp.IsEnabled = true;
+            OUT8_sp.IsEnabled = true;
+            OUT9_sp.IsEnabled = true;
+            OUT10_sp.IsEnabled = true;
+
+            LoadDefaultM3000Conf();
         }
 
         private void FeelModuls(List<Modul> list)
@@ -1575,12 +1550,34 @@ namespace IMSConfigurator
 
         private void ChoseM1000Basic()
         {
-            
+            PWR1_sp.IsEnabled = true;
+            PWR2_sp.IsEnabled = true;
+            PWR3_sp.IsEnabled = false;
+            PWR4_sp.IsEnabled = false;
+            CLK1_sp.IsEnabled = true;
+            CPU_sp.IsEnabled = true;
+            OUT1_sp.IsEnabled = true;
+            OUT2_sp.IsEnabled = true;
+            OUT3_sp.IsEnabled = true;
+            OUT4_sp.IsEnabled = true;
+            OUT5_sp.IsEnabled = true;
+            OUT6_sp.IsEnabled = true;
+            OUT7_sp.IsEnabled = false;
+            OUT8_sp.IsEnabled = false;
+            OUT9_sp.IsEnabled = false;
+            OUT10_sp.IsEnabled = false;
+            if (CPU_chkbx.IsChecked == true)
+                Close4to6ModuleM1000();
+            if (Double_CLK_chBx.IsChecked == true)
+                Close4to6ModuleM1000();
+            if (CLK1_name.Text != "Модуль" || string.IsNullOrEmpty(CLK1_name.Text))
+                Close4to6ModuleM1000();
+            LoadDefaultM1000Conf();
         }
 
         private void FeelOfferM1000(List<Modul> list)
         {
-            ChoseM1000Basic();
+            M1000_rbtn.IsChecked = true;
             FeelModuls(list);
         }
     }
