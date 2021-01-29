@@ -142,8 +142,14 @@ namespace IMSConfigurator
                 RSC_discription.Text = rsc.Discription;
                 RSC_price.Text = rsc.Price.ToString();
             }
-			if (M1000_rbtn.IsChecked == true)
-				OpenModuleM1000();
+            if (M1000_rbtn.IsChecked == true)
+            {
+                RSC_name.Text = "Модуль";
+                RSC_ID.Text = "ID";
+                RSC_discription.Text = "Описание";
+                RSC_price.Text = "Price";
+                OpenModuleM1000();
+            }
 
         }
 
@@ -1497,7 +1503,7 @@ namespace IMSConfigurator
             if(nameServer.Contains("Метроном - 1000"))
             {
 
-                MessageBox.Show("M1000");
+               
                 History h = new History();
                 if (h.HistoryLog.ContainsKey(nameServer))
                 {
@@ -1506,7 +1512,7 @@ namespace IMSConfigurator
             }
             else
             {
-                MessageBox.Show("M3000");
+                
                 History h = new History();
                 if (h.HistoryLog.ContainsKey(nameServer))
                 {
@@ -1545,7 +1551,33 @@ namespace IMSConfigurator
 
         private void FeelModuls(List<Modul> list)
         {
-            
+            string temp = "";
+            foreach (var item in list)
+            {
+                temp += item.Name + "\n";
+                switch (item.Type)
+                {
+                    case ModulType.Power:
+                        break;
+                    case ModulType.Generator:
+                        break;
+                    case ModulType.Processor:
+                        break;
+                    case ModulType.Output:
+                        break;
+                    case ModulType.Cooler:
+                        break;
+                    case ModulType.Input:
+                        break;
+                    case ModulType.Switcher:
+                        break;
+                    case ModulType.Chassis:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            MessageBox.Show(temp);
         }
 
         private void ChoseM1000Basic()
