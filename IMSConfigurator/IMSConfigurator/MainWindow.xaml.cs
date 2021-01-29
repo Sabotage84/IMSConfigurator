@@ -1545,31 +1545,47 @@ namespace IMSConfigurator
             OUT8_sp.IsEnabled = true;
             OUT9_sp.IsEnabled = true;
             OUT10_sp.IsEnabled = true;
-
             LoadDefaultM3000Conf();
         }
 
         private void FeelModuls(List<Modul> list)
         {
             string temp = "";
+            Modul t = new Modul();
+            PWR1_chBx.IsChecked = false;
+            foreach (var item in list)
+            {
+                if (item.Type==ModulType.Generator)
+                {
+                    t = item;
+                    CLK1_name.SelectedItem = item;
+                }
+            }
+            list.Remove(t);
             foreach (var item in list)
             {
                 temp += item.Name + "\n";
+                
                 switch (item.Type)
                 {
                     case ModulType.Power:
+                        AddPowerModul(item);
                         break;
                     case ModulType.Generator:
+                        //AddCLKModul(item);
                         break;
                     case ModulType.Processor:
                         break;
                     case ModulType.Output:
+                        AddOutModul(item);
                         break;
                     case ModulType.Cooler:
                         break;
                     case ModulType.Input:
+                        AddInputModul(item);
                         break;
                     case ModulType.Switcher:
+                        AddSwitchModul(item);
                         break;
                     case ModulType.Chassis:
                         break;
@@ -1578,6 +1594,54 @@ namespace IMSConfigurator
                 }
             }
             MessageBox.Show(temp);
+        }
+
+        private void AddSwitchModul(Modul item)
+        {
+            
+        }
+
+        private void AddInputModul(Modul item)
+        {
+            
+        }
+
+        private void AddOutModul(Modul item)
+        {
+            
+        }
+
+        private void AddCLKModul(Modul item)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddPowerModul(Modul item)
+        {
+            if (PWR1_chBx.IsChecked==false)
+            {
+                PWR1_chBx.IsChecked = true;
+                PWR1_name.SelectedItem = item;
+                //FeelPWR(PWR1_name, PWR1_ID, PWR1_discription, PWR1_price, item);
+            }
+            else if(PWR2_chBx.IsChecked==false)
+            {
+                PWR2_chBx.IsChecked = true;
+                PWR2_name.SelectedItem = item;
+                //FeelPWR(PWR2_name, PWR2_ID, PWR2_discription, PWR2_price, item);
+            }
+            else if (PWR3_chBx.IsChecked==false)
+            {
+                PWR3_chBx.IsChecked = true;
+                PWR3_name.SelectedItem = item;
+                //FeelPWR(PWR3_name, PWR3_ID, PWR3_discription, PWR3_price, item);
+            }
+            else if(PWR4_chBx.IsChecked==false)
+            {
+                PWR4_chBx.IsChecked = true;
+                PWR4_name.SelectedItem = item;
+                //FeelPWR(PWR4_name, PWR4_ID, PWR4_discription, PWR4_price, item);
+            }
         }
 
         private void ChoseM1000Basic()
