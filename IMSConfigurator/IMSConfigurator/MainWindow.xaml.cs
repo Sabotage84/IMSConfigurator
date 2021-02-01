@@ -1580,7 +1580,6 @@ namespace IMSConfigurator
                         AddPowerModul(item);
                         break;
                     case ModulType.Generator:
-                        //AddCLKModul(item);
                         break;
                     case ModulType.Processor:
                         break;
@@ -1621,13 +1620,69 @@ namespace IMSConfigurator
 
         private void AddInputModul(Modul item)
         {
-            
+            AddOutModulBasic(item);
         }
 
         private void AddOutModul(Modul item)
         {
-            
+            AddOutModulBasic(item);
         }
+
+        private void AddOutModulBasic(Modul item)
+        {
+            if (OUT1_chkbx.IsChecked==false)
+            {
+                OUT1_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            }
+            else if(OUT2_chkbx.IsChecked==false)
+            {
+                OUT2_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT2_name, OUT2_ID, OUT2_discription, OUT2_price);
+            }
+            else if (OUT3_chkbx.IsChecked == false)
+            {
+                OUT3_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+            }
+            else if (OUT4_chkbx.IsChecked == false)
+            {
+                OUT4_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+            }
+            else if (OUT5_chkbx.IsChecked == false)
+            {
+                OUT5_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+            }
+            else if (OUT6_chkbx.IsChecked == false)
+            {
+                OUT6_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+            }
+            else if (OUT7_chkbx.IsChecked == false)
+            {
+                OUT7_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+            }
+            else if (OUT8_chkbx.IsChecked == false)
+            {
+                OUT8_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+            }
+            else if (OUT9_chkbx.IsChecked == false)
+            {
+                OUT9_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+            }
+            else if (OUT10_chkbx.IsChecked == false)
+            {
+                OUT10_chkbx.IsChecked = true;
+                FeelOutModul(item, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+            }
+        }
+
+       
 
         private void AddCLKModul(Modul item)
         {
@@ -1714,6 +1769,17 @@ namespace IMSConfigurator
             PWR3_chBx.IsChecked = false;
             PWR4_chBx.IsChecked = false;
             Double_CLK_chBx.IsChecked = false;
+            OUT1_chkbx.IsChecked = false;
+            OUT2_chkbx.IsChecked = false;
+            OUT3_chkbx.IsChecked = false;
+            OUT4_chkbx.IsChecked = false;
+            OUT5_chkbx.IsChecked = false;
+            OUT6_chkbx.IsChecked = false;
+            OUT7_chkbx.IsChecked = false;
+            OUT8_chkbx.IsChecked = false;
+            OUT9_chkbx.IsChecked = false;
+            OUT10_chkbx.IsChecked = false;
+
 
         }
     }
