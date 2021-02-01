@@ -1524,6 +1524,7 @@ namespace IMSConfigurator
         private void FeelOfferM3000(List<Modul> list)
         {
             M3000_rbtn.IsChecked = true;
+            ClearAllModuls();
             FeelModuls(list);
         }
 
@@ -1598,7 +1599,17 @@ namespace IMSConfigurator
 
         private void AddSwitchModul(Modul item)
         {
-            
+            if (item.Name.Contains("RSC"))
+            {
+                Double_CLK_chBx.IsChecked = true;
+            }
+            else
+            {
+                RSC_name.Text = item.Name;
+                RSC_ID.Text = item.ID;
+                RSC_discription.Text = item.Discription;
+                RSC_price.Text = item.Price.ToString();
+            }
         }
 
         private void AddInputModul(Modul item)
@@ -1621,26 +1632,37 @@ namespace IMSConfigurator
             if (PWR1_chBx.IsChecked==false)
             {
                 PWR1_chBx.IsChecked = true;
-                PWR1_name.SelectedItem = item;
-                //FeelPWR(PWR1_name, PWR1_ID, PWR1_discription, PWR1_price, item);
+                SelectPWRMod(item,PWR1_name);
+                
+                FeelPWR(PWR1_name, PWR1_ID, PWR1_discription, PWR1_price, item);
             }
             else if(PWR2_chBx.IsChecked==false)
             {
                 PWR2_chBx.IsChecked = true;
-                PWR2_name.SelectedItem = item;
-                //FeelPWR(PWR2_name, PWR2_ID, PWR2_discription, PWR2_price, item);
+                SelectPWRMod(item, PWR2_name);
+                FeelPWR(PWR2_name, PWR2_ID, PWR2_discription, PWR2_price, item);
             }
             else if (PWR3_chBx.IsChecked==false)
             {
                 PWR3_chBx.IsChecked = true;
-                PWR3_name.SelectedItem = item;
-                //FeelPWR(PWR3_name, PWR3_ID, PWR3_discription, PWR3_price, item);
+                SelectPWRMod(item, PWR3_name);
+                FeelPWR(PWR3_name, PWR3_ID, PWR3_discription, PWR3_price, item);
             }
             else if(PWR4_chBx.IsChecked==false)
             {
                 PWR4_chBx.IsChecked = true;
-                PWR4_name.SelectedItem = item;
-                //FeelPWR(PWR4_name, PWR4_ID, PWR4_discription, PWR4_price, item);
+                SelectPWRMod(item, PWR4_name);
+                FeelPWR(PWR4_name, PWR4_ID, PWR4_discription, PWR4_price, item);
+            }
+        }
+
+        private void SelectPWRMod(Modul item, ComboBox pWR_name)
+        {
+            foreach (var pMod in pWR_name.Items)
+            {
+                Modul t = (Modul)pMod;
+                if (t.Name == item.Name)
+                    pWR_name.SelectedItem = pMod;
             }
         }
 
@@ -1674,7 +1696,18 @@ namespace IMSConfigurator
         private void FeelOfferM1000(List<Modul> list)
         {
             M1000_rbtn.IsChecked = true;
+            ClearAllModuls();
             FeelModuls(list);
+        }
+
+        private void ClearAllModuls()
+        {
+            PWR1_chBx.IsChecked = false;
+            PWR2_chBx.IsChecked = false;
+            PWR3_chBx.IsChecked = false;
+            PWR4_chBx.IsChecked = false;
+            Double_CLK_chBx.IsChecked = false;
+
         }
     }
 }
