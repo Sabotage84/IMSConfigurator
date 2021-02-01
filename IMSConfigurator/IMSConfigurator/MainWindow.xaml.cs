@@ -1559,7 +1559,14 @@ namespace IMSConfigurator
                 if (item.Type==ModulType.Generator)
                 {
                     t = item;
+                    foreach (var clkMod in CLK1_name.Items)
+                    {
+                        Modul tmod = (Modul)clkMod;
+                        if (tmod.Name == t.Name)
+                            CLK1_name.SelectedItem = clkMod;
+                    }
                     CLK1_name.SelectedItem = item;
+                    break;
                 }
             }
             list.Remove(t);
