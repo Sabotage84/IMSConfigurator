@@ -17,6 +17,12 @@ namespace IMSConfigurator.ViewModel
         public ObservableCollection<Modul> modListMV;
         public List<Modul> allModuls;
         public event PropertyChangedEventHandler PropertyChanged;
+		
+		
+		
+		
+		
+		
 
         public ObservableCollection<Modul> ModListMV { get => modListMV;
             set 
