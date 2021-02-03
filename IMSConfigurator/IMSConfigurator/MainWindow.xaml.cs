@@ -1499,11 +1499,9 @@ namespace IMSConfigurator
         private void history_cmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string nameServer = history_cmbx.SelectedItem.ToString();
-            MessageBox.Show(nameServer);
+            //MessageBox.Show(nameServer);
             if(nameServer.Contains("Метроном - 1000"))
             {
-
-               
                 History h = new History();
                 if (h.HistoryLog.ContainsKey(nameServer))
                 {
@@ -1512,7 +1510,6 @@ namespace IMSConfigurator
             }
             else
             {
-                
                 History h = new History();
                 if (h.HistoryLog.ContainsKey(nameServer))
                 {
@@ -1600,7 +1597,7 @@ namespace IMSConfigurator
                         break;
                 }
             }
-            MessageBox.Show(temp);
+            //MessageBox.Show(temp);
         }
 
         private void AddSwitchModul(Modul item)
@@ -1634,55 +1631,64 @@ namespace IMSConfigurator
             {
                 OUT1_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+               CLK1_name.Focus();
             }
             else if(OUT2_chkbx.IsChecked==false)
             {
                 OUT2_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT2_name, OUT2_ID, OUT2_discription, OUT2_price);
+                CLK1_name.Focus();
             }
             else if (OUT3_chkbx.IsChecked == false)
             {
                 OUT3_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+                CLK1_name.Focus();
+                
             }
             else if (OUT4_chkbx.IsChecked == false)
             {
                 OUT4_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+                CLK1_name.Focus();
             }
             else if (OUT5_chkbx.IsChecked == false)
             {
                 OUT5_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+                CLK1_name.Focus();
             }
             else if (OUT6_chkbx.IsChecked == false)
             {
                 OUT6_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+                CLK1_name.Focus();
             }
             else if (OUT7_chkbx.IsChecked == false)
             {
                 OUT7_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+                CLK1_name.Focus();
             }
             else if (OUT8_chkbx.IsChecked == false)
             {
                 OUT8_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+                CLK1_name.Focus();
             }
             else if (OUT9_chkbx.IsChecked == false)
             {
                 OUT9_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+                CLK1_name.Focus();
             }
             else if (OUT10_chkbx.IsChecked == false)
             {
                 OUT10_chkbx.IsChecked = true;
                 FeelOutModul(item, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+                CLK1_name.Focus();
             }
         }
-
-       
 
         private void AddCLKModul(Modul item)
         {
