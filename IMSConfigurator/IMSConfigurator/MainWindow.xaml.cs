@@ -851,8 +851,34 @@ namespace IMSConfigurator
 
         private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            CheckDoubleForModul((Modul)OUT1_tooltip.SelectedItem);
             FeelOutModul((Modul)OUT1_tooltip.SelectedItem, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
             OUT1_tooltip.SelectedItem = null;
+        }
+
+        private void CheckDoubleForModul(Modul modul)
+        {
+            if (modul.Name=="test")
+            {
+                if (CheckForFreeOutModul())
+                {
+                    CloseOutModul();
+                }
+                else
+                {
+                    MessageBox.Show("Test");
+                }
+            }
+        }
+
+        private void CloseOutModul()
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool CheckForFreeOutModul()
+        {
+            throw new NotImplementedException();
         }
 
         private void FeelOutModul(Modul m, TextBox name, TextBlock ID, TextBlock dis, TextBlock price)
