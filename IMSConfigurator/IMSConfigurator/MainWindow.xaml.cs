@@ -477,6 +477,68 @@ namespace IMSConfigurator
         {
             OUT1_name.IsEnabled = false;
             OUT1_Clear.IsEnabled = false;
+            Modul m = m_moduls.SearchModul(OUT1_name.Text);
+            if(m!=null)
+            {
+                if (m.Type==ModulType.DoubleOut)
+                {
+                    OpenOutModul();
+                }
+            }
+        }
+
+        private void OpenOutModul()
+        {
+            if (OUT1_chkbx.IsChecked == false && !OUT1_chkbx.IsEnabled)
+            {
+                OUT1_chkbx.IsEnabled = true;
+                OUT1_name.IsEnabled = true;
+            }
+            else if (OUT2_chkbx.IsChecked == false && !OUT2_chkbx.IsEnabled)
+            {
+                OUT2_chkbx.IsEnabled = true;
+                OUT2_name.IsEnabled = true;
+            }
+            else if (OUT3_chkbx.IsChecked == false && !OUT3_chkbx.IsEnabled)
+            {
+                OUT3_chkbx.IsEnabled = true;
+                OUT3_name.IsEnabled = true;
+            }
+            else if (OUT4_chkbx.IsChecked == false && !OUT4_chkbx.IsEnabled)
+            {
+                OUT4_chkbx.IsEnabled = true;
+                OUT4_name.IsEnabled = true;
+            }
+            else if (OUT5_chkbx.IsChecked == false && !OUT5_chkbx.IsEnabled)
+            {
+                OUT5_chkbx.IsEnabled = true;
+                OUT5_name.IsEnabled = true;
+            }
+            else if (OUT6_chkbx.IsChecked == false && !OUT6_chkbx.IsEnabled)
+            {
+                OUT6_chkbx.IsEnabled = true;
+                OUT6_name.IsEnabled = true;
+            }
+            else if (OUT7_chkbx.IsChecked == false && !OUT7_chkbx.IsEnabled)
+            {
+                OUT7_chkbx.IsEnabled = true;
+                OUT7_name.IsEnabled = true;
+            }
+            else if (OUT8_chkbx.IsChecked == false && !OUT8_chkbx.IsEnabled)
+            {
+                OUT8_chkbx.IsEnabled = true;
+                OUT8_name.IsEnabled = true;
+            }
+            else if (OUT9_chkbx.IsChecked == false && !OUT9_chkbx.IsEnabled)
+            {
+                OUT9_chkbx.IsEnabled = true;
+                OUT9_name.IsEnabled = true;
+            }
+            else if (OUT10_chkbx.IsChecked == false && !OUT10_chkbx.IsEnabled)
+            {
+                OUT10_chkbx.IsEnabled = true;
+                OUT10_name.IsEnabled = true;
+            }
         }
 
         private void OUT2_chkbx_Unchecked(object sender, RoutedEventArgs e)

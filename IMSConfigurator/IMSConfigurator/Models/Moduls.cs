@@ -175,7 +175,15 @@ namespace IMSConfigurator.Models
 
         }
 
-       
+        internal Modul SearchModul(string text)
+        {
+            foreach (var item in m_moduls)
+            {
+                if (item.Name == text)
+                    return item;
+            }
+            return null;
+        }
 
         public IEnumerator<Modul> GetEnumerator()
         {
