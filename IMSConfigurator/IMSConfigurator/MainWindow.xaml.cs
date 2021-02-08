@@ -851,34 +851,107 @@ namespace IMSConfigurator
 
         private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CheckDoubleForModul((Modul)OUT1_tooltip.SelectedItem);
-            FeelOutModul((Modul)OUT1_tooltip.SelectedItem, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            Modul m = (Modul)OUT1_tooltip.SelectedItem;
+            FeelOutModul(m, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            CheckDoubleForModul(m);
             OUT1_tooltip.SelectedItem = null;
         }
 
         private void CheckDoubleForModul(Modul modul)
         {
-            if (modul.Name=="test")
-            {
-                if (CheckForFreeOutModul())
+            if (modul != null) {
+                if (modul.Type == ModulType.DoubleOut)
                 {
-                    CloseOutModul();
-                }
-                else
-                {
-                    MessageBox.Show("Test");
+                    if (CheckForFreeOutModul())
+                    {
+                        CloseOutModul();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Недьзя добавить модуль, так как он занимает два слота!");
+                    }
                 }
             }
         }
 
         private void CloseOutModul()
         {
-            throw new NotImplementedException();
+            if (OUT1_chkbx.IsChecked == false)
+            {
+                OUT1_chkbx.IsEnabled = false;
+                OUT1_name.IsEnabled = false;
+            }
+            else if (OUT2_chkbx.IsChecked == false)
+            {
+                OUT2_chkbx.IsEnabled = false;
+                OUT2_name.IsEnabled = false;
+            }
+            else if (OUT3_chkbx.IsChecked == false)
+            {
+                OUT3_chkbx.IsEnabled = false;
+                OUT3_name.IsEnabled = false;
+            }
+            else if (OUT4_chkbx.IsChecked == false)
+            {
+                OUT4_chkbx.IsEnabled = false;
+                OUT4_name.IsEnabled = false;
+            }
+            else if (OUT5_chkbx.IsChecked == false)
+            {
+                OUT5_chkbx.IsEnabled = false;
+                OUT5_name.IsEnabled = false;
+            }
+            else if (OUT6_chkbx.IsChecked == false)
+            {
+                OUT6_chkbx.IsEnabled = false;
+                OUT6_name.IsEnabled = false;
+            }
+            else if (OUT7_chkbx.IsChecked == false)
+            {
+                OUT7_chkbx.IsEnabled = false;
+                OUT7_name.IsEnabled = false;
+            }
+            else if (OUT8_chkbx.IsChecked == false)
+            {
+                OUT8_chkbx.IsEnabled = false;
+                OUT8_name.IsEnabled = false;
+            }
+            else if (OUT9_chkbx.IsChecked == false)
+            {
+                OUT9_chkbx.IsEnabled = false;
+                OUT9_name.IsEnabled = false;
+            }
+            else if (OUT10_chkbx.IsChecked == false)
+            {
+                OUT10_chkbx.IsEnabled = false;
+                OUT10_name.IsEnabled = false;
+            }
         }
 
         private bool CheckForFreeOutModul()
         {
-            throw new NotImplementedException();
+            if (OUT1_chkbx.IsChecked == false)
+                return true;
+            if (OUT2_chkbx.IsChecked == false)
+                return true;
+            if (OUT3_chkbx.IsChecked == false)
+                return true;
+            if (OUT4_chkbx.IsChecked == false)
+                return true;
+            if (OUT5_chkbx.IsChecked == false)
+                return true;
+            if (OUT6_chkbx.IsChecked == false)
+                return true;
+            if (OUT7_chkbx.IsChecked == false)
+                return true;
+            if (OUT8_chkbx.IsChecked == false)
+                return true;
+            if (OUT9_chkbx.IsChecked == false)
+                return true;
+            if (OUT10_chkbx.IsChecked == false)
+                return true;
+            return false;
+
         }
 
         private void FeelOutModul(Modul m, TextBox name, TextBlock ID, TextBlock dis, TextBlock price)
@@ -1609,6 +1682,9 @@ namespace IMSConfigurator
                     case ModulType.Output:
                         AddOutModul(item);
                         break;
+                    case ModulType.DoubleOut:
+                        AddOutModul(item);
+                        break;
                     case ModulType.Cooler:
                         break;
                     case ModulType.Input:
@@ -1623,7 +1699,6 @@ namespace IMSConfigurator
                         break;
                 }
             }
-            //MessageBox.Show(temp);
         }
 
         private void AddSwitchModul(Modul item)

@@ -38,6 +38,6 @@ namespace IMSConfigurator.Models
     [Serializable]
     public enum ModulType
     {
-        Power, Generator, Processor, Output, Cooler, Input, Switcher, Chassis
+        Power, Generator, Processor, Output, Cooler, Input, Switcher, Chassis, DoubleOut
     }
 }
