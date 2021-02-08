@@ -477,10 +477,15 @@ namespace IMSConfigurator
         {
             OUT1_name.IsEnabled = false;
             OUT1_Clear.IsEnabled = false;
-            Modul m = m_moduls.SearchModul(OUT1_name.Text);
-            if(m!=null)
+            CheckForDoubleOutModulUnchecked(OUT1_name.Text);
+        }
+
+        private void CheckForDoubleOutModulUnchecked(string text)
+        {
+            Modul m = m_moduls.SearchModul(text);
+            if (m != null)
             {
-                if (m.Type==ModulType.DoubleOut)
+                if (m.Type == ModulType.DoubleOut)
                 {
                     OpenOutModul();
                 }
@@ -545,54 +550,63 @@ namespace IMSConfigurator
         {
             OUT2_name.IsEnabled = false;
             OUT2_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT2_name.Text);
         }
 
         private void OUT3_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT3_name.IsEnabled = false;
             OUT3_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT3_name.Text);
         }
 
         private void OUT4_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT4_name.IsEnabled = false;
             OUT4_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT4_name.Text);
         }
 
         private void OUT5_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT5_name.IsEnabled = false;
             OUT5_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT5_name.Text);
         }
 
         private void OUT6_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT6_name.IsEnabled = false;
             OUT6_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT6_name.Text);
         }
 
         private void OUT7_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT7_name.IsEnabled = false;
             OUT7_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT7_name.Text);
         }
 
         private void OUT8_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT8_name.IsEnabled = false;
             OUT8_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT8_name.Text);
         }
 
         private void OUT9_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT9_name.IsEnabled = false;
             OUT9_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT9_name.Text);
         }
 
         private void OUT10_chkbx_Unchecked(object sender, RoutedEventArgs e)
         {
             OUT10_name.IsEnabled = false;
             OUT10_Clear.IsEnabled = false;
+            CheckForDoubleOutModulUnchecked(OUT10_name.Text);
         }
 
         private void OUT1_name_GotFocus(object sender, RoutedEventArgs e)
