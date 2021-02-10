@@ -928,12 +928,14 @@ namespace IMSConfigurator
         private void OUT1_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT1_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT1_name, OUT1_ID, OUT1_discription, OUT1_price);
+            }
             OUT1_tooltip.SelectedItem = null;
         }
 
-        private void CheckDoubleForModul(Modul modul)
+        private bool CheckDoubleForModul(Modul modul)
         {
             if (modul != null) {
                 if (modul.Type == ModulType.DoubleOut)
@@ -941,13 +943,17 @@ namespace IMSConfigurator
                     if (CheckForFreeOutModul())
                     {
                         CloseOutModul();
+                        return true;
                     }
                     else
                     {
                         MessageBox.Show("Недьзя добавить модуль, так как он занимает два слота!");
+                        return false;
                     }
                 }
+                return true;
             }
+            return false;
         }
 
         private void CloseOutModul()
@@ -1058,64 +1064,80 @@ namespace IMSConfigurator
         private void OUT3_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT3_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT3_name, OUT3_ID, OUT3_discription, OUT3_price);
+            }
             OUT3_tooltip.SelectedItem = null;
         }
 
         private void OUT4_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT4_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT4_name, OUT4_ID, OUT4_discription, OUT4_price);
+            }
             OUT4_tooltip.SelectedItem = null;
         }
 
         private void OUT5_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT5_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT5_name, OUT5_ID, OUT5_discription, OUT5_price);
+            }
             OUT5_tooltip.SelectedItem = null;
         }
 
         private void OUT6_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT6_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT6_name, OUT6_ID, OUT6_discription, OUT6_price);
+            }
             OUT6_tooltip.SelectedItem = null;
         }
 
         private void OUT7_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT7_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT7_name, OUT7_ID, OUT7_discription, OUT7_price);
+            }
             OUT7_tooltip.SelectedItem = null;
         }
 
         private void OUT8_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT8_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT8_name, OUT8_ID, OUT8_discription, OUT8_price);
+            }
             OUT8_tooltip.SelectedItem = null;
         }
 
         private void OUT9_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT9_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT9_name, OUT9_ID, OUT9_discription, OUT9_price);
+            }
             OUT9_tooltip.SelectedItem = null;
         }
 
         private void OUT10_tooltip_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul m = (Modul)OUT10_tooltip.SelectedItem;
-            CheckDoubleForModul(m);
-            FeelOutModul(m, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+            if (CheckDoubleForModul(m))
+            {
+                FeelOutModul(m, OUT10_name, OUT10_ID, OUT10_discription, OUT10_price);
+            }
             OUT10_tooltip.SelectedItem = null;
         }
 
