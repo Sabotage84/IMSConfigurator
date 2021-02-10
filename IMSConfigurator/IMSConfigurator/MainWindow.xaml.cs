@@ -1006,25 +1006,25 @@ namespace IMSConfigurator
 
         private bool CheckForFreeOutModul()
         {
-            if (OUT1_chkbx.IsChecked == false)
+            if (OUT1_chkbx.IsChecked == false && OUT1_chkbx.IsEnabled==true)
                 return true;
-            if (OUT2_chkbx.IsChecked == false)
+            if (OUT2_chkbx.IsChecked == false && OUT2_chkbx.IsEnabled == true)
                 return true;
-            if (OUT3_chkbx.IsChecked == false)
+            if (OUT3_chkbx.IsChecked == false && OUT3_chkbx.IsEnabled == true)
                 return true;
-            if (OUT4_chkbx.IsChecked == false)
+            if (OUT4_chkbx.IsChecked == false && OUT4_chkbx.IsEnabled == true)
                 return true;
-            if (OUT5_chkbx.IsChecked == false)
+            if (OUT5_chkbx.IsChecked == false && OUT5_chkbx.IsEnabled == true)
                 return true;
-            if (OUT6_chkbx.IsChecked == false)
+            if (OUT6_chkbx.IsChecked == false && OUT6_chkbx.IsEnabled == true)
                 return true;
-            if (OUT7_chkbx.IsChecked == false)
+            if (OUT7_chkbx.IsChecked == false && OUT7_chkbx.IsEnabled == true)
                 return true;
-            if (OUT8_chkbx.IsChecked == false)
+            if (OUT8_chkbx.IsChecked == false && OUT8_chkbx.IsEnabled == true)
                 return true;
-            if (OUT9_chkbx.IsChecked == false)
+            if (OUT9_chkbx.IsChecked == false && OUT9_chkbx.IsEnabled == true)
                 return true;
-            if (OUT10_chkbx.IsChecked == false)
+            if (OUT10_chkbx.IsChecked == false && OUT10_chkbx.IsEnabled == true)
                 return true;
             return false;
 
