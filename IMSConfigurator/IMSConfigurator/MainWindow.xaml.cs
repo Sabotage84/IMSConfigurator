@@ -293,9 +293,36 @@ namespace IMSConfigurator
                 CLK2_price.Text = m.Price.ToString();
             }
 
-            if (M3000_rbtn.IsChecked == true)
+            if (M3000_rbtn.IsChecked == true && Double_CLK_chBx.IsChecked==false)
             {
                 Modul rsc = m_moduls.SearchModul("IMS-SPT M3000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+            }
+
+            if (M1000_rbtn.IsChecked == true && Double_CLK_chBx.IsChecked == false)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS-SPT M1000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+            }
+
+            if (M3000_rbtn.IsChecked == true && Double_CLK_chBx.IsChecked == true)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS-RSC M3000", ModulType.Switcher);
+                RSC_name.Text = rsc.Name;
+                RSC_ID.Text = rsc.ID;
+                RSC_discription.Text = rsc.Discription;
+                RSC_price.Text = rsc.Price.ToString();
+            }
+
+            if (M1000_rbtn.IsChecked==true && Double_CLK_chBx.IsChecked==true)
+            {
+                Modul rsc = m_moduls.SearchModul("IMS-RSC M1000", ModulType.Switcher);
                 RSC_name.Text = rsc.Name;
                 RSC_ID.Text = rsc.ID;
                 RSC_discription.Text = rsc.Discription;

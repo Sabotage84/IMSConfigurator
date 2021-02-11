@@ -553,7 +553,7 @@
     <Price>388</Price>
     <Type>Switcher</Type>
   </Modul>
-   <Modul>
+  <Modul>
     <Name>IMS-RSC M1000</Name>
     <ID>27057</ID>
     <Discription>Модуль резервного переключения</Discription>
@@ -584,6 +584,13 @@
   <Modul>
     <Name>IMS-SPT M3000</Name>
     <ID>27022</ID>
+    <Discription>Проходной модуль</Discription>
+    <Price>61</Price>
+    <Type>Switcher</Type>
+  </Modul>
+  <Modul>
+    <Name>IMS-SPT M1000</Name>
+    <ID>27548</ID>
     <Discription>Проходной модуль</Discription>
     <Price>61</Price>
     <Type>Switcher</Type>
