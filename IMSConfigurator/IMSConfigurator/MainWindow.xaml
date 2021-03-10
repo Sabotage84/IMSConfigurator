@@ -18,8 +18,8 @@
                 <MenuItem Header="Управление модулями"/>
             </MenuItem>
             <MenuItem Header="О программе">
-                <MenuItem Header="Инфо"/>
-                <MenuItem Header="Выход"/>
+                <MenuItem x:Name="InfoMenuIt" Header="Инфо" Click="MenuItem_Click"/>
+                <MenuItem x:Name="ExitMenuIt" Header="Выход" Click="InfoMenuIt_Click"/>
             </MenuItem>
         </Menu>
         <ComboBox x:Name="history_cmbx" Margin="0,0,5,0" MaxDropDownHeight="400" Width="1295" HorizontalAlignment="Center" ItemsSource="{Binding HistoryLogVM.Keys}" DataContextChanged="history_cmbx_DataContextChanged" SelectionChanged="history_cmbx_SelectionChanged">

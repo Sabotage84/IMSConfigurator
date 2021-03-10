@@ -2032,5 +2032,15 @@ namespace IMSConfigurator
 
 
         }
+
+        private void InfoMenuIt_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Программа для создания КП на IMS серию.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
