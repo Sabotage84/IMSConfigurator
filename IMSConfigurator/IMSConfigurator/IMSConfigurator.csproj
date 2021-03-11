@@ -59,6 +59,9 @@
     <Compile Include="Models\IMSMetronome.cs" />
     <Compile Include="Models\Metronome1000.cs" />
     <Compile Include="Models\Metronome3000.cs" />
+    <Compile Include="ModulsEditWin.xaml.cs">
+      <DependentUpon>ModulsEditWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BaseVM.cs" />
     <Compile Include="ViewModel\GeneratorsModulsVM.cs" />
     <Compile Include="ViewModel\HistoryVM.cs" />
@@ -76,6 +79,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModulsEditWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Modul.cs" />
