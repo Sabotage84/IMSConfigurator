@@ -15,7 +15,7 @@
     <StackPanel Orientation="Vertical" Height="589" VerticalAlignment="Top" Margin="0" MinHeight="589" MaxHeight="589" MinWidth="1305" MaxWidth="1305">
         <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1305">
             <MenuItem Header="Настройки">
-                <MenuItem Header="Управление модулями"/>
+                <MenuItem x:Name="ModulsEditMenuItem" Header="Управление модулями" Click="ModulsEditMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="О программе">
                 <MenuItem x:Name="InfoMenuIt" Header="Инфо" Click="MenuItem_Click"/>

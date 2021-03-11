@@ -2042,5 +2042,11 @@ namespace IMSConfigurator
         {
             MessageBox.Show("Программа для создания КП на IMS серию.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+        private void ModulsEditMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ModulsEditWin modulswin = new ModulsEditWin();
+            modulswin.Show();
+        }
     }
 }
