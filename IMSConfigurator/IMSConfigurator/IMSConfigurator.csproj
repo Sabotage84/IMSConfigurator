@@ -65,6 +65,7 @@
     <Compile Include="ViewModel\BaseVM.cs" />
     <Compile Include="ViewModel\GeneratorsModulsVM.cs" />
     <Compile Include="ViewModel\HistoryVM.cs" />
+    <Compile Include="ViewModel\ModulsVM.cs" />
     <Compile Include="ViewModel\OutputModulsVM.cs" />
     <Compile Include="ViewModel\PowerModulsVM.cs" />
     <Page Include="MainWindow.xaml">

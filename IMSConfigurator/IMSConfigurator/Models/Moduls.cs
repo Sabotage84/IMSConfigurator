@@ -232,6 +232,10 @@ namespace IMSConfigurator.Models
             return GetEnumerator();
         }
 
+        public List<Modul> GetAllModuls()
+        {
+            return m_moduls;
+        }
 
     }
 }
