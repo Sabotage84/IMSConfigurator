@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IMSConfigurator.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace IMSConfigurator
     /// </summary>
     public partial class ModulsEditWin : Window
     {
+        Moduls allModuls = Moduls.modulInstance;
         public ModulsEditWin()
         {
             InitializeComponent();
+        }
+
+        private void ModulsForEdit_lstbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Modul changModul = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
+            MessageBox.Show(changModul.Name+" " + changModul.ID);
         }
     }
 }

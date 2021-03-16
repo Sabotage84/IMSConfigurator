@@ -9,7 +9,7 @@
         Title="ModulsEditWin" Height="450" Width="800">
     <Grid>
 
-        <ListBox x:Name="ModulsForEdit_lstbx" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" ItemsSource="{Binding Moduls}">
+        <ListBox x:Name="ModulsForEdit_lstbx" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" ItemsSource="{Binding Moduls}" SelectionChanged="ModulsForEdit_lstbx_SelectionChanged">
             <ListBox.DataContext>
                 <ViewModel:ModulsVM/>
             </ListBox.DataContext>
