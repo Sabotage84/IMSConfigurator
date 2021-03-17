@@ -16,10 +16,14 @@
         </ListBox>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="238,22,0,0" VerticalAlignment="Top" Width="77"/>
         <TextBox x:Name="ModulNameForEdit" HorizontalAlignment="Left" Height="23" Margin="238,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="646,30,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="409,22,0,0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="238,129,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="409,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="646,21,0,0" VerticalAlignment="Top"/>
+        <Label Content="Описание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="409,22,0,0"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="238,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="409,129,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ModulDiscriptionForEdit" HorizontalAlignment="Left" Height="23" Margin="409,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ModulPriceForEdit" HorizontalAlignment="Left" Height="23" Margin="646,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ModulIDForEdit" HorizontalAlignment="Left" Height="23" Margin="238,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ModulTypeForEdit" HorizontalAlignment="Left" Margin="409,160,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
