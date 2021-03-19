@@ -29,7 +29,10 @@ namespace IMSConfigurator
         private void ModulsForEdit_lstbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul changModul = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
-            MessageBox.Show(changModul.Name+" " + changModul.ID);
+            ModulNameForEdit.Text = changModul.Name;
+            ModulPriceForEdit.Text = changModul.Price.ToString();
+            ModulIDForEdit.Text = changModul.ID;
+            ModulDiscriptionForEdit.Text = changModul.Discription;
         }
     }
 }
