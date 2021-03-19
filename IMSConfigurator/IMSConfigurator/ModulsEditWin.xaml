@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IMSConfigurator"
-        xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" x:Class="IMSConfigurator.ModulsEditWin"
+        xmlns:ViewModel="clr-namespace:IMSConfigurator.ViewModel" xmlns:Models="clr-namespace:IMSConfigurator.Models" x:Class="IMSConfigurator.ModulsEditWin"
         mc:Ignorable="d"
         Title="ModulsEditWin" Height="450" Width="800">
     <Grid>
@@ -23,7 +23,9 @@
         <TextBox x:Name="ModulDiscriptionForEdit" HorizontalAlignment="Left" Height="72" Margin="409,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
         <TextBox x:Name="ModulPriceForEdit" HorizontalAlignment="Left" Height="23" Margin="646,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="ModulIDForEdit" HorizontalAlignment="Left" Height="23" Margin="238,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ModulTypeForEdit" HorizontalAlignment="Left" Margin="409,160,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ModulTypeForEdit" HorizontalAlignment="Left" Margin="409,160,0,0" VerticalAlignment="Top" Width="120" >
+           
+        </ComboBox>
 
     </Grid>
 </Window>
