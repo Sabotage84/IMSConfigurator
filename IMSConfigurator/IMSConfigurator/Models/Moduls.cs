@@ -237,5 +237,10 @@ namespace IMSConfigurator.Models
             return m_moduls;
         }
 
+        public void EditModul(Modul oldModul, Modul newModul)
+        {
+            m_moduls[m_moduls.IndexOf(oldModul)].Name = newModul.Name;
+        }
+
     }
 }
