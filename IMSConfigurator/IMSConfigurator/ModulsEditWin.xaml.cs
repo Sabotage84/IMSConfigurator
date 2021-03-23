@@ -34,7 +34,8 @@ namespace IMSConfigurator
             ModulPriceForEdit.Text = changModul.Price.ToString();
             ModulIDForEdit.Text = changModul.ID;
             ModulDiscriptionForEdit.Text = changModul.Discription;
-
+            Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
+            allModuls.EditModul(old, newModul);
         }
     }
 }
