@@ -29,11 +29,15 @@ namespace IMSConfigurator
         private void ModulsForEdit_lstbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modul changModul = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
-            Modul old = changModul;
             ModulNameForEdit.Text = changModul.Name;
             ModulPriceForEdit.Text = changModul.Price.ToString();
             ModulIDForEdit.Text = changModul.ID;
             ModulDiscriptionForEdit.Text = changModul.Discription;
+        }
+
+        private void EditModul_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Modul old = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
             Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
             allModuls.EditModul(old, newModul);
         }
