@@ -26,6 +26,7 @@
         <ComboBox x:Name="ModulTypeForEdit" HorizontalAlignment="Left" Margin="409,160,0,0" VerticalAlignment="Top" Width="120" >
            
         </ComboBox>
+        <Button x:Name="EditModul_btn" Content="EDIT" HorizontalAlignment="Left" Margin="691,163,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
