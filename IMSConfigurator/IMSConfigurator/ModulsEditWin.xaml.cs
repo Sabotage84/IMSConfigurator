@@ -29,11 +29,14 @@ namespace IMSConfigurator
 
         private void ModulsForEdit_lstbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Modul changModul = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
-            ModulNameForEdit.Text = changModul.Name;
-            ModulPriceForEdit.Text = changModul.Price.ToString();
-            ModulIDForEdit.Text = changModul.ID;
-            ModulDiscriptionForEdit.Text = changModul.Discription;
+            if (ModulsForEdit_lstbx.SelectedItem != null)
+            {
+                Modul changModul = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
+                ModulNameForEdit.Text = changModul.Name;
+                ModulPriceForEdit.Text = changModul.Price.ToString();
+                ModulIDForEdit.Text = changModul.ID;
+                ModulDiscriptionForEdit.Text = changModul.Discription;
+            }
         }
 
         private void EditModul_btn_Click(object sender, RoutedEventArgs e)
@@ -41,8 +44,15 @@ namespace IMSConfigurator
             Modul old = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
             Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
             ModulsVM mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
+            ModulsForEdit_lstbx.SelectedItem = null;
+            
             mvm.UpdateList(old.Name, newModul.Name);
+            
             allModuls.EditModul(old, newModul);
+            ModulsForEdit_lstbx.SelectedItem = newModul.Name;
+            //((ListBoxItem)ModulsForEdit_lstbx.SelectedItem).Focus();
+
+
         }
     }
 }

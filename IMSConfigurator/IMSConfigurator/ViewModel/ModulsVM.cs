@@ -22,12 +22,16 @@ namespace IMSConfigurator.ViewModel
             }
         }
 
-        public List<string> Moduls { get => moduls; set => moduls = value; }
+        public List<string> Moduls { get => moduls; set { moduls = value; OnPropertyChanged(); } }
 
         public void UpdateList(string oldName, string newName)
         {
-            Moduls.Remove(oldName);
-            Moduls.Add(newName);
+            List<string> temp = new List<string>();
+            temp = Moduls;
+            temp.Remove(oldName);
+            temp.Add(newName);
+           // Moduls = new List<string>();
+            moduls = temp;
         }
     }
 }
