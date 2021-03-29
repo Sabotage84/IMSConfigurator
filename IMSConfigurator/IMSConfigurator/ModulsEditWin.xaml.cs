@@ -1,4 +1,5 @@
 ﻿using IMSConfigurator.Models;
+using IMSConfigurator.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,8 @@ namespace IMSConfigurator
         {
             Modul old = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
             Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
+            ModulsVM mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
+            mvm.UpdateList(old.Name, newModul.Name);
             allModuls.EditModul(old, newModul);
         }
     }

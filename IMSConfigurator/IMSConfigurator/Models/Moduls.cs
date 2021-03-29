@@ -239,7 +239,8 @@ namespace IMSConfigurator.Models
 
         public void EditModul(Modul oldModul, Modul newModul)
         {
-            m_moduls[m_moduls.IndexOf(oldModul)].Name = newModul.Name;
+            m_moduls.Remove(oldModul);
+            m_moduls.Add(newModul);
 
         }
 

@@ -23,5 +23,11 @@ namespace IMSConfigurator.ViewModel
         }
 
         public List<string> Moduls { get => moduls; set => moduls = value; }
+
+        public void UpdateList(string oldName, string newName)
+        {
+            Moduls.Remove(oldName);
+            Moduls.Add(newName);
+        }
     }
 }
