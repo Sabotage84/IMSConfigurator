@@ -26,12 +26,19 @@ namespace IMSConfigurator.ViewModel
 
         public void UpdateList(string oldName, string newName)
         {
+            //Moduls.Remove(oldName);
+            //Moduls.Add(newName);
+
+
             List<string> temp = new List<string>();
             temp = Moduls;
             temp.Remove(oldName);
             temp.Add(newName);
-           // Moduls = new List<string>();
-            moduls = temp;
+            Moduls = new List<string>();
+            foreach (var item in temp)
+            {
+                Moduls.Add(item);
+            }
         }
     }
 }

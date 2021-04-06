@@ -18,7 +18,7 @@
                 <ViewModel:ModulsVM/>
             </ListBox.DataContext>
         </ListBox>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="238,22,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="nameLabel_test" Content="Имя" HorizontalAlignment="Left" Margin="238,22,0,0" VerticalAlignment="Top" Width="77"/>
         <TextBox x:Name="ModulNameForEdit" HorizontalAlignment="Left" Height="23" Margin="238,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Цена" HorizontalAlignment="Left" Margin="249.6,21,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Content="Описание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12.6,22,0,0" Grid.Column="1"/>
