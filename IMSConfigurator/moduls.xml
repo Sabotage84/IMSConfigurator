@@ -589,6 +589,13 @@
     <Type>Switcher</Type>
   </Modul>
   <Modul>
+    <Name>IMS-SPT M1000</Name>
+    <ID>27029</ID>
+    <Discription>Проходной модуль</Discription>
+    <Price>61</Price>
+    <Type>Switcher</Type>
+  </Modul>
+  <Modul>
     <Name>IMS-TSU-GbE</Name>
     <ID>27006</ID>
     <Discription>IEEE - 1588 Time Stamp Unit SFP Option                    </Discription>

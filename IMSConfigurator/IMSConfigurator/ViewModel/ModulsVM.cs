@@ -30,15 +30,20 @@ namespace IMSConfigurator.ViewModel
             //Moduls.Add(newName);
 
 
-            List<string> temp = new List<string>();
-            temp = Moduls;
-            temp.Remove(oldName);
-            temp.Add(newName);
-            Moduls = new List<string>();
-            foreach (var item in temp)
-            {
-                Moduls.Add(item);
-            }
+            //List<string> temp = new List<string>();
+            //temp = Moduls;
+            //temp.Remove(oldName);
+            //temp.Add(newName);
+            //Moduls = new List<string>();
+            //foreach (var item in temp)
+            //{
+            //    Moduls.Add(item);
+            //}
+
+            int ind = Moduls.IndexOf(oldName);
+            Moduls[ind] = newName;
+            //OnPropertyChanged();
+
         }
     }
 }
