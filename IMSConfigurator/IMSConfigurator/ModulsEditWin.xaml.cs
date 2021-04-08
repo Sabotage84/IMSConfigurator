@@ -54,13 +54,15 @@ namespace IMSConfigurator
             ModulsVM mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
             ModulsForEdit_lstbx.SelectedItem = null;
             nameLabel_test.Focus();
+            
             mvm.UpdateList(old.Name, newModul.Name);
             
             allModuls.EditModul(old, newModul);
-            ModulsForEdit_lstbx.SelectedItem = newModul.Name;
+
+            //ModulsForEdit_lstbx.SelectedItem = newModul.Name;
             //((ListBoxItem)ModulsForEdit_lstbx.SelectedItem).Focus();
 			//TODO
-			//Listbox not refresh
+			//ObservationCollection!!!!!!!!!!!!!
 
         }
     }

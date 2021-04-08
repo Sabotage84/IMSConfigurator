@@ -43,7 +43,24 @@ namespace IMSConfigurator.ViewModel
             int ind = Moduls.IndexOf(oldName);
             Moduls[ind] = newName;
             //OnPropertyChanged();
+            SortNames();
 
+        }
+
+        private void SortNames()
+        {
+            List<string> temp = new List<string>();
+            foreach (var item in moduls)
+            {
+                temp.Add(item);
+                temp.Sort();
+            }
+
+            Moduls.Clear();
+            foreach (var item in temp)
+            {
+                Moduls.Add(item);
+            }
         }
     }
 }
