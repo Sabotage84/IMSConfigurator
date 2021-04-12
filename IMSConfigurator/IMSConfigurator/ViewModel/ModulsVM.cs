@@ -31,9 +31,6 @@ namespace IMSConfigurator.ViewModel
 
             int ind = Moduls.IndexOf(oldName);
             Moduls[ind] = newName;
-            
-            //SortNames();
-
         }
 
         private void SortNames()

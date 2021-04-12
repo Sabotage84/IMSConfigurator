@@ -59,11 +59,6 @@ namespace IMSConfigurator
             
             allModuls.EditModul(old, newModul);
 
-            //ModulsForEdit_lstbx.SelectedItem = newModul.Name;
-            //((ListBoxItem)ModulsForEdit_lstbx.SelectedItem).Focus();
-			//TODO
-			//ObservationCollection!!!!!!!!!!!!!
-
         }
     }
 }

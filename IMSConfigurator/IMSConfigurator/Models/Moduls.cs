@@ -15,7 +15,6 @@ namespace IMSConfigurator.Models
     {
         List<Modul> m_moduls = new List<Modul>();
 
-
         private static readonly Lazy<Moduls> lazy =
         new Lazy<Moduls>(() => new Moduls());
 
@@ -23,9 +22,6 @@ namespace IMSConfigurator.Models
         private Moduls()
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<Modul>));
-
-
-
             using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
             {
 
@@ -172,7 +168,6 @@ namespace IMSConfigurator.Models
                 }
 
             }
-
         }
 
         internal Modul SearchModul(string text)
@@ -241,6 +236,21 @@ namespace IMSConfigurator.Models
         {
             m_moduls.Remove(oldModul);
             m_moduls.Add(newModul);
+
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Modul>));
+            using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
+            {
+
+                try
+                {
+                    formatter.Serialize(fs, m_moduls);
+                }
+                catch
+                {
+                    MessageBox.Show("Moduls file not foud!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+            }
 
         }
 
