@@ -149,10 +149,13 @@ namespace IMSConfigurator.Models
                     m_moduls.Add(new Modul("IMS-PWR-DC20", "27015", "Блок питания шасси. Входное напряжение постоянное 20…72 В.", 288, ModulType.Power));
                     m_moduls.Add(new Modul("IMS-REL-1000", "27026", "Карта вывода сигналов неисправности. 3xDFK", 192, ModulType.Output));
                     m_moduls.Add(new Modul("IMS-RSC M3000", "27019", "Модуль резервного переключения", 388, ModulType.Switcher));
+                    m_moduls.Add(new Modul("IMS-RSC M1000", "00027057", "Модуль резервного переключения", 388, ModulType.Switcher));
                     m_moduls.Add(new Modul("IMS-RSC-MDU", "27502", "Описание!!!", 578, ModulType.Switcher));
                     m_moduls.Add(new Modul("IMS-SCG-B", "27534", "Модуль-генератор цифрового сигнала синхронизации звука DARS (симм) 1x 25pin, 4 x DARS.", 798, ModulType.Output));
                     m_moduls.Add(new Modul("IMS-SCG-U", "27503", "Модуль-генератор сигналов Word Clock и AES11 (несимм, 2,5 В TL на 75 Ом), 4x BNC", 699, ModulType.Output));
                     m_moduls.Add(new Modul("IMS-SPT M3000", "27022", "Проходной модуль", 61, ModulType.Switcher));
+                    m_moduls.Add(new Modul("IMS-SPT M1000", "00027548", "Проходной модуль", 61, ModulType.Switcher));
+
                     m_moduls.Add(new Modul ("IMS-TSU-GbE"               ,"27006",   "IEEE - 1588 Time Stamp Unit SFP Option                    ",   1122,   ModulType.Output     ));
                     m_moduls.Add(new Modul("IMS-VSG", "27507", "Модуль-генератор видеосинхронизации. 1 x bi-level sync ,1x Tri-Level Sync, 1x Sync Signals (H-Sync, V-Sync, .. .), 1x DARS. 4 x BNC.", 805, ModulType.Output));
 
