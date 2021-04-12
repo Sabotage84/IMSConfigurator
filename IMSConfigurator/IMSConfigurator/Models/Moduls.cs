@@ -238,7 +238,7 @@ namespace IMSConfigurator.Models
             m_moduls.Add(newModul);
 
             XmlSerializer formatter = new XmlSerializer(typeof(List<Modul>));
-            using (FileStream fs = new FileStream("moduls.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("moduls.xml", FileMode.Create))
             {
 
                 try
