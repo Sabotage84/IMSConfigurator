@@ -60,5 +60,10 @@ namespace IMSConfigurator
             allModuls.EditModul(old, newModul);
 
         }
+
+        private void cancel_btn_edit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
