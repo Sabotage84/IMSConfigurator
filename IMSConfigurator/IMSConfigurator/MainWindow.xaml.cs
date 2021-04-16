@@ -2046,7 +2046,7 @@ namespace IMSConfigurator
         private void ModulsEditMenuItem_Click(object sender, RoutedEventArgs e)
         {
             ModulsEditWin modulswin = new ModulsEditWin();
-            modulswin.Show();
+            modulswin.ShowDialog();
         }
     }
 }
