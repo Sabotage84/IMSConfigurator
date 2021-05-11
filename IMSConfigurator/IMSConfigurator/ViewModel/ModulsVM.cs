@@ -33,7 +33,7 @@ namespace IMSConfigurator.ViewModel
             Moduls[ind] = newName;
         }
 
-        private void SortNames()
+        public void SortNames()
         {
             List<string> temp = new List<string>();
             foreach (var item in Moduls)

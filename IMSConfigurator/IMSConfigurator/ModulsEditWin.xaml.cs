@@ -52,14 +52,13 @@ namespace IMSConfigurator
             Modul old = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
             Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
             ModulsVM mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
-            //ModulsForEdit_lstbx.SelectedItem = null;
-            //nameLabel_test.Focus();
+           
             
             mvm.UpdateList(old.Name, newModul.Name);
             
             allModuls.EditModul(old, newModul);
             UpdateMainWinModuls(newModul);
-
+            mvm.SortNames();
         }
 
         private void UpdateMainWinModuls(Modul newModul)
