@@ -22,9 +22,12 @@ namespace IMSConfigurator
     public partial class ModulsEditWin : Window
     {
         Moduls allModuls = Moduls.modulInstance;
+        ModulsVM mvm;
         public ModulsEditWin()
         {
             InitializeComponent();
+            mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
+            mvm.SortNames();
         }
 
         private void ModulsForEdit_lstbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -51,9 +54,7 @@ namespace IMSConfigurator
         {
             Modul old = allModuls.SearchModul(ModulsForEdit_lstbx.SelectedItem.ToString());
             Modul newModul = new Modul(ModulNameForEdit.Text, ModulIDForEdit.Text, ModulDiscriptionForEdit.Text, double.Parse(ModulPriceForEdit.Text), old.Type);
-            ModulsVM mvm = (ModulsVM)ModulsForEdit_lstbx.DataContext;
-           
-            
+             
             mvm.UpdateList(old.Name, newModul.Name);
             
             allModuls.EditModul(old, newModul);
