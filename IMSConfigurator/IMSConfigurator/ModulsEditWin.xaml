@@ -27,11 +27,9 @@
         <TextBox x:Name="ModulDiscriptionForEdit" HorizontalAlignment="Left" Height="72" Margin="12.6,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Grid.Column="1"/>
         <TextBox x:Name="ModulPriceForEdit" HorizontalAlignment="Left" Height="23" Margin="249.6,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="ModulIDForEdit" HorizontalAlignment="Left" Height="23" Margin="238,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ModulTypeForEdit" HorizontalAlignment="Left" Margin="12.6,160,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" >
-
-        </ComboBox>
         <Button x:Name="EditModul_btn" Content="EDIT" HorizontalAlignment="Left" Margin="179,163,0,0" VerticalAlignment="Top" Width="75" Click="EditModul_btn_Click" Grid.Column="1"/>
         <Button x:Name="cancel_btn_edit" Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" Margin="275,163,0,0" VerticalAlignment="Top" Width="75" Click="cancel_btn_edit_Click"/>
+        <ListBox x:Name="ModulTypeEdit_lstbx" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="13,163,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>
