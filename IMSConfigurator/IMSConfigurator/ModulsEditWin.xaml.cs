@@ -73,5 +73,11 @@ namespace IMSConfigurator
         {
             Close();
         }
+
+        private void ModulNameForEdit_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            ModulNameForEdit.Foreground = Brushes.Red;
+        }
     }
 }
